@@ -1,0 +1,92 @@
+# ISARA sample auto-mounting robot arm
+# Status socket
+#
+# Macros
+#  P - Record name prefix
+#  DEV - asyn port name of status socket
+
+# Status chain
+
+record(ai, "$(P)Pos:X-I") {
+    field(DTYP, "stream")
+    field(INP , "@isara-status.proto position($(P)Pos:) $(DEV)")
+    field(SCAN, "1 second")
+    field(FLNK, "$(P)LastMsg-I")
+}
+record(ai, "$(P)Pos:Y-I") {}
+record(ai, "$(P)Pos:Z-I") {}
+record(ai, "$(P)Pos:RX-I") {}
+record(ai, "$(P)Pos:RY-I") {}
+record(ai, "$(P)Pos:RZ-I") {}
+
+record(stringin, "$(P)LastMsg-I") {
+    field(DTYP, "stream")
+    field(INP , "@isara-status.proto message $(DEV)")
+    field(FLNK, "$(P)Pwr-Sts")
+}
+
+record(bi, "$(P)Pwr-Sts") {
+    field(DTYP, "stream")
+    field(INP , "@isara-status.proto state($(P)) $(DEV)")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+}
+record(bi, "$(P)Rmt-Sts") {
+    field(ZNAM, "Local")
+    field(ONAM, "Remote")
+}
+record(bi, "$(P)Flt-Sts") {
+    field(ZNAM, "0")
+    field(ONAM, "1")
+}
+record(stringin, "$(P)Tool-I") {}
+record(stringin, "$(P)Pos:Name-I") {}
+record(stringin, "$(P)Path:Name-I") {}
+record(bi, "$(P)Grp:A-Sts") {
+    field(ZNAM, "0")
+    field(ONAM, "1")
+}
+record(bi, "$(P)Grp:B-Sts") {
+    field(ZNAM, "0")
+    field(ONAM, "1")
+}
+record(longin, "$(P)Pck:A-I") {}
+record(longin, "$(P)Samp:A-I") {}
+record(longin, "$(P)Pck:B-I") {}
+record(longin, "$(P)Samp:B-I") {}
+record(longin, "$(P)Pck:Dif-I") {}
+record(longin, "$(P)Samp:Dif-I") {}
+record(longin, "$(P)Plt:Tl-I") {}
+record(longin, "$(P)Plt:Dif-I") {}
+record(stringin, "$(P)DM:Lst-I") {}
+record(bi, "$(P)Seq:Run-Sts") {
+    field(ZNAM, "Stop")
+    field(ONAM, "Move")
+}
+record(bi, "$(P)Seq:Paus-Sts") {
+    field(ZNAM, "Normal")
+    field(ONAM, "Pause")
+}
+record(ai, "$(P)Speed-I") {}
+record(bi, "$(P)LN2:Reg-Sts") {
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+}
+record(longin, "$(P)LN2:SoakPha-I") {}
+record(ai, "$(P)LN2:Lvl-I") {}
+record(ai, "$(P)LN2:Max-I") {}
+record(ai, "$(P)LN2:Min-I") {}
+record(bi, "$(P)CamTrk-Sts") {
+    field(ZNAM, "Idle")
+    field(ONAM, "Track")
+}
+record(bi, "$(P)GripDry-Sts") {
+    field(ZNAM, "Idle")
+    field(ONAM, "Drying")
+}
+record(bi, "$(P)LN2:PS-Sts") {
+    field(ZNAM, "0")
+    field(ONAM, "1")
+}
+record(longin, "$(P)Msg-I") {}
+record(longin, "$(P)Alarm-I") {}

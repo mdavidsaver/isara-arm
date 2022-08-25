@@ -3,14 +3,11 @@ include $(TOP)/configure/CONFIG
 #----------------------------------------
 #  ADD MACRO DEFINITIONS AFTER THIS LINE
 
-#----------------------------------------------------
-# Create and install (or just install) into <top>/db
-# databases, templates, substitutions like this
-#DB += xxx.db
+DB += isara-status.db
+DB += isara-status.proto
 
-#----------------------------------------------------
-# If <anyname>.db template is not named <anyname>*.template add
-# <anyname>_template = <templatename>
+DB += isara-command.db
+DB += isara-command.proto
 
 include $(TOP)/configure/RULES
 #----------------------------------------

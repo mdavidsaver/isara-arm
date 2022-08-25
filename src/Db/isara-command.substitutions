@@ -1,0 +1,52 @@
+# ISARA sample auto-mounting robot arm
+# Command socket
+#
+# Macros
+#  P - Record name prefix
+#  DEV - asyn port name of command socket
+
+# "simple" control commands (without arguments)
+file "isara-simple-cmd.template" {
+{ DEV="\$(DEV)", R="\$(P)Pwr:On", CMD="poweron"}
+{ DEV="\$(DEV)", R="\$(P)Pwr:Off", CMD="poweroff"}
+
+{ DEV="\$(DEV)", R="\$(P)Spd:Up", CMD="speedup"}
+{ DEV="\$(DEV)", R="\$(P)Spd:Dn", CMD="speeddown"}
+
+{ DEV="\$(DEV)", R="\$(P)Panic", CMD="panic"}
+{ DEV="\$(DEV)", R="\$(P)Abort", CMD="abort"}
+
+{ DEV="\$(DEV)", R="\$(P)Pause", CMD="pause"}
+{ DEV="\$(DEV)", R="\$(P)Resume", CMD="restart", ACTION="Resume"}
+
+{ DEV="\$(DEV)", R="\$(P)Reset", CMD="reset", ACTION="Reset Trip"}
+
+{ DEV="\$(DEV)", R="\$(P)BRDM:Clr", CMD="clearbcrd"}
+
+{ DEV="\$(DEV)", R="\$(P)Lid:Opn", CMD="openlid"}
+{ DEV="\$(DEV)", R="\$(P)Lid:Cls", CMD="closelid"}
+
+{ DEV="\$(DEV)", R="\$(P)Tl:OpnA", CMD="opentool"}
+{ DEV="\$(DEV)", R="\$(P)Tl:ClsA", CMD="closetool"}
+
+{ DEV="\$(DEV)", R="\$(P)Tl:OpnB", CMD="opentoolb"}
+{ DEV="\$(DEV)", R="\$(P)Tl:ClsB", CMD="closetoolb"}
+
+{ DEV="\$(DEV)", R="\$(P)Mgt:On", CMD="magneton"}
+{ DEV="\$(DEV)", R="\$(P)Mgt:Off", CMD="magnetoff"}
+
+{ DEV="\$(DEV)", R="\$(P)Htr:On", CMD="heateron"}
+{ DEV="\$(DEV)", R="\$(P)Htr:Off", CMD="heateroff"}
+
+{ DEV="\$(DEV)", R="\$(P)LN2Reg:On", CMD="regulon"}
+{ DEV="\$(DEV)", R="\$(P)LN2Reg:Off", CMD="reguloff"}
+
+{ DEV="\$(DEV)", R="\$(P)LN2PS:On", CMD="ps_regulon"}
+{ DEV="\$(DEV)", R="\$(P)LN2PS:Off", CMD="ps_reguloff"}
+
+#{ DEV="\$(DEV)", R="\$(P)", CMD=""}
+}
+
+file "isara-traj.template" {
+{ DEV="\$(DEV)", P="\$(P)"}
+}

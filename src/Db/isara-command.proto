@@ -1,0 +1,19 @@
+
+# needs to be longer than longest move time
+LockTimeout  = 10000;
+ReplyTimeout = 10000;
+
+# Most commands take no arguments and simply echo on success
+cmd {
+    out "\$1";
+    in "\$1";
+}
+
+traj_home {
+    out "traj(home, %(\$1Tl-Sel)u)";
+    in "home";
+}
+traj_recover {
+    out "traj(recover, %(\$1Tl-Sel)u)";
+    in "recover";
+}

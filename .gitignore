@@ -4,3 +4,6 @@ O.*/
 /dbd/
 /db/
 /configure/*.local
+iocBoot/*/envPaths
+*.dbl
+*.log
