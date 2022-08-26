@@ -157,6 +157,12 @@ class State:
             self.lastMsg,
             self.binAlarm,
         ]
+        S.extend([str(p) for p in self.pos]) # 6 items
+        S.extend(["0.0"]*6) # joint position
+        S.append(self.lastMsg) # ??
+        S.extend(["0"]*(58-42)) # unused
+        S.append('changetool|3|3|0|3.248|-0.01|392.597|0.0|0.0|-2.375')
+
         R = [None]*len(S)
         for i,s in enumerate(S):
             if isinstance(s, bool):
