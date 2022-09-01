@@ -107,8 +107,8 @@ class State:
     pos: numpy.ndarray = field(default_factory=lambda:numpy.zeros((6,)))
 
     # raw digital intputs/outputs
-    di: numpy.ndarray = field(default_factory=lambda:numpy.zeros((100,), dtype='?'))
-    do: numpy.ndarray = field(default_factory=lambda:numpy.zeros((100,), dtype='?'))
+    di: numpy.ndarray = field(default_factory=lambda:numpy.zeros((112,), dtype='?'))
+    do: numpy.ndarray = field(default_factory=lambda:numpy.zeros((112,), dtype='?'))
 
     # last system message
     message: str = 'System OK for operation'
@@ -191,6 +191,12 @@ class ISARA:
 
     def reset(self):
         self.S = State()
+        # set some unused/spare bits (cf. ISARA-NS-12-2)
+        # to test unpacking
+        for b in (15, 26, 37, 39):
+            self.S.di[b] = True
+
+        self.S.binAlarm |= 0x40000000
 
     @task_guard
     async def sim(self):

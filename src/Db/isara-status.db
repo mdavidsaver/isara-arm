@@ -2,15 +2,16 @@
 # Status socket
 #
 # Macros
-#  P - Record name prefix
-#  DEV - asyn port name of status socket
+#  P    - Record name prefix
+#  DEV  - asyn port name of status socket
+#  SCAN - (Optional)  Default "1 second"
 
 # Status chain
 
 record(ai, "$(P)Pos:X-I") {
     field(DTYP, "stream")
     field(INP , "@isara-status.proto position($(P)Pos:) $(DEV)")
-    field(SCAN, "1 second")
+    field(SCAN, "$(SCAN=1 second)")
     field(FLNK, "$(P)LastMsg-I")
 }
 record(ai, "$(P)Pos:Y-I") {}
@@ -30,6 +31,7 @@ record(bi, "$(P)Pwr-Sts") {
     field(INP , "@isara-status.proto state($(P)) $(DEV)")
     field(ZNAM, "Off")
     field(ONAM, "On")
+    field(FLNK, "$(P)DI-I_")
 }
 record(bi, "$(P)Rmt-Sts") {
     field(ZNAM, "Local")
@@ -89,4 +91,104 @@ record(bi, "$(P)LN2:PS-Sts") {
     field(ONAM, "1")
 }
 record(longin, "$(P)Msg-I") {}
-record(longin, "$(P)Alarm-I") {}
+record(mbbiDirect, "$(P)Alarm-I") {
+    field(NOBT, "32")
+}
+
+
+record(aai, "$(P)DI-I_") {
+    field(FTVL, "SHORT")
+    field(NELM, "256") # currently 112 will be used
+    field(DTYP, "stream")
+    field(INP , "@isara-status.proto bits(di) $(DEV)")
+    field(FLNK, "$(P)DI:Chop-I_")
+}
+
+record(aSub, "$(P)DI:Chop-I_") {
+    field(SNAM, "isara_chop_bits")
+
+    field(FTA , "SHORT")
+    field(NOA, "256")
+    field(INPA, "$(P)DI-I_ NPP MSI")
+
+    field(FTVA, "ULONG")
+    field(OUTA, "$(P)DI:0-I PP MSI")
+    field(FTVB, "ULONG")
+    field(OUTB, "$(P)DI:1-I PP MSI")
+    field(FTVC, "ULONG")
+    field(OUTC, "$(P)DI:2-I PP MSI")
+    field(FTVD, "ULONG")
+    field(OUTD, "$(P)DI:3-I PP MSI")
+
+    field(FLNK, "$(P)DO-I_")
+}
+
+record(mbbiDirect, "$(P)DI:0-I") {
+    field(NOBT, "32")
+}
+record(mbbiDirect, "$(P)DI:1-I") {
+    field(NOBT, "32")
+}
+record(mbbiDirect, "$(P)DI:2-I") {
+    field(NOBT, "32")
+}
+record(mbbiDirect, "$(P)DI:3-I") {
+    field(NOBT, "32")
+}
+
+record(aai, "$(P)DO-I_") {
+    field(FTVL, "SHORT")
+    field(NELM, "256") # currently 112 will be used
+    field(DTYP, "stream")
+    field(INP , "@isara-status.proto bits(do) $(DEV)")
+    field(FLNK, "$(P)DO:Chop-I_")
+}
+
+record(aSub, "$(P)DO:Chop-I_") {
+    field(SNAM, "isara_chop_bits")
+
+    field(FTA , "SHORT")
+    field(NOA, "256")
+    field(INPA, "$(P)DO-I_ NPP MSI")
+
+    field(FTVA, "ULONG")
+    field(OUTA, "$(P)DO:0-I PP MSI")
+    field(FTVB, "ULONG")
+    field(OUTB, "$(P)DO:1-I PP MSI")
+    field(FTVC, "ULONG")
+    field(OUTC, "$(P)DO:2-I PP MSI")
+    field(FTVD, "ULONG")
+    field(OUTD, "$(P)DO:3-I PP MSI")
+
+    field(FLNK, "$(P)Tck:S-Calc_")
+}
+
+record(mbbiDirect, "$(P)DO:0-I") {
+    field(NOBT, "32")
+}
+record(mbbiDirect, "$(P)DO:1-I") {
+    field(NOBT, "32")
+}
+record(mbbiDirect, "$(P)DO:2-I") {
+    field(NOBT, "32")
+}
+record(mbbiDirect, "$(P)DO:3-I") {
+    field(NOBT, "32")
+}
+
+
+record(calc, "$(P)Tck:S-Calc_") {
+    field(CALC, "(VAL+1)%0xffff")
+}
+
+record(calc, "$(P)Rate:S-I") {
+    field(SCAN, ".5 second")
+    field(INPA, "$(P)Tck:S-Calc_")
+    field(CALC, "C:=A-B;B:=A;C/2")
+    field(EGU , "Hz")
+    field(PREC, "1")
+    field(HIGH, "2")
+    field(LOW , "0.1")
+    field(HSV , "MAJOR")
+    field(LSV , "MAJOR")
+}

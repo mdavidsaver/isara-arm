@@ -18,7 +18,10 @@ isaraDemo_DBD += base.dbd
 isaraDemo_DBD += asyn.dbd drvAsynIPPort.dbd
 isaraDemo_DBD += stream.dbd
 
+isaraDemo_DBD += isaraSupport.dbd
+
 isaraDemo_LIBS += stream asyn
+isaraDemo_LIBS += isaraSupport
 
 # isaraDemo_registerRecordDeviceDriver.cpp derives from isaraDemo.dbd
 isaraDemo_SRCS += isaraDemo_registerRecordDeviceDriver.cpp
