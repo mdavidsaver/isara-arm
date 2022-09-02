@@ -8,26 +8,9 @@
 
 # Status chain
 
-record(ai, "$(P)Pos:X-I") {
-    field(DTYP, "stream")
-    field(INP , "@isara-status.proto position($(P)Pos:) $(DEV)")
+record(ai, "$(P)Scn:Strt-I_") {
+    field(DTYP, "Soft Timestamp") # OS time at start of scan
     field(SCAN, "$(SCAN=1 second)")
-    field(FLNK, "$(P)LastMsg-I")
-}
-record(ai, "$(P)Pos:Y-I") {}
-record(ai, "$(P)Pos:Z-I") {}
-record(ai, "$(P)Pos:RX-I") {}
-record(ai, "$(P)Pos:RY-I") {}
-record(ai, "$(P)Pos:RZ-I") {}
-
-record(stringin, "$(P)LastMsg-I") {
-    field(DTYP, "stream")
-    field(INP , "@isara-status.proto message $(DEV)")
-    field(FLNK, "$(P)Pwr-Sts")
-}
-record(stringin, "$(P)LastMsg:2-I") {
-    field(DTYP, "stream")
-    field(INP , "@isara-status.proto message $(DEV)")
     field(FLNK, "$(P)Pwr-Sts")
 }
 
@@ -74,15 +57,27 @@ record(bi, "$(P)Seq:Paus-Sts") {
     field(ZNAM, "Normal")
     field(ONAM, "Pause")
 }
-record(ai, "$(P)Speed-I") {}
+record(ai, "$(P)Speed-I") {
+    field(PREC, "1")
+    field(EGU, "%")
+}
 record(bi, "$(P)LN2:Reg-Sts") {
     field(ZNAM, "Off")
     field(ONAM, "On")
 }
 record(longin, "$(P)LN2:SoakPha-I") {}
-record(ai, "$(P)LN2:Lvl-I") {}
-record(ai, "$(P)LN2:Max-I") {}
-record(ai, "$(P)LN2:Min-I") {}
+record(ai, "$(P)LN2:Lvl-I") {
+    field(PREC, "1")
+    field(EGU, "%")
+}
+record(ai, "$(P)LN2:Max-I") {
+    field(PREC, "1")
+    field(EGU, "%")
+}
+record(ai, "$(P)LN2:Min-I") {
+    field(PREC, "1")
+    field(EGU, "%")
+}
 record(bi, "$(P)CamTrk-Sts") {
     field(ZNAM, "Idle")
     field(ONAM, "Track")
@@ -92,11 +87,36 @@ record(bi, "$(P)GripDry-Sts") {
     field(ONAM, "Drying")
 }
 record(bi, "$(P)LN2:PS-Sts") {
-    field(ZNAM, "0")
-    field(ONAM, "1")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
 }
+record(stringin, "$(P)LastMsg-I") {}
 record(mbbiDirect, "$(P)Alarm-I") {
     field(NOBT, "32")
+}
+record(ai, "$(P)Pos:X-I") {
+    field(PREC, "1")
+    field(EGU , "mm")
+}
+record(ai, "$(P)Pos:Y-I") {
+    field(PREC, "1")
+    field(EGU , "mm")
+}
+record(ai, "$(P)Pos:Z-I") {
+    field(PREC, "1")
+    field(EGU , "mm")
+}
+record(ai, "$(P)Pos:RX-I") {
+    field(PREC, "1")
+    field(EGU , "deg")
+}
+record(ai, "$(P)Pos:RY-I") {
+    field(PREC, "1")
+    field(EGU , "deg")
+}
+record(ai, "$(P)Pos:RZ-I") {
+    field(PREC, "1")
+    field(EGU , "deg")
 }
 
 
@@ -164,7 +184,7 @@ record(aSub, "$(P)DO:Chop-I_") {
     field(FTVD, "ULONG")
     field(OUTD, "$(P)DO:3-I PP MSI")
 
-    field(FLNK, "$(P)Tck:S-Calc_")
+    field(FLNK, "$(P)Scn:End-I_")
 }
 
 record(mbbiDirect, "$(P)DO:0-I") {
@@ -180,15 +200,32 @@ record(mbbiDirect, "$(P)DO:3-I") {
     field(NOBT, "32")
 }
 
+# status scan status
 
-record(calc, "$(P)Tck:S-Calc_") {
+record(ai, "$(P)Scn:End-I_") {
+    field(DTYP, "Soft Timestamp") # OS time at end of scan
+    field(SCAN, "$(SCAN=1 second)")
+    field(FLNK, "$(P)Scn:Tm-I")
+}
+
+record(calc, "$(P)Scn:Tm-I") {
+    field(INPA, "$(P)Scn:Strt-I_")
+    field(INPB, "$(P)Scn:End-I_")
+    field(INPC, "1000")
+    field(CALC, "(B-A)*C")
+    field(EGU , "ms")
+    field(PREC, "3")
+    field(FLNK, "$(P)Scn:Cnt-Calc_")
+}
+
+record(calc, "$(P)Scn:Cnt-Calc_") {
     field(CALC, "(VAL+1)%0xffff")
 }
 
-record(calc, "$(P)Rate:S-I") {
-    field(SCAN, ".5 second")
-    field(INPA, "$(P)Tck:S-Calc_")
-    field(CALC, "C:=A-B;B:=A;C/2")
+record(calc, "$(P)Scn:Rate-I") {
+    field(SCAN, "10 second")
+    field(INPA, "$(P)Scn:Cnt-Calc_")
+    field(CALC, "C:=A-B;B:=A;C/10")
     field(EGU , "Hz")
     field(PREC, "1")
     field(HIGH, "2")

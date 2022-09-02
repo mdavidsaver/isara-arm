@@ -3,17 +3,6 @@
 LockTimeout  = 100;
 ReplyTimeout = 100;
 
-# eg. "position(-33.7,708.9,-415.0,178.6,-0.6,-43.4)"
-position {
-    out "position";
-    in "position(%f,%(\$1Y-I)f,%(\$1Z-I)f,%(\$1RX-I)f,%(\$1RY-I)f,%(\$1RZ-I)f)";
-}
-
-message {
-    out "message";
-    in "%39c";
-}
-
 # eg.
 # "state(0,0,0,DoubleGripper,HOME,,0,0,-1,-1,-1,-1,-1,-1,-32768,-32768,,0,0,25.0,0,0,0.5155593,75.0,72.0,1,0,0,System OK for operation,0,304.7,139.9,-94.4,0.0,-180.0,-47.5,21.5,-15.6,97.1,0.0,98.5,-23.5,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,)"
 state {
@@ -49,13 +38,19 @@ state {
        ",%(\$1CamTrk-Sts)b"
        ",%(\$1GripDry-Sts)b"
        ",%(\$1LN2:PS-Sts)b"
-       ",%(\$1LastMsg:2-I)[^,)]"
+       ",%(\$1LastMsg-I)[^,)]"
        ",%(\$1Alarm-I)u"
        # 30
-       # match, and ignore, ")" or ",...)"
+       ",%(\$1Pos:X-I)f"
+       ",%(\$1Pos:Y-I)f"
+       ",%(\$1Pos:Z-I)f"
+       ",%(\$1Pos:RX-I)f"
+       ",%(\$1Pos:RY-I)f"
+       ",%(\$1Pos:RZ-I)f"
        "%*/\)|,[^)]*\)/";
 }
 
+# for "di" and "do"
 bits {
     separator = ",";
     out "\$1";
