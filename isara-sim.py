@@ -99,7 +99,7 @@ class State:
     camTrack: bool = False
     gripDrying: bool = False
     ln2PhaSep: bool = False
-    lastMsg: int = 0
+    lastMsg: str = 0
     binAlarm: int = 0
 
     # position
@@ -159,7 +159,7 @@ class State:
         ]
         S.extend([str(p) for p in self.pos]) # 6 items
         S.extend(["0.0"]*6) # joint position
-        S.append(self.lastMsg) # ??
+        S.append(self.lastMsg)
         S.extend(["0"]*(58-42)) # unused
         S.append('changetool|3|3|0|3.248|-0.01|392.597|0.0|0.0|-2.375')
 
@@ -191,6 +191,7 @@ class ISARA:
 
     def reset(self):
         self.S = State()
+        self.S.lastMsg = 'Last Message'
         # set some unused/spare bits (cf. ISARA-NS-12-2)
         # to test unpacking
         for b in (15, 26, 37, 39):
@@ -353,10 +354,10 @@ class ISARA:
                 writer.write(f'do({ret})\r'.encode())
 
             elif line==b'message':
-                writer.write(b'Last Message\r')
+                writer.write(self.S.lastMsg.encode() + b'\r')
 
             else:
-                writer.write('Unexpected status command\r')
+                writer.write(b'Unexpected status command\r')
 
             await writer.drain()
 

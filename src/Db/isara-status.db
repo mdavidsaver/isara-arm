@@ -25,6 +25,11 @@ record(stringin, "$(P)LastMsg-I") {
     field(INP , "@isara-status.proto message $(DEV)")
     field(FLNK, "$(P)Pwr-Sts")
 }
+record(stringin, "$(P)LastMsg:2-I") {
+    field(DTYP, "stream")
+    field(INP , "@isara-status.proto message $(DEV)")
+    field(FLNK, "$(P)Pwr-Sts")
+}
 
 record(bi, "$(P)Pwr-Sts") {
     field(DTYP, "stream")
@@ -90,7 +95,6 @@ record(bi, "$(P)LN2:PS-Sts") {
     field(ZNAM, "0")
     field(ONAM, "1")
 }
-record(longin, "$(P)Msg-I") {}
 record(mbbiDirect, "$(P)Alarm-I") {
     field(NOBT, "32")
 }
