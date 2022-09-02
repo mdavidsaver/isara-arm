@@ -210,19 +210,6 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Msg-I</DESC>
-      <NAME>$(P)Msg-I</NAME>
-    </macros>
-    <file>_isara-readback.bob</file>
-    <x>210</x>
-    <y>289</y>
-    <width>320</width>
-    <height>20</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display</name>
-    <macros>
       <DESC>$(P)Pck:A-I</DESC>
       <NAME>$(P)Pck:A-I</NAME>
     </macros>
@@ -421,7 +408,7 @@
     <name>Polyline</name>
     <x>570</x>
     <y>250</y>
-    <width>0</width>
+    <width>1</width>
     <height>740</height>
     <points>
       <point x="0.0" y="0.0">
