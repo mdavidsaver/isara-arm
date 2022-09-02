@@ -77,15 +77,15 @@ class State:
     path: str = ''
     gripA: bool = False
     gripB: bool = False
-    puckA: int = 0
-    sampleA: int = 0
+    puckA: int = -1
+    sampleA: int = -1
     # 10
-    puckB: int = 0
-    sampleB: int = 0
-    puckDiff: int = 0
-    sampleDiff: int = 0
-    plateTool: int = 0
-    plateDiff: int = 0
+    puckB: int = -1
+    sampleB: int = -1
+    puckDiff: int = -1
+    sampleDiff: int = -1
+    plateTool: int = -1
+    plateDiff: int = -1
     lastDM: str = ''
     seqRun: bool = False
     seqPause: bool = False
@@ -158,7 +158,7 @@ class State:
             self.binAlarm,
         ]
         S.extend([str(p) for p in self.pos]) # 6 items
-        S.extend(["0.0"]*6) # joint position
+        S.extend('21.5,-15.6,97.1,0.0,98.5,-23.5'.split(',')) # joint position
         S.append(self.lastMsg)
         S.extend(["0"]*(58-42)) # unused
         S.append('changetool|3|3|0|3.248|-0.01|392.597|0.0|0.0|-2.375')
@@ -191,13 +191,15 @@ class ISARA:
 
     def reset(self):
         self.S = State()
-        self.S.lastMsg = 'Last Message'
-        # set some unused/spare bits (cf. ISARA-NS-12-2)
-        # to test unpacking
-        for b in (15, 26, 37, 39):
-            self.S.di[b] = True
+        self.S.lastMsg = 'System OK for operation'
+
+        self.S.di[:] = numpy.asarray('1 0 0 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0'.split(' '), dtype='u1')
+
+        self.S.do[:] = numpy.asarray('0 0 0 0 0 1 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0'.split(' '), dtype='u1')
 
         self.S.binAlarm |= 0x40000000
+
+        self.S.pos[:] = [304.7,139.9,-94.4,0.0,-180.0,-47.5]
 
     @task_guard
     async def sim(self):
