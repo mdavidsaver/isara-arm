@@ -14,17 +14,44 @@ message {
     in "%39c";
 }
 
-# The big one...
-# The ISARA-NS-05 document lists 60 values in the reply.
-# However, observed output has _only_ 30.  The remaining 30
-# appear to be partially redundant to the "position" and "message" replies.
-#
-# eg. "state(0,0,0,DoubleGripper,SOAK,,0,0,-1,-1,-1,-1,9,11,-32768,-32768,,0,0,100.0,1,7,86.15965,89.0,87.0,0,0,0,0,0)"
-#
-# see ./state.py and ./state.txt
 state {
     out "state";
-    in "state(%b,%(\$1Rmt-Sts)b,%(\$1Flt-Sts)b,%(\$1Tool-I)[^,],%(\$1Pos:Name-I)[^,],%(\$1Path:Name-I)[^,],%(\$1Grp:A-Sts)b,%(\$1Grp:B-Sts)b,%(\$1Pck:A-I)d,%(\$1Samp:A-I)d,%(\$1Pck:B-I)d,%(\$1Samp:B-I)d,%(\$1Pck:Dif-I)d,%(\$1Samp:Dif-I)d,%(\$1Plt:Tl-I)d,%(\$1Plt:Dif-I)d,%(\$1DM:Lst-I)[^,],%(\$1Seq:Run-Sts)b,%(\$1Seq:Paus-Sts)b,%(\$1Speed-I)f,%(\$1LN2:Reg-Sts)b,%(\$1LN2:SoakPha-I)d,%(\$1LN2:Lvl-I)f,%(\$1LN2:Max-I)f,%(\$1LN2:Min-I)f,%(\$1CamTrk-Sts)b,%(\$1GripDry-Sts)b,%(\$1LN2:PS-Sts)b,%(\$1Msg-I)d,%(\$1Alarm-I)u%*/\)|,[^)]*\)/";
+    in "state(%b"
+       # 1
+       ",%(\$1Rmt-Sts)b"
+       ",%(\$1Flt-Sts)b"
+       ",%(\$1Tool-I)[^,]"
+       ",%(\$1Pos:Name-I)[^,]"
+       ",%(\$1Path:Name-I)[^,]"
+       ",%(\$1Grp:A-Sts)b"
+       ",%(\$1Grp:B-Sts)b"
+       ",%(\$1Pck:A-I)d"
+       ",%(\$1Samp:A-I)d"
+       # 10
+       ",%(\$1Pck:B-I)d"
+       ",%(\$1Samp:B-I)d"
+       ",%(\$1Pck:Dif-I)d"
+       ",%(\$1Samp:Dif-I)d"
+       ",%(\$1Plt:Tl-I)d"
+       ",%(\$1Plt:Dif-I)d"
+       ",%(\$1DM:Lst-I)[^,]"
+       ",%(\$1Seq:Run-Sts)b"
+       ",%(\$1Seq:Paus-Sts)b"
+       ",%(\$1Speed-I)f"
+       # 20
+       ",%(\$1LN2:Reg-Sts)b"
+       ",%(\$1LN2:SoakPha-I)d"
+       ",%(\$1LN2:Lvl-I)f"
+       ",%(\$1LN2:Max-I)f"
+       ",%(\$1LN2:Min-I)f"
+       ",%(\$1CamTrk-Sts)b"
+       ",%(\$1GripDry-Sts)b"
+       ",%(\$1LN2:PS-Sts)b"
+       ",%(\$1Msg-I)d"
+       ",%(\$1Alarm-I)u"
+       # 30
+       # match, and ignore, ")" or ",...)"
+       "%*/\)|,[^)]*\)/";
 }
 
 bits {
