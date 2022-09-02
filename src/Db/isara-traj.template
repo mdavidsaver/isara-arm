@@ -22,6 +22,12 @@ record(mbbo, "$(P)Tl-Sel") {
     field(EIVL, "8")
 }
 
+record(longout, "$(P)Plt-SP") {
+}
+
+record(longout, "$(P)Samp-SP") {
+}
+
 
 # trajector commands
 
@@ -37,4 +43,25 @@ record(bo, "$(P)Move:Rcvr-Cmd") {
     field(OUT , "@isara-command.proto traj_recover($(P)) $(DEV)")
     field(ZNAM, "Recover")
     field(ONAM, "Recover")
+}
+
+record(bo, "$(P)Move:Get-Cmd") {
+    field(DTYP, "stream")
+    field(OUT , "@isara-command.proto traj_get($(P)) $(DEV)")
+    field(ZNAM, "Get")
+    field(ONAM, "Get")
+}
+
+record(bo, "$(P)Move:Put-Cmd") {
+    field(DTYP, "stream")
+    field(OUT , "@isara-command.proto traj_put($(P)) $(DEV)")
+    field(ZNAM, "Put")
+    field(ONAM, "Put")
+}
+
+record(bo, "$(P)Move:GetPut-Cmd") {
+    field(DTYP, "stream")
+    field(OUT , "@isara-command.proto traj_getput($(P)) $(DEV)")
+    field(ZNAM, "Get+Put")
+    field(ONAM, "Get+Put")
 }
