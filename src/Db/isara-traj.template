@@ -36,6 +36,7 @@ record(bo, "$(P)Move:Home-Cmd") {
     field(OUT , "@isara-command.proto traj_home($(P)) $(DEV)")
     field(ZNAM, "Home")
     field(ONAM, "Home")
+    field(VAL , "0")
 }
 
 record(bo, "$(P)Move:Rcvr-Cmd") {
@@ -43,6 +44,7 @@ record(bo, "$(P)Move:Rcvr-Cmd") {
     field(OUT , "@isara-command.proto traj_recover($(P)) $(DEV)")
     field(ZNAM, "Recover")
     field(ONAM, "Recover")
+    field(VAL , "0")
 }
 
 record(bo, "$(P)Move:Get-Cmd") {
@@ -50,6 +52,7 @@ record(bo, "$(P)Move:Get-Cmd") {
     field(OUT , "@isara-command.proto traj_get($(P)) $(DEV)")
     field(ZNAM, "Get")
     field(ONAM, "Get")
+    field(VAL , "0")
 }
 
 record(bo, "$(P)Move:Put-Cmd") {
@@ -57,6 +60,7 @@ record(bo, "$(P)Move:Put-Cmd") {
     field(OUT , "@isara-command.proto traj_put($(P)) $(DEV)")
     field(ZNAM, "Put")
     field(ONAM, "Put")
+    field(VAL , "0")
 }
 
 record(bo, "$(P)Move:GetPut-Cmd") {
@@ -64,4 +68,5 @@ record(bo, "$(P)Move:GetPut-Cmd") {
     field(OUT , "@isara-command.proto traj_getput($(P)) $(DEV)")
     field(ZNAM, "Get+Put")
     field(ONAM, "Get+Put")
+    field(VAL , "0")
 }

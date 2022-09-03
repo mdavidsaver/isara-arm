@@ -4,4 +4,5 @@ record(bo, "$(R)-Cmd") {
     field(ZNAM, "$(ACTION=$(CMD))")
     field(ONAM, "$(ACTION=$(CMD))")
     field(DESC, "$(DESC=)")
+    field(VAL , "0")
 }
