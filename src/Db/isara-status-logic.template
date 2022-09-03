@@ -29,7 +29,26 @@ record(bi, "$(P)Flt-Sts") {
     field(ZNAM, "0")
     field(ONAM, "1")
 }
-record(stringin, "$(P)Tool-I") {}
+record(mbbo, "$(P)Tool-I") {
+    field(ZRST, "ToolChanger")
+    field(ONST, "Cryotong")
+    field(TWST, "SingleGripper")
+    field(THST, "DoubleGripper")
+    field(FRST, "MiniSpineGripper")
+    field(FVST, "RotatingGripper")
+    field(SXST, "PlateGripper")
+    field(SVST, "Spare")
+    field(EIST, "LaserTool")
+    field(ZRVL, "0")
+    field(ONVL, "1")
+    field(TWVL, "2")
+    field(THVL, "3")
+    field(FRVL, "4")
+    field(FVVL, "5")
+    field(SXVL, "6")
+    field(SVVL, "7")
+    field(EIVL, "8")
+}
 record(stringin, "$(P)Pos:Name-I") {}
 record(stringin, "$(P)Path:Name-I") {}
 record(bi, "$(P)Grp:A-Sts") {
