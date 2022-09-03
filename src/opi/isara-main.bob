@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
-  <name>ISARA Arm $(P)</name>
+  <name>ISARA $(P)</name>
   <macros>
     <P>TST:</P>
   </macros>
@@ -9,7 +9,7 @@
   <widget type="label" version="2.0.0">
     <name>Label</name>
     <class>TITLE</class>
-    <text>ISARA Arm $(P)</text>
+    <text>ISARA Robot Main $(P)</text>
     <x use_class="true">0</x>
     <y use_class="true">0</y>
     <width>550</width>
@@ -48,8 +48,8 @@
     <file>_isara-readback.bob</file>
     <x>210</x>
     <y>501</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -61,8 +61,8 @@
     <file>_isara-readback.bob</file>
     <x>210</x>
     <y>471</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -74,8 +74,8 @@
     <file>_isara-readback.bob</file>
     <x>210</x>
     <y>411</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -87,8 +87,8 @@
     <file>_isara-readback.bob</file>
     <x>210</x>
     <y>381</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -100,8 +100,8 @@
     <file>_isara-readback.bob</file>
     <x>210</x>
     <y>351</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="action_button" version="3.0.0">
@@ -143,8 +143,8 @@
     <file>_isara-readback.bob</file>
     <x>210</x>
     <y>319</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="action_button" version="3.0.0">
@@ -216,8 +216,8 @@
     <file>_isara-readback.bob</file>
     <x>210</x>
     <y>870</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -229,8 +229,8 @@
     <file>_isara-readback.bob</file>
     <x>210</x>
     <y>840</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -242,8 +242,8 @@
     <file>_isara-readback.bob</file>
     <x>210</x>
     <y>810</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -255,8 +255,8 @@
     <file>_isara-readback.bob</file>
     <x>210</x>
     <y>780</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -268,8 +268,8 @@
     <file>_isara-readback.bob</file>
     <x>210</x>
     <y>750</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -281,8 +281,8 @@
     <file>_isara-readback.bob</file>
     <x>210</x>
     <y>710</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -294,8 +294,8 @@
     <file>_isara-readback.bob</file>
     <x>210</x>
     <y>680</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -307,8 +307,8 @@
     <file>_isara-readback.bob</file>
     <x>210</x>
     <y>650</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -320,8 +320,8 @@
     <file>_isara-readback.bob</file>
     <x>210</x>
     <y>620</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="action_button" version="3.0.0">
@@ -393,8 +393,8 @@
     <file>_isara-readback.bob</file>
     <x>210</x>
     <y>561</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="label" version="2.0.0">
@@ -449,10 +449,10 @@
         </action>
       </actions>
       <pv_name>$(P)Reset-Cmd</pv_name>
-      <text>$(pv_name)</text>
-      <x>352</x>
-      <y>13</y>
-      <width>160</width>
+      <text>Reset</text>
+      <x>422</x>
+      <y>3</y>
+      <width>90</width>
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display</name>
@@ -463,8 +463,8 @@
       <file>_isara-readback.bob</file>
       <x>2</x>
       <y>33</y>
-      <width>320</width>
-      <height>20</height>
+      <width>325</width>
+      <height>30</height>
       <resize>2</resize>
     </widget>
     <widget type="embedded" version="2.0.0">
@@ -476,8 +476,8 @@
       <file>_isara-readback.bob</file>
       <x>2</x>
       <y>3</y>
-      <width>320</width>
-      <height>20</height>
+      <width>325</width>
+      <height>30</height>
       <resize>2</resize>
     </widget>
     <widget type="byte_monitor" version="2.0.0">
@@ -488,6 +488,24 @@
       <width>240</width>
       <height>7</height>
       <numBits>32</numBits>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_4</name>
+      <actions>
+        <action type="open_display">
+          <file>isara-alarm.bob</file>
+          <macros>
+            <P>$(P)</P>
+          </macros>
+          <target>tab</target>
+          <description>Open Display</description>
+        </action>
+      </actions>
+      <text>Details</text>
+      <x>337</x>
+      <y>40</y>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
     </widget>
   </widget>
   <widget type="group" version="2.0.0">
@@ -505,8 +523,8 @@
       <file>_isara-readback.bob</file>
       <x>12</x>
       <y>43</y>
-      <width>320</width>
-      <height>20</height>
+      <width>325</width>
+      <height>30</height>
       <resize>2</resize>
     </widget>
     <widget type="action_button" version="3.0.0">
@@ -644,8 +662,8 @@
       <file>_isara-readback.bob</file>
       <x>12</x>
       <y>304</y>
-      <width>320</width>
-      <height>20</height>
+      <width>325</width>
+      <height>30</height>
       <resize>2</resize>
     </widget>
     <widget type="embedded" version="2.0.0">
@@ -657,8 +675,8 @@
       <file>_isara-readback.bob</file>
       <x>12</x>
       <y>274</y>
-      <width>320</width>
-      <height>20</height>
+      <width>325</width>
+      <height>30</height>
       <resize>2</resize>
     </widget>
     <widget type="embedded" version="2.0.0">
@@ -670,8 +688,8 @@
       <file>_isara-readback.bob</file>
       <x>12</x>
       <y>244</y>
-      <width>320</width>
-      <height>20</height>
+      <width>325</width>
+      <height>30</height>
       <resize>2</resize>
     </widget>
     <widget type="label" version="2.0.0">
@@ -761,8 +779,8 @@
       <file>_isara-readback.bob</file>
       <x>2</x>
       <y>82</y>
-      <width>320</width>
-      <height>20</height>
+      <width>325</width>
+      <height>30</height>
       <resize>2</resize>
     </widget>
   </widget>
@@ -781,8 +799,8 @@
       <file>_isara-readback.bob</file>
       <x>12</x>
       <y>12</y>
-      <width>320</width>
-      <height>20</height>
+      <width>325</width>
+      <height>30</height>
       <resize>2</resize>
     </widget>
     <widget type="embedded" version="2.0.0">
@@ -794,8 +812,8 @@
       <file>_isara-readback.bob</file>
       <x>12</x>
       <y>192</y>
-      <width>320</width>
-      <height>20</height>
+      <width>325</width>
+      <height>30</height>
       <resize>2</resize>
     </widget>
     <widget type="embedded" version="2.0.0">
@@ -807,8 +825,8 @@
       <file>_isara-readback.bob</file>
       <x>12</x>
       <y>162</y>
-      <width>320</width>
-      <height>20</height>
+      <width>325</width>
+      <height>30</height>
       <resize>2</resize>
     </widget>
     <widget type="embedded" version="2.0.0">
@@ -820,8 +838,8 @@
       <file>_isara-readback.bob</file>
       <x>12</x>
       <y>132</y>
-      <width>320</width>
-      <height>20</height>
+      <width>325</width>
+      <height>30</height>
       <resize>2</resize>
     </widget>
     <widget type="embedded" version="2.0.0">
@@ -833,8 +851,8 @@
       <file>_isara-readback.bob</file>
       <x>12</x>
       <y>102</y>
-      <width>320</width>
-      <height>20</height>
+      <width>325</width>
+      <height>30</height>
       <resize>2</resize>
     </widget>
     <widget type="embedded" version="2.0.0">
@@ -846,8 +864,8 @@
       <file>_isara-readback.bob</file>
       <x>12</x>
       <y>72</y>
-      <width>320</width>
-      <height>20</height>
+      <width>325</width>
+      <height>30</height>
       <resize>2</resize>
     </widget>
     <widget type="embedded" version="2.0.0">
@@ -859,8 +877,8 @@
       <file>_isara-readback.bob</file>
       <x>12</x>
       <y>42</y>
-      <width>320</width>
-      <height>20</height>
+      <width>325</width>
+      <height>30</height>
       <resize>2</resize>
     </widget>
   </widget>
@@ -939,8 +957,8 @@
       <file>_isara-readback.bob</file>
       <x>12</x>
       <y>261</y>
-      <width>320</width>
-      <height>20</height>
+      <width>325</width>
+      <height>30</height>
       <resize>2</resize>
     </widget>
     <widget type="embedded" version="2.0.0">
@@ -952,8 +970,8 @@
       <file>_isara-readback.bob</file>
       <x>12</x>
       <y>231</y>
-      <width>320</width>
-      <height>20</height>
+      <width>325</width>
+      <height>30</height>
       <resize>2</resize>
     </widget>
     <widget type="embedded" version="2.0.0">
@@ -965,8 +983,8 @@
       <file>_isara-readback.bob</file>
       <x>12</x>
       <y>201</y>
-      <width>320</width>
-      <height>20</height>
+      <width>325</width>
+      <height>30</height>
       <resize>2</resize>
     </widget>
     <widget type="embedded" version="2.0.0">
@@ -978,8 +996,8 @@
       <file>_isara-readback.bob</file>
       <x>12</x>
       <y>171</y>
-      <width>320</width>
-      <height>20</height>
+      <width>325</width>
+      <height>30</height>
       <resize>2</resize>
     </widget>
     <widget type="embedded" version="2.0.0">
@@ -991,8 +1009,8 @@
       <file>_isara-readback.bob</file>
       <x>12</x>
       <y>141</y>
-      <width>320</width>
-      <height>20</height>
+      <width>325</width>
+      <height>30</height>
       <resize>2</resize>
     </widget>
     <widget type="embedded" version="2.0.0">
@@ -1004,8 +1022,8 @@
       <file>_isara-readback.bob</file>
       <x>12</x>
       <y>111</y>
-      <width>320</width>
-      <height>20</height>
+      <width>325</width>
+      <height>30</height>
       <resize>2</resize>
     </widget>
   </widget>
@@ -1064,6 +1082,24 @@
       <y>3</y>
       <width>20</width>
     </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_2</name>
+      <actions>
+        <action type="open_display">
+          <file>isara-di.bob</file>
+          <macros>
+            <P>$(P)</P>
+          </macros>
+          <target>tab</target>
+          <description>Open Display</description>
+        </action>
+      </actions>
+      <text>DI Details</text>
+      <x>72</x>
+      <y>2</y>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
   </widget>
   <widget type="action_button" version="3.0.0">
     <name>Action Button_1</name>
@@ -1081,6 +1117,7 @@
     <x>30</x>
     <y>190</y>
     <width>150</width>
+    <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="group" version="2.0.0">
     <name>Driver Status SCAN</name>
@@ -1097,8 +1134,8 @@
       <file>_isara-readback.bob</file>
       <x>2</x>
       <y>33</y>
-      <width>320</width>
-      <height>20</height>
+      <width>325</width>
+      <height>30</height>
       <resize>2</resize>
     </widget>
     <widget type="embedded" version="2.0.0">
@@ -1110,8 +1147,8 @@
       <file>_isara-readback.bob</file>
       <x>2</x>
       <y>62</y>
-      <width>320</width>
-      <height>20</height>
+      <width>325</width>
+      <height>30</height>
       <resize>2</resize>
     </widget>
     <widget type="embedded" version="2.0.0">
@@ -1123,8 +1160,8 @@
       <file>_isara-readback.bob</file>
       <x>2</x>
       <y>92</y>
-      <width>320</width>
-      <height>20</height>
+      <width>325</width>
+      <height>30</height>
       <resize>2</resize>
     </widget>
     <widget type="combo" version="2.0.0">
@@ -1191,5 +1228,59 @@
       <y>7</y>
       <width>20</width>
     </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_3</name>
+      <actions>
+        <action type="open_display">
+          <file>isara-do.bob</file>
+          <macros>
+            <P>$(P)</P>
+          </macros>
+          <target>tab</target>
+          <description>Open Display</description>
+        </action>
+      </actions>
+      <text>DO Details</text>
+      <x>62</x>
+      <y>7</y>
+      <height>20</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_5</name>
+    <actions>
+      <action type="open_display">
+        <file>asynRecord.bob</file>
+        <macros>
+          <R>Prt:St-Asyn</R>
+        </macros>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Status expert</text>
+    <x>450</x>
+    <y>191</y>
+    <width>120</width>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_6</name>
+    <actions>
+      <action type="open_display">
+        <file>asynRecord.bob</file>
+        <macros>
+          <R>Prt:Ctl-Asyn</R>
+        </macros>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Command expert</text>
+    <x>320</x>
+    <y>189</y>
+    <width>120</width>
+    <tooltip>$(actions)</tooltip>
   </widget>
 </display>

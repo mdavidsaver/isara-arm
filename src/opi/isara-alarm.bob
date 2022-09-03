@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>ISARA Alarm $(P)</name>
+  <macros>
+    <P>TST:</P>
+  </macros>
+  <width>550</width>
+  <height>511</height>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>TITLE</class>
+    <text>ISARA Alarms $(P)</text>
+    <x use_class="true">0</x>
+    <y use_class="true">0</y>
+    <width>550</width>
+    <height>31</height>
+    <font use_class="true">
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Alm:DGrp-Sts</DESC>
+      <NAME>$(P)Alm:DGrp-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>10</x>
+    <y>481</y>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Alm:DwrFlt-Sts</DESC>
+      <NAME>$(P)Alm:DwrFlt-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>10</x>
+    <y>451</y>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Alm:DwrH-Sts</DESC>
+      <NAME>$(P)Alm:DwrH-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>10</x>
+    <y>421</y>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Alm:DwrT-Sts</DESC>
+      <NAME>$(P)Alm:DwrT-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>10</x>
+    <y>391</y>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Alm:GrpCal-Sts</DESC>
+      <NAME>$(P)Alm:GrpCal-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>10</x>
+    <y>361</y>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Alm:GrpLn-Sts</DESC>
+      <NAME>$(P)Alm:GrpLn-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>10</x>
+    <y>331</y>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Alm:HtBrk-Sts</DESC>
+      <NAME>$(P)Alm:HtBrk-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>10</x>
+    <y>301</y>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Alm:LN2Lw-Sts</DESC>
+      <NAME>$(P)Alm:LN2Lw-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>10</x>
+    <y>271</y>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Alm:LsrCal-Sts</DESC>
+      <NAME>$(P)Alm:LsrCal-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>10</x>
+    <y>241</y>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Alm:PLCTmp-Sts</DESC>
+      <NAME>$(P)Alm:PLCTmp-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>10</x>
+    <y>211</y>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Alm:PSFlt-Sts</DESC>
+      <NAME>$(P)Alm:PSFlt-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>10</x>
+    <y>181</y>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Alm:PSH-Sts</DESC>
+      <NAME>$(P)Alm:PSH-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>10</x>
+    <y>151</y>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Alm:PckTch-Sts</DESC>
+      <NAME>$(P)Alm:PckTch-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>10</x>
+    <y>121</y>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Alm:SysUp-Sts</DESC>
+      <NAME>$(P)Alm:SysUp-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>10</x>
+    <y>91</y>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Alm:TlCal-Sts</DESC>
+      <NAME>$(P)Alm:TlCal-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>10</x>
+    <y>61</y>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Alm:Trj-Sts</DESC>
+      <NAME>$(P)Alm:Trj-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>10</x>
+    <y>31</y>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+</display>
