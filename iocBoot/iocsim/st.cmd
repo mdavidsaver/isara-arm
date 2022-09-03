@@ -14,6 +14,9 @@ epicsEnvSet("STREAM_PROTOCOL_PATH", "../../db")
 dbLoadDatabase "../../dbd/isaraDemo.dbd"
 isaraDemo_registerRecordDeviceDriver(pdbbase) 
 
+# error on re-use of record name
+var dbRecordsOnceOnly 1
+
 # Command socket
 drvAsynIPPortConfigure("ISARA_CMD", "$(IP):$(PORT_CMD=10000)")
 asynOctetSetInputEos("ISARA_CMD", -1, "\r")
@@ -42,4 +45,8 @@ dbLoadRecords("../../db/isara-status.db", "P=$(P),DEV=ISARA_STS")
 
 iocInit()
 
-#dbl > records.dbl
+dbl > records.dbl
+
+epicsThreadSleep 1
+
+dbcar '' 1
