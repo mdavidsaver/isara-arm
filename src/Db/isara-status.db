@@ -204,7 +204,6 @@ record(mbbiDirect, "$(P)DO:3-I") {
 
 record(ai, "$(P)Scn:End-I_") {
     field(DTYP, "Soft Timestamp") # OS time at end of scan
-    field(SCAN, "$(SCAN=1 second)")
     field(FLNK, "$(P)Scn:Tm-I")
 }
 
