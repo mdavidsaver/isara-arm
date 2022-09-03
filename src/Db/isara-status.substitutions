@@ -1,0 +1,256 @@
+# Macros
+#  P    - Record name prefix
+#  DEV  - asyn port name of status socket
+#  SCAN - (Optional)  Default "1 second"
+
+file "isara-status-logic.template" {
+{P="\$(P)", DEV="$(DEV)", SCAN="\$(SCAN=1 second)"}
+}
+
+file "isara-bit.template" {
+# Alarm bits
+{N="\$(P)Alm:Trj",    INP="\$(P)Alarm-I.B0",  ZNAM="OK", ONAM="Alarm", OSV="MAJOR"}
+{N="\$(P)Alm:DGrp",   INP="\$(P)Alarm-I.B1",  ZNAM="OK", ONAM="Alarm", OSV="MAJOR"}
+{N="\$(P)Alm:GrpCal", INP="\$(P)Alarm-I.B2",  ZNAM="OK", ONAM="Alarm", OSV="MAJOR"}
+{N="\$(P)Alm:LsrCal", INP="\$(P)Alarm-I.B3",  ZNAM="OK", ONAM="Alarm", OSV="MAJOR"}
+{N="\$(P)Alm:PckTch", INP="\$(P)Alarm-I.B4",  ZNAM="OK", ONAM="Alarm", OSV="MAJOR"}
+# "System in operation for more than 90 days (reboot recommended)"
+# Such confidence!
+{N="\$(P)Alm:SysUp",  INP="\$(P)Alarm-I.B5",  ZNAM="OK", ONAM="Reboot?", OSV="MAJOR"}
+{N="\$(P)Alm:GrpLn",  INP="\$(P)Alarm-I.B6",  ZNAM="OK", ONAM="Alarm", OSV="MAJOR"}
+{N="\$(P)Alm:PLCTmp", INP="\$(P)Alarm-I.B10", ZNAM="OK", ONAM="Alarm", OSV="MAJOR"}
+{N="\$(P)Alm:TlCal",  INP="\$(P)Alarm-I.B11", ZNAM="OK", ONAM="Alarm", OSV="MAJOR"}
+{N="\$(P)Alm:HtBrk",  INP="\$(P)Alarm-I.B12", ZNAM="OK", ONAM="Alarm", OSV="MAJOR"}
+{N="\$(P)Alm:LN2Lw",  INP="\$(P)Alarm-I.B13", ZNAM="OK", ONAM="Alarm", OSV="MAJOR"}
+{N="\$(P)Alm:DwrT",   INP="\$(P)Alarm-I.B14", ZNAM="OK", ONAM="Alarm", OSV="MAJOR"}
+{N="\$(P)Alm:DwrH",   INP="\$(P)Alarm-I.B15", ZNAM="OK", ONAM="Alarm", OSV="MAJOR"}
+{N="\$(P)Alm:PSH",    INP="\$(P)Alarm-I.B16", ZNAM="OK", ONAM="Alarm", OSV="MAJOR"}
+{N="\$(P)Alm:DwrFlt", INP="\$(P)Alarm-I.B17", ZNAM="OK", ONAM="Alarm", OSV="MAJOR"}
+{N="\$(P)Alm:PSFlt",  INP="\$(P)Alarm-I.B18", ZNAM="OK", ONAM="Alarm", OSV="MAJOR"}
+# DI bits
+{N="\$(P)Standby",       INP="\$(P)DI:0-I.B0"}
+{N="\$(P)SeqReady",      INP="\$(P)DI:0-I.B1"}
+{N="\$(P)SeqRunning",    INP="\$(P)DI:0-I.B2"}
+{N="\$(P)SeqPaused",     INP="\$(P)DI:0-I.B3"}
+{N="\$(P)Fault", INP="\$(P)DI:0-I.B4"}
+{N="\$(P)Debug", INP="\$(P)DI:0-I.B5"}
+{N="\$(P)Warning",       INP="\$(P)DI:0-I.B6"}
+{N="\$(P)ManualSeqMode", INP="\$(P)DI:0-I.B7"}
+{N="\$(P)ES:MCP",        INP="\$(P)DI:0-I.B8"}
+{N="\$(P)ES:WMS",        INP="\$(P)DI:0-I.B9"}
+{N="\$(P)ES:USA",        INP="\$(P)DI:0-I.BA"}
+{N="\$(P)ES:USB",        INP="\$(P)DI:0-I.BB"}
+{N="\$(P)ES:USEN",       INP="\$(P)DI:0-I.BC"}
+{N="\$(P)ES:DOOR",       INP="\$(P)DI:0-I.BD"}
+{N="\$(P)ES:INTERN",     INP="\$(P)DI:0-I.BE"}
+{N="\$(P)DI:15", INP="\$(P)DI:0-I.BF"}
+{N="\$(P)ToolChanger",   INP="\$(P)DI:0-I.B10"}
+{N="\$(P)GripA:Op",  INP="\$(P)DI:0-I.B11"}
+{N="\$(P)GripA:Cl",  INP="\$(P)DI:0-I.B12"}
+{N="\$(P)GripB:Op",  INP="\$(P)DI:0-I.B13"}
+{N="\$(P)GripB:Cl",  INP="\$(P)DI:0-I.B14"}
+{N="\$(P)BlowAir",       INP="\$(P)DI:0-I.B15"}
+{N="\$(P)SGripOpened",   INP="\$(P)DI:0-I.B16"}
+{N="\$(P)SGripClosed",   INP="\$(P)DI:0-I.B17"}
+{N="\$(P)CGripOpened",   INP="\$(P)DI:0-I.B18"}
+{N="\$(P)CGripClosed",   INP="\$(P)DI:0-I.B19"}
+{N="\$(P)DI:26", INP="\$(P)DI:0-I.B1A"}
+{N="\$(P)DI:27", INP="\$(P)DI:0-I.B1B"}
+{N="\$(P)DI:28",        INP="\$(P)DI:0-I.B1C"}
+{N="\$(P)DI:29", INP="\$(P)DI:0-I.B1D"}
+{N="\$(P)DI:30", INP="\$(P)DI:0-I.B1E"}
+{N="\$(P)DI:31",        INP="\$(P)DI:0-I.B1F"}
+{N="\$(P)OpenLidRqst",   INP="\$(P)DI:1-I.B0"}
+{N="\$(P)CloseLidRqst",  INP="\$(P)DI:1-I.B1"}
+{N="\$(P)AirBlowerRqst", INP="\$(P)DI:1-I.B2"}
+{N="\$(P)AirSupplyRqst", INP="\$(P)DI:1-I.B3"}
+{N="\$(P)LN2RegRqst",    INP="\$(P)DI:1-I.B4"}
+{N="\$(P)DI:37", INP="\$(P)DI:1-I.B5"}
+{N="\$(P)DI:38", INP="\$(P)DI:1-I.B6"}
+{N="\$(P)DI:39", INP="\$(P)DI:1-I.B7"}
+{N="\$(P)RobotOutDewar", INP="\$(P)DI:1-I.B8"}
+{N="\$(P)RobotOutGonio", INP="\$(P)DI:1-I.B9"}
+{N="\$(P)lnCamZoneDewar",        INP="\$(P)DI:1-I.BA"}
+{N="\$(P)lnCamZoneGonio",        INP="\$(P)DI:1-I.BB"}
+{N="\$(P)lnCamZoneHome", INP="\$(P)DI:1-I.BC"}
+{N="\$(P)DI:45", INP="\$(P)DI:1-I.BD"}
+{N="\$(P)DI:46", INP="\$(P)DI:1-I.BE"}
+{N="\$(P)DI:47", INP="\$(P)DI:1-I.BF"}
+{N="\$(P)DI:48", INP="\$(P)DI:1-I.B10"}
+{N="\$(P)DI:49", INP="\$(P)DI:1-I.B11"}
+{N="\$(P)DeadManSwitch", INP="\$(P)DI:1-I.B12"}
+{N="\$(P)BrakeUnlocked", INP="\$(P)DI:1-I.B13"}
+{N="\$(P)TorqueOvershoot",       INP="\$(P)DI:1-I.B14"}
+{N="\$(P)DI:53", INP="\$(P)DI:1-I.B15"}
+{N="\$(P)DI:54", INP="\$(P)DI:1-I.B16"}
+{N="\$(P)DI:55", INP="\$(P)DI:1-I.B17"}
+{N="\$(P)PO:1",  INP="\$(P)DI:1-I.B18"}
+{N="\$(P)PO:2",  INP="\$(P)DI:1-I.B19"}
+{N="\$(P)PO:3",  INP="\$(P)DI:1-I.B1A"}
+{N="\$(P)PO:4",  INP="\$(P)DI:1-I.B1B"}
+{N="\$(P)PO:5",  INP="\$(P)DI:1-I.B1C"}
+{N="\$(P)PO:6",  INP="\$(P)DI:1-I.B1D"}
+{N="\$(P)PO:7",  INP="\$(P)DI:1-I.B1E"}
+{N="\$(P)PO:8",  INP="\$(P)DI:1-I.B1F"}
+{N="\$(P)PO:9",  INP="\$(P)DI:2-I.B0"}
+{N="\$(P)PO:10", INP="\$(P)DI:2-I.B1"}
+{N="\$(P)PO:11", INP="\$(P)DI:2-I.B2"}
+{N="\$(P)PO:12", INP="\$(P)DI:2-I.B3"}
+{N="\$(P)DI:68", INP="\$(P)DI:2-I.B4"}
+{N="\$(P)DI:69", INP="\$(P)DI:2-I.B5"}
+{N="\$(P)DI:70", INP="\$(P)DI:2-I.B6"}
+{N="\$(P)DI:71", INP="\$(P)DI:2-I.B7"}
+{N="\$(P)DI:72", INP="\$(P)DI:2-I.B8"}
+{N="\$(P)DI:73", INP="\$(P)DI:2-I.B9"}
+{N="\$(P)DI:74", INP="\$(P)DI:2-I.BA"}
+{N="\$(P)DI:75", INP="\$(P)DI:2-I.BB"}
+{N="\$(P)DI:76", INP="\$(P)DI:2-I.BC"}
+{N="\$(P)DI:77", INP="\$(P)DI:2-I.BD"}
+{N="\$(P)DI:78", INP="\$(P)DI:2-I.BE"}
+{N="\$(P)DI:79", INP="\$(P)DI:2-I.BF"}
+{N="\$(P)SaveTrajResults",       INP="\$(P)DI:2-I.B10"}
+{N="\$(P)DI:81", INP="\$(P)DI:2-I.B11"}
+{N="\$(P)DI:82", INP="\$(P)DI:2-I.B12"}
+{N="\$(P)DI:83", INP="\$(P)DI:2-I.B13"}
+{N="\$(P)DI:84", INP="\$(P)DI:2-I.B14"}
+{N="\$(P)DI:85", INP="\$(P)DI:2-I.B15"}
+{N="\$(P)DI:86", INP="\$(P)DI:2-I.B16"}
+{N="\$(P)DI:87", INP="\$(P)DI:2-I.B17"}
+{N="\$(P)DI:88", INP="\$(P)DI:2-I.B18"}
+{N="\$(P)DI:89", INP="\$(P)DI:2-I.B19"}
+{N="\$(P)DI:90", INP="\$(P)DI:2-I.B1A"}
+{N="\$(P)DI:91", INP="\$(P)DI:2-I.B1B"}
+{N="\$(P)DI:92", INP="\$(P)DI:2-I.B1C"}
+{N="\$(P)DI:93", INP="\$(P)DI:2-I.B1D"}
+{N="\$(P)DI:94", INP="\$(P)DI:2-I.B1E"}
+{N="\$(P)DI:95", INP="\$(P)DI:2-I.B1F"}
+{N="\$(P)DI:96", INP="\$(P)DI:3-I.B0"}
+{N="\$(P)DI:97", INP="\$(P)DI:3-I.B1"}
+{N="\$(P)DI:98", INP="\$(P)DI:3-I.B2"}
+{N="\$(P)DI:99", INP="\$(P)DI:3-I.B3"}
+{N="\$(P)SafetyAck",     INP="\$(P)DI:3-I.B4"}
+{N="\$(P)NetworkOk",     INP="\$(P)DI:3-I.B5"}
+{N="\$(P)SafetyRestartNeeded",   INP="\$(P)DI:3-I.B6"}
+{N="\$(P)DI:103",        INP="\$(P)DI:3-I.B7"}
+{N="\$(P)DI:104",        INP="\$(P)DI:3-I.B8"}
+{N="\$(P)DI:105",        INP="\$(P)DI:3-I.B9"}
+{N="\$(P)DI:106",        INP="\$(P)DI:3-I.BA"}
+{N="\$(P)DI:107",        INP="\$(P)DI:3-I.BB"}
+{N="\$(P)DI:108",        INP="\$(P)DI:3-I.BC"}
+{N="\$(P)DI:109",        INP="\$(P)DI:3-I.BD"}
+{N="\$(P)DI:110",        INP="\$(P)DI:3-I.BE"}
+{N="\$(P)DI:111",        INP="\$(P)DI:3-I.BF"}
+# DO bits
+{N="\$(P)PwrON",        INP="\$(P)DO:0-I.B0"}
+{N="\$(P)FltAck",       INP="\$(P)DO:0-I.B1"}
+{N="\$(P)Stop", INP="\$(P)DO:0-I.B2"}
+{N="\$(P)Pause",        INP="\$(P)DO:0-I.B3"}
+{N="\$(P)AckEndSeq",    INP="\$(P)DO:0-I.B4"}
+{N="\$(P)AckManualSeq", INP="\$(P)DO:0-I.B5"}
+{N="\$(P)DO:6", INP="\$(P)DO:0-I.B6"}
+{N="\$(P)WarmDewar",    INP="\$(P)DO:0-I.B7"}
+{N="\$(P)ColdDewar",    INP="\$(P)DO:0-I.B8"}
+{N="\$(P)LidOpened",    INP="\$(P)DO:0-I.B9"}
+{N="\$(P)LidClosed",    INP="\$(P)DO:0-I.BA"}
+{N="\$(P)Grp:OpA",      INP="\$(P)DO:0-I.BB"}
+{N="\$(P)Grp:ClA",      INP="\$(P)DO:0-I.BC"}
+{N="\$(P)Grp:OpB",      INP="\$(P)DO:0-I.BD"}
+{N="\$(P)Grp:ClB",      INP="\$(P)DO:0-I.BE"}
+{N="\$(P)RegRun",       INP="\$(P)DO:0-I.BF"}
+{N="\$(P)SetMem:Gn",    INP="\$(P)DO:0-I.B10"}
+{N="\$(P)SetMem:GrpA",  INP="\$(P)DO:0-I.B11"}
+{N="\$(P)SetMem:GrpB",  INP="\$(P)DO:0-I.B12"}
+{N="\$(P)ClrMem",       INP="\$(P)DO:0-I.B13"}
+{N="\$(P)ClrParam",     INP="\$(P)DO:0-I.B14"}
+{N="\$(P)ClrRobotMsg",  INP="\$(P)DO:0-I.B15"}
+{N="\$(P)ResetProgram", INP="\$(P)DO:0-I.B16"}
+{N="\$(P)DO:23",        INP="\$(P)DO:0-I.B17"}
+{N="\$(P)PI:1", INP="\$(P)DO:0-I.B18"}
+{N="\$(P)PI:2", INP="\$(P)DO:0-I.B19"}
+{N="\$(P)PI:3", INP="\$(P)DO:0-I.B1A"}
+{N="\$(P)PI:4", INP="\$(P)DO:0-I.B1B"}
+{N="\$(P)PI:5", INP="\$(P)DO:0-I.B1C"}
+{N="\$(P)PI:6", INP="\$(P)DO:0-I.B1D"}
+{N="\$(P)PI:7", INP="\$(P)DO:0-I.B1E"}
+{N="\$(P)PI:8", INP="\$(P)DO:0-I.B1F"}
+{N="\$(P)PI:9", INP="\$(P)DO:1-I.B0"}
+{N="\$(P)PI:10",        INP="\$(P)DO:1-I.B1"}
+{N="\$(P)PI:11",        INP="\$(P)DO:1-I.B2"}
+{N="\$(P)PI:12",        INP="\$(P)DO:1-I.B3"}
+{N="\$(P)PI:13",        INP="\$(P)DO:1-I.B4"}
+{N="\$(P)PI:14",        INP="\$(P)DO:1-I.B5"}
+{N="\$(P)DO:38",        INP="\$(P)DO:1-I.B6"}
+{N="\$(P)DO:39",        INP="\$(P)DO:1-I.B7"}
+{N="\$(P)PODO:1",       INP="\$(P)DO:1-I.B8"}
+{N="\$(P)PODO:2",       INP="\$(P)DO:1-I.B9"}
+{N="\$(P)PODO:3",       INP="\$(P)DO:1-I.BA"}
+{N="\$(P)PODO:4",       INP="\$(P)DO:1-I.BB"}
+{N="\$(P)PODO:5",       INP="\$(P)DO:1-I.BC"}
+{N="\$(P)PODO:6",       INP="\$(P)DO:1-I.BD"}
+{N="\$(P)PODO:7",       INP="\$(P)DO:1-I.BE"}
+{N="\$(P)PODO:8",       INP="\$(P)DO:1-I.BF"}
+{N="\$(P)PODO:9",       INP="\$(P)DO:1-I.B10"}
+{N="\$(P)PODO:10",      INP="\$(P)DO:1-I.B11"}
+{N="\$(P)PODO:11",      INP="\$(P)DO:1-I.B12"}
+{N="\$(P)PODO:12",      INP="\$(P)DO:1-I.B13"}
+{N="\$(P)DO:52",        INP="\$(P)DO:1-I.B14"}
+{N="\$(P)DO:53",        INP="\$(P)DO:1-I.B15"}
+{N="\$(P)DO:54",        INP="\$(P)DO:1-I.B16"}
+{N="\$(P)DO:55",        INP="\$(P)DO:1-I.B17"}
+{N="\$(P)Pck:1",        INP="\$(P)DO:1-I.B18"}
+{N="\$(P)Pck:2",        INP="\$(P)DO:1-I.B19"}
+{N="\$(P)Pck:3",        INP="\$(P)DO:1-I.B1A"}
+{N="\$(P)Pck:4",        INP="\$(P)DO:1-I.B1B"}
+{N="\$(P)Pck:5",        INP="\$(P)DO:1-I.B1C"}
+{N="\$(P)Pck:6",        INP="\$(P)DO:1-I.B1D"}
+{N="\$(P)Pck:7",        INP="\$(P)DO:1-I.B1E"}
+{N="\$(P)Pck:8",        INP="\$(P)DO:1-I.B1F"}
+{N="\$(P)Pck:9",        INP="\$(P)DO:2-I.B0"}
+{N="\$(P)Pck:10",       INP="\$(P)DO:2-I.B1"}
+{N="\$(P)Pck:11",       INP="\$(P)DO:2-I.B2"}
+{N="\$(P)Pck:12",       INP="\$(P)DO:2-I.B3"}
+{N="\$(P)Pck:13",       INP="\$(P)DO:2-I.B4"}
+{N="\$(P)Pck:14",       INP="\$(P)DO:2-I.B5"}
+{N="\$(P)Pck:15",       INP="\$(P)DO:2-I.B6"}
+{N="\$(P)Pck:16",       INP="\$(P)DO:2-I.B7"}
+{N="\$(P)Pck:17",       INP="\$(P)DO:2-I.B8"}
+{N="\$(P)Pck:18",       INP="\$(P)DO:2-I.B9"}
+{N="\$(P)Pck:19",       INP="\$(P)DO:2-I.BA"}
+{N="\$(P)Pck:20",       INP="\$(P)DO:2-I.BB"}
+{N="\$(P)Pck:21",       INP="\$(P)DO:2-I.BC"}
+{N="\$(P)Pck:22",       INP="\$(P)DO:2-I.BD"}
+{N="\$(P)Pck:23",       INP="\$(P)DO:2-I.BE"}
+{N="\$(P)Pck:24",       INP="\$(P)DO:2-I.BF"}
+{N="\$(P)Pck:25",       INP="\$(P)DO:2-I.B10"}
+{N="\$(P)Pck:26",       INP="\$(P)DO:2-I.B11"}
+{N="\$(P)Pck:27",       INP="\$(P)DO:2-I.B12"}
+{N="\$(P)Pck:28",       INP="\$(P)DO:2-I.B13"}
+{N="\$(P)Pck:29",       INP="\$(P)DO:2-I.B14"}
+{N="\$(P)DO:85",        INP="\$(P)DO:2-I.B15"}
+{N="\$(P)DO:86",        INP="\$(P)DO:2-I.B16"}
+{N="\$(P)DO:87",        INP="\$(P)DO:2-I.B17"}
+{N="\$(P)OpenGripSM",   INP="\$(P)DO:2-I.B18"}
+{N="\$(P)CloseGripSM",  INP="\$(P)DO:2-I.B19"}
+{N="\$(P)OpenGripC",    INP="\$(P)DO:2-I.B1A"}
+{N="\$(P)CloseGripC",   INP="\$(P)DO:2-I.B1B"}
+{N="\$(P)CloseGripEC",  INP="\$(P)DO:2-I.B1C"}
+{N="\$(P)DO:93",        INP="\$(P)DO:2-I.B1D"}
+{N="\$(P)DO:94",        INP="\$(P)DO:2-I.B1E"}
+{N="\$(P)DO:95",        INP="\$(P)DO:2-I.B1F"}
+{N="\$(P)DO:96",        INP="\$(P)DO:3-I.B0"}
+{N="\$(P)DO:97",        INP="\$(P)DO:3-I.B1"}
+{N="\$(P)DO:98",        INP="\$(P)DO:3-I.B2"}
+{N="\$(P)DO:99",        INP="\$(P)DO:3-I.B3"}
+{N="\$(P)DO:100",       INP="\$(P)DO:3-I.B4"}
+{N="\$(P)DO:101",       INP="\$(P)DO:3-I.B5"}
+{N="\$(P)DO:102",       INP="\$(P)DO:3-I.B6"}
+{N="\$(P)DO:103",       INP="\$(P)DO:3-I.B7"}
+{N="\$(P)DO:104",       INP="\$(P)DO:3-I.B8"}
+{N="\$(P)DO:105",       INP="\$(P)DO:3-I.B9"}
+{N="\$(P)DO:106",       INP="\$(P)DO:3-I.BA"}
+{N="\$(P)DO:107",       INP="\$(P)DO:3-I.BB"}
+{N="\$(P)DO:108",       INP="\$(P)DO:3-I.BC"}
+{N="\$(P)DO:109",       INP="\$(P)DO:3-I.BD"}
+{N="\$(P)DO:110",       INP="\$(P)DO:3-I.BE"}
+{N="\$(P)DO:111",       INP="\$(P)DO:3-I.BF"}
+}

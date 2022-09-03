@@ -4,13 +4,13 @@
 # Macros
 #  P    - Record name prefix
 #  DEV  - asyn port name of status socket
-#  SCAN - (Optional)  Default "1 second"
+#  SCAN - status scan rate
 
 # Status chain
 
 record(ai, "$(P)Scn:Strt-I_") {
     field(DTYP, "Soft Timestamp") # OS time at start of scan
-    field(SCAN, "$(SCAN=1 second)")
+    field(SCAN, "$(SCAN)")
     field(FLNK, "$(P)Pwr-Sts")
 }
 

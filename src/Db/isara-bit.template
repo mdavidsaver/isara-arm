@@ -1,0 +1,8 @@
+record(bi, "$(N)-Sts") {
+    field(DESC, "$(DESC=)")
+    field(INP, "$(INP) CP MS")
+    field(ZNAM, "$(ZNAM=0)")
+    field(ONAM, "$(ONAM=1)")
+    field(ZSV , "$(ZSV=)")
+    field(OSV , "$(OSV=)")
+}
