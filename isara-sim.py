@@ -1,14 +1,21 @@
 #!/usr/bin/env python3
 """
-Bare bones simulation of ISARA sample auto-mounter arm
+Bare bones simulation of ISARA sample auto-mounter arm.
+
+Based on vendor docs:
+  ISARA-NS-05 rev. 12, April 2019  - requests and replies
+  ISARA-NS-12 rev. 2, August 2014  - DI/DO signal list
+  Vendor does not allow reproduction/distribution of docs :.(
 """
 
 import asyncio
 from dataclasses import dataclass, field
 from functools import wraps
+from enum import IntEnum
 import logging
 import re
 import signal
+import typing
 
 import numpy
 
@@ -17,6 +24,23 @@ _log = logging.getLogger()
 # <cmd>
 # <cmd> '(' <args> ')'
 _cmd = re.compile(rb'([a-z_]+)(?:\(([^)]*)\))?')
+
+class Tool(IntEnum):
+    ToolChanger = 0
+    Cryotong = 1
+    SingleGripper = 2
+    DoubleGripper = 3
+    MiniSpineGripper = 4
+    RotatingGripper = 5
+    PlateGripper = 6
+    Spare = 7
+    LaserTool = 8
+
+class DI(IntEnum):
+    pass
+
+class DO(IntEnum):
+    pass
 
 def task_guard(corofn):
     """Make some noise if a Task ends with an error
@@ -72,7 +96,7 @@ class State:
     power: bool = False
     remote: bool = False
     fault_stop: bool = False
-    tool: str = 'DoubleGripper'
+    tool: Tool = Tool.DoubleGripper
     position: str = 'HOME'
     path: str = ''
     gripA: bool = False
@@ -129,7 +153,7 @@ class State:
             self.power,
             self.remote,
             self.fault_stop,
-            self.tool,
+            self.tool.name,
             self.position,
             self.path,
             self.gripA,
@@ -173,7 +197,9 @@ class State:
                 raise NotImplementedError(type(s))
         return R
 
-def state_gate(cond, msg):
+def state_gate(cond: typing.Callable[[State], bool], msg: str):
+    """Wrap method to return an error if a condition isn't met.
+    """
     def dec(fn):
         @wraps(fn)
         def wrapper(self, args):
@@ -182,6 +208,11 @@ def state_gate(cond, msg):
             return fn(self, args)
         return wrapper
     return dec
+
+# must be powered
+gate_powered = state_gate(lambda S:S.power, b"Robot power disabled")
+# must be stopped
+gate_not_moving = state_gate(lambda S:not S.seqRun, b"Disabled when path is running")
 
 class ISARA:
     def __init__(self):
@@ -193,11 +224,12 @@ class ISARA:
         self.S = State()
         self.S.lastMsg = 'System OK for operation'
 
+        # observed values
         self.S.di[:] = numpy.asarray('1 0 0 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0'.split(' '), dtype='u1')
 
         self.S.do[:] = numpy.asarray('0 0 0 0 0 1 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0'.split(' '), dtype='u1')
 
-        self.S.binAlarm |= 0x40000000
+        #self.S.binAlarm |= 0x40000000
 
         self.S.pos[:] = [304.7,139.9,-94.4,0.0,-180.0,-47.5]
 
@@ -236,9 +268,11 @@ class ISARA:
                     self.S.s_traj = self.S.s_path = None
                     self.S.s_time = 0.0
 
+    @gate_not_moving
     def cmd_poweron(self, args):
         self.S.power = True
 
+    @gate_not_moving
     def cmd_poweroff(self, args):
         self.S.power = False
 
@@ -267,6 +301,15 @@ class ISARA:
     def cmd_restart(self, args):
         self.S.seqPause = False
 
+    @gate_not_moving
+    def cmd_openlid(self, args):
+        pass
+
+    @gate_not_moving
+    def cmd_closelid(self, args):
+        pass
+
+
     def cmd_regulon(self, args):
         self.S.ln2Reg = True
 
@@ -279,7 +322,7 @@ class ISARA:
     def cmd_ps_reguloff(self, args):
         self.S.ln2PhaSep = False
 
-    @state_gate(lambda S:S.power, b"Robot power disabled")
+    @gate_powered
     def cmd_traj(self, args):
         path = _paths.get(args[0])
         if path is not None:
