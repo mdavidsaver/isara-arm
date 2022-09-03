@@ -5,6 +5,10 @@
 #  P - Record name prefix
 #  DEV - asyn port name of command socket
 
+file "asynRecord.db" {
+{P="$(P)", R="Prt:Ctl-Asyn", PORT="\$(DEV)", ADDR="-1", OMAX="256", IMAX="256"}
+}
+
 # "simple" control commands (without arguments)
 file "isara-simple-cmd.template" {
 { DEV="\$(DEV)", R="\$(P)Pwr:On", CMD="poweron"}

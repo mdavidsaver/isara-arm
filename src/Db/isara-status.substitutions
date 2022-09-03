@@ -3,8 +3,12 @@
 #  DEV  - asyn port name of status socket
 #  SCAN - (Optional)  Default "1 second"
 
+file "asynRecord.db" {
+{P="$(P)", R="Prt:St-Asyn", PORT="\$(DEV)", ADDR="-1", OMAX="256", IMAX="256"}
+}
+
 file "isara-status-logic.template" {
-{P="\$(P)", DEV="$(DEV)", SCAN="\$(SCAN=1 second)"}
+{P="\$(P)", DEV="\$(DEV)", SCAN="\$(SCAN=1 second)"}
 }
 
 file "isara-bit.template" {

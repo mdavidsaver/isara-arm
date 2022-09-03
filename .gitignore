@@ -3,6 +3,7 @@ O.*/
 /lib/
 /dbd/
 /db/
+/opi/
 /configure/*.local
 iocBoot/*/envPaths
 *.dbl
