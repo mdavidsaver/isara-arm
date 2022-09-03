@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
-  <name>ISARA Arm $(P)</name>
+  <name>ISARA Samp $(P)</name>
   <height>880</height>
   <widget type="label" version="2.0.0">
     <name>Label</name>
     <class>TITLE</class>
-    <text>ISARA Arm Sample Data $(P)</text>
+    <text>ISARA Sample Data $(P)</text>
     <x use_class="true">0</x>
     <y use_class="true">0</y>
     <width>550</width>
@@ -29,8 +29,8 @@
     <file>_isara-readback.bob</file>
     <x>30</x>
     <y>410</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -42,8 +42,8 @@
     <file>_isara-readback.bob</file>
     <x>30</x>
     <y>380</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -55,8 +55,8 @@
     <file>_isara-readback.bob</file>
     <x>30</x>
     <y>350</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -68,8 +68,8 @@
     <file>_isara-readback.bob</file>
     <x>30</x>
     <y>320</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -81,8 +81,8 @@
     <file>_isara-readback.bob</file>
     <x>30</x>
     <y>290</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -94,8 +94,8 @@
     <file>_isara-readback.bob</file>
     <x>30</x>
     <y>260</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -107,8 +107,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>20</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -120,8 +120,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>860</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -133,8 +133,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>830</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -146,8 +146,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>800</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -159,8 +159,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>770</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -172,8 +172,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>740</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -185,8 +185,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>710</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -198,8 +198,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>680</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -211,8 +211,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>650</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -224,8 +224,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>620</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -237,8 +237,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>590</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -250,8 +250,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>560</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -263,8 +263,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>530</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -276,8 +276,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>500</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -289,8 +289,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>470</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -302,8 +302,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>440</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -315,8 +315,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>410</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -328,8 +328,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>380</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -341,8 +341,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>350</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -354,8 +354,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>320</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -367,8 +367,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>290</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -380,8 +380,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>260</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -393,8 +393,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>230</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -406,8 +406,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>200</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -419,8 +419,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>170</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -432,8 +432,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>140</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -445,8 +445,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>110</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -458,8 +458,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>80</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -471,8 +471,8 @@
     <file>_isara-readback.bob</file>
     <x>480</x>
     <y>50</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -484,8 +484,8 @@
     <file>_isara-readback.bob</file>
     <x>30</x>
     <y>230</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -497,8 +497,8 @@
     <file>_isara-readback.bob</file>
     <x>30</x>
     <y>200</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -510,8 +510,8 @@
     <file>_isara-readback.bob</file>
     <x>30</x>
     <y>170</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -523,8 +523,8 @@
     <file>_isara-readback.bob</file>
     <x>30</x>
     <y>140</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -536,8 +536,8 @@
     <file>_isara-readback.bob</file>
     <x>30</x>
     <y>110</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -549,8 +549,8 @@
     <file>_isara-readback.bob</file>
     <x>30</x>
     <y>80</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -562,8 +562,8 @@
     <file>_isara-readback.bob</file>
     <x>30</x>
     <y>50</y>
-    <width>320</width>
-    <height>20</height>
+    <width>325</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
 </display>

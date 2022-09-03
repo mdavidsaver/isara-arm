@@ -1009,64 +1009,6 @@
       <resize>2</resize>
     </widget>
   </widget>
-  <widget type="byte_monitor" version="2.0.0">
-    <name>Byte Monitor_4</name>
-    <pv_name>$(P)DO:0-I</pv_name>
-    <x>300</x>
-    <y>52</y>
-    <width>240</width>
-    <height>7</height>
-    <numBits>32</numBits>
-  </widget>
-  <widget type="byte_monitor" version="2.0.0">
-    <name>Byte Monitor_5</name>
-    <pv_name>$(P)DO:1-I</pv_name>
-    <x>300</x>
-    <y>69</y>
-    <width>240</width>
-    <height>7</height>
-    <numBits>32</numBits>
-  </widget>
-  <widget type="byte_monitor" version="2.0.0">
-    <name>Byte Monitor_6</name>
-    <pv_name>$(P)DO:2-I</pv_name>
-    <x>300</x>
-    <y>86</y>
-    <width>240</width>
-    <height>7</height>
-    <numBits>32</numBits>
-  </widget>
-  <widget type="byte_monitor" version="2.0.0">
-    <name>Byte Monitor_7</name>
-    <pv_name>$(P)DO:3-I</pv_name>
-    <x>300</x>
-    <y>103</y>
-    <width>240</width>
-    <height>7</height>
-    <numBits>32</numBits>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_6</name>
-    <text>Raw Digitial Output</text>
-    <x>350</x>
-    <y>31</y>
-    <width>150</width>
-    <height>21</height>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_9</name>
-    <text>0</text>
-    <x>540</x>
-    <y>31</y>
-    <width>20</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_11</name>
-    <text>31</text>
-    <x>300</x>
-    <y>30</y>
-    <width>20</width>
-  </widget>
   <widget type="group" version="2.0.0">
     <name>Digital Input</name>
     <y>50</y>
@@ -1131,7 +1073,7 @@
         <macros>
           <P>$(P)SD:</P>
         </macros>
-        <target>replace</target>
+        <target>tab</target>
         <description>Open Display</description>
       </action>
     </actions>
@@ -1191,6 +1133,63 @@
       <x>82</x>
       <y>1</y>
       <width>130</width>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Digital Output</name>
+    <x>280</x>
+    <y>50</y>
+    <width>280</width>
+    <height>139</height>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor_4</name>
+      <pv_name>$(P)DO:0-I</pv_name>
+      <x>2</x>
+      <y>37</y>
+      <width>240</width>
+      <height>7</height>
+      <numBits>32</numBits>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor_5</name>
+      <pv_name>$(P)DO:1-I</pv_name>
+      <x>2</x>
+      <y>54</y>
+      <width>240</width>
+      <height>7</height>
+      <numBits>32</numBits>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor_6</name>
+      <pv_name>$(P)DO:2-I</pv_name>
+      <x>2</x>
+      <y>71</y>
+      <width>240</width>
+      <height>7</height>
+      <numBits>32</numBits>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor_7</name>
+      <pv_name>$(P)DO:3-I</pv_name>
+      <x>2</x>
+      <y>88</y>
+      <width>240</width>
+      <height>7</height>
+      <numBits>32</numBits>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_9</name>
+      <text>0</text>
+      <x>230</x>
+      <y>8</y>
+      <width>20</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_11</name>
+      <text>31</text>
+      <x>2</x>
+      <y>7</y>
+      <width>20</width>
     </widget>
   </widget>
 </display>
