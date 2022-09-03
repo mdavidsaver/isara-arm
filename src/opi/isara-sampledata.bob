@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>ISARA Arm $(P)</name>
+  <height>880</height>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>TITLE</class>
+    <text>ISARA Arm Sample Data $(P)</text>
+    <x use_class="true">0</x>
+    <y use_class="true">0</y>
+    <width>550</width>
+    <height>31</height>
+    <font use_class="true">
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)AirTm-I</DESC>
+      <NAME>$(P)AirTm-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>30</x>
+    <y>410</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Cnt:Flt-I</DESC>
+      <NAME>$(P)Cnt:Flt-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>30</x>
+    <y>380</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Cnt:OK-I</DESC>
+      <NAME>$(P)Cnt:OK-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>30</x>
+    <y>350</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)GetTm-I</DESC>
+      <NAME>$(P)GetTm-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>30</x>
+    <y>320</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)GnTm-I</DESC>
+      <NAME>$(P)GnTm-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>30</x>
+    <y>290</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)PPTm-I</DESC>
+      <NAME>$(P)PPTm-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>30</x>
+    <y>260</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck1-I</DESC>
+      <NAME>$(P)Pck1-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>20</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck10-I</DESC>
+      <NAME>$(P)Pck10-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>860</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck11-I</DESC>
+      <NAME>$(P)Pck11-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>830</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck12-I</DESC>
+      <NAME>$(P)Pck12-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>800</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck13-I</DESC>
+      <NAME>$(P)Pck13-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>770</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck14-I</DESC>
+      <NAME>$(P)Pck14-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>740</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck15-I</DESC>
+      <NAME>$(P)Pck15-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>710</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck16-I</DESC>
+      <NAME>$(P)Pck16-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>680</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck17-I</DESC>
+      <NAME>$(P)Pck17-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>650</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck18-I</DESC>
+      <NAME>$(P)Pck18-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>620</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck19-I</DESC>
+      <NAME>$(P)Pck19-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>590</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck2-I</DESC>
+      <NAME>$(P)Pck2-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>560</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck20-I</DESC>
+      <NAME>$(P)Pck20-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>530</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck21-I</DESC>
+      <NAME>$(P)Pck21-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>500</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck22-I</DESC>
+      <NAME>$(P)Pck22-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>470</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck23-I</DESC>
+      <NAME>$(P)Pck23-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>440</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck24-I</DESC>
+      <NAME>$(P)Pck24-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>410</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck25-I</DESC>
+      <NAME>$(P)Pck25-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>380</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck26-I</DESC>
+      <NAME>$(P)Pck26-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>350</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck27-I</DESC>
+      <NAME>$(P)Pck27-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>320</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck28-I</DESC>
+      <NAME>$(P)Pck28-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>290</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck29-I</DESC>
+      <NAME>$(P)Pck29-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>260</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck3-I</DESC>
+      <NAME>$(P)Pck3-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>230</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck4-I</DESC>
+      <NAME>$(P)Pck4-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>200</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck5-I</DESC>
+      <NAME>$(P)Pck5-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>170</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck6-I</DESC>
+      <NAME>$(P)Pck6-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>140</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck7-I</DESC>
+      <NAME>$(P)Pck7-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>110</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck8-I</DESC>
+      <NAME>$(P)Pck8-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>80</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)Pck9-I</DESC>
+      <NAME>$(P)Pck9-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>480</x>
+    <y>50</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)PckN-I</DESC>
+      <NAME>$(P)PckN-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>30</x>
+    <y>230</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)PckT-I</DESC>
+      <NAME>$(P)PckT-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>30</x>
+    <y>200</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)PltN-I</DESC>
+      <NAME>$(P)PltN-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>30</x>
+    <y>170</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)PltTm-I</DESC>
+      <NAME>$(P)PltTm-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>30</x>
+    <y>140</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)PutTm-I</DESC>
+      <NAME>$(P)PutTm-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>30</x>
+    <y>110</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)SampN-I</DESC>
+      <NAME>$(P)SampN-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>30</x>
+    <y>80</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>$(P)SampTm-I</DESC>
+      <NAME>$(P)SampTm-I</NAME>
+    </macros>
+    <file>_isara-readback.bob</file>
+    <x>30</x>
+    <y>50</y>
+    <width>320</width>
+    <height>20</height>
+    <resize>2</resize>
+  </widget>
+</display>

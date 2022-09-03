@@ -358,6 +358,9 @@ class ISARA:
             elif line==b'message':
                 writer.write(self.S.lastMsg.encode() + b'\r')
 
+            elif line==b'sampledata':
+                writer.write(b'sampledata(0.0,0.0,9.0,8.0,0.0,24.98,0.0,14.19,52.11,13.13,79.46,1202,21,0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,)\r')
+
             else:
                 writer.write(b'Unexpected status command\r')
 

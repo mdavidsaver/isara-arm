@@ -1123,4 +1123,21 @@
       <width>20</width>
     </widget>
   </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_1</name>
+    <actions>
+      <action type="open_display">
+        <file>isara-sampledata.bob</file>
+        <macros>
+          <P>$(P)SD:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Last Sample Data</text>
+    <x>30</x>
+    <y>190</y>
+    <width>150</width>
+  </widget>
 </display>

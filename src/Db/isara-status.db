@@ -184,7 +184,7 @@ record(aSub, "$(P)DO:Chop-I_") {
     field(FTVD, "ULONG")
     field(OUTD, "$(P)DO:3-I PP MSI")
 
-    field(FLNK, "$(P)Scn:End-I_")
+    field(FLNK, "$(P)SD:PltN-I")
 }
 
 record(mbbiDirect, "$(P)DO:0-I") {
@@ -200,6 +200,53 @@ record(mbbiDirect, "$(P)DO:3-I") {
     field(NOBT, "32")
 }
 
+record(ai, "$(P)SD:PltN-I") {
+    field(DTYP, "stream")
+    field(INP , "@isara-status.proto sampledata($(P)SD:) $(DEV)")
+    field(FLNK, "$(P)Scn:End-I_")
+}
+record(ai, "$(P)SD:PltTm-I") {}
+record(ai, "$(P)SD:PckN-I") {}
+record(ai, "$(P)SD:SampN-I") {}
+record(ai, "$(P)SD:PckT-I") {}
+record(ai, "$(P)SD:AirTm-I") {}
+record(ai, "$(P)SD:PPTm-I") {}
+record(ai, "$(P)SD:PutTm-I") {}
+record(ai, "$(P)SD:GnTm-I") {}
+record(ai, "$(P)SD:GetTm-I") {}
+record(ai, "$(P)SD:SampTm-I") {}
+record(longin, "$(P)SD:Cnt:OK-I") {}
+record(longin, "$(P)SD:Cnt:Flt-I") {}
+record(stringin, "$(P)SD:Pck1-I") {}
+record(stringin, "$(P)SD:Pck2-I") {}
+record(stringin, "$(P)SD:Pck3-I") {}
+record(stringin, "$(P)SD:Pck4-I") {}
+record(stringin, "$(P)SD:Pck5-I") {}
+record(stringin, "$(P)SD:Pck6-I") {}
+record(stringin, "$(P)SD:Pck7-I") {}
+record(stringin, "$(P)SD:Pck8-I") {}
+record(stringin, "$(P)SD:Pck9-I") {}
+record(stringin, "$(P)SD:Pck10-I") {}
+record(stringin, "$(P)SD:Pck11-I") {}
+record(stringin, "$(P)SD:Pck12-I") {}
+record(stringin, "$(P)SD:Pck13-I") {}
+record(stringin, "$(P)SD:Pck14-I") {}
+record(stringin, "$(P)SD:Pck15-I") {}
+record(stringin, "$(P)SD:Pck16-I") {}
+record(stringin, "$(P)SD:Pck17-I") {}
+record(stringin, "$(P)SD:Pck18-I") {}
+record(stringin, "$(P)SD:Pck19-I") {}
+record(stringin, "$(P)SD:Pck20-I") {}
+record(stringin, "$(P)SD:Pck21-I") {}
+record(stringin, "$(P)SD:Pck22-I") {}
+record(stringin, "$(P)SD:Pck23-I") {}
+record(stringin, "$(P)SD:Pck24-I") {}
+record(stringin, "$(P)SD:Pck25-I") {}
+record(stringin, "$(P)SD:Pck26-I") {}
+record(stringin, "$(P)SD:Pck27-I") {}
+record(stringin, "$(P)SD:Pck28-I") {}
+record(stringin, "$(P)SD:Pck29-I") {}
+
 # status scan status
 
 record(ai, "$(P)Scn:End-I_") {
@@ -207,23 +254,27 @@ record(ai, "$(P)Scn:End-I_") {
     field(FLNK, "$(P)Scn:Tm-I")
 }
 
+# measured time for all I/O
 record(calc, "$(P)Scn:Tm-I") {
+    field(DESC, "Time to SCAN")
     field(INPA, "$(P)Scn:Strt-I_")
     field(INPB, "$(P)Scn:End-I_")
     field(INPC, "1000")
     field(CALC, "(B-A)*C")
     field(EGU , "ms")
     field(PREC, "3")
-    field(FLNK, "$(P)Scn:Cnt-Calc_")
+    field(FLNK, "$(P)Scn:Cnt-I")
 }
 
-record(calc, "$(P)Scn:Cnt-Calc_") {
+record(calc, "$(P)Scn:Cnt-I") {
     field(CALC, "(VAL+1)%0xffff")
 }
 
+# measured rate of status scan cycle counter
 record(calc, "$(P)Scn:Rate-I") {
+    field(DESC, "Effective SCAN rate")
     field(SCAN, "10 second")
-    field(INPA, "$(P)Scn:Cnt-Calc_")
+    field(INPA, "$(P)Scn:Cnt-I")
     field(CALC, "C:=A-B;B:=A;C/10")
     field(EGU , "Hz")
     field(PREC, "1")
