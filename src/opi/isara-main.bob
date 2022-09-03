@@ -1140,4 +1140,57 @@
     <y>190</y>
     <width>150</width>
   </widget>
+  <widget type="group" version="2.0.0">
+    <name>Driver Status SCAN</name>
+    <x>990</x>
+    <y>651</y>
+    <width>360</width>
+    <height>160</height>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_1</name>
+      <macros>
+        <DESC>I/O Time</DESC>
+        <NAME>$(P)Scn:Tm-I</NAME>
+      </macros>
+      <file>_isara-readback.bob</file>
+      <x>2</x>
+      <y>33</y>
+      <width>320</width>
+      <height>20</height>
+      <resize>2</resize>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_2</name>
+      <macros>
+        <DESC>Cycle Count</DESC>
+        <NAME>$(P)Scn:Cnt-I</NAME>
+      </macros>
+      <file>_isara-readback.bob</file>
+      <x>2</x>
+      <y>62</y>
+      <width>320</width>
+      <height>20</height>
+      <resize>2</resize>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_3</name>
+      <macros>
+        <DESC>Cycle Rate</DESC>
+        <NAME>$(P)Scn:Rate-I</NAME>
+      </macros>
+      <file>_isara-readback.bob</file>
+      <x>2</x>
+      <y>92</y>
+      <width>320</width>
+      <height>20</height>
+      <resize>2</resize>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Combo Box</name>
+      <pv_name>$(P)Scn:Strt-I_.SCAN</pv_name>
+      <x>82</x>
+      <y>1</y>
+      <width>130</width>
+    </widget>
+  </widget>
 </display>

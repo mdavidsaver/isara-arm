@@ -278,8 +278,8 @@ record(calc, "$(P)Scn:Rate-I") {
     field(CALC, "C:=A-B;B:=A;C/10")
     field(EGU , "Hz")
     field(PREC, "1")
-    field(HIGH, "2")
-    field(LOW , "0.1")
-    field(HSV , "MAJOR")
+    field(HIGH, "11")   # faster than SCAN=".1 second"
+    field(LOW , "0.05") # slower than SCAN="10 second"
+    field(HSV , "MINOR")
     field(LSV , "MAJOR")
 }
