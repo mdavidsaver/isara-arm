@@ -10,34 +10,34 @@ cmd {
 }
 
 traj_home {
-    out "traj(home, %(\$1Tl-Sel)u)";
+    out "traj(home,%(\$1Tl-Sel)u)";
     in "home";
 }
 traj_recover {
-    out "traj(recover, %(\$1Tl-Sel)u)";
+    out "traj(recover,%(\$1Tl-Sel)u)";
     in "recover";
 }
 traj_changetool {
-    out "traj(changetool, %(\$1Tl-Sel)u)";
+    out "traj(changetool,%(\$1Tl-Sel)u)";
     in "changetool";
 }
 traj_soak {
-    out "traj(soak, %(\$1Tl-Sel)u)";
+    out "traj(soak,%(\$1Tl-Sel)u)";
     in "soak";
 }
 traj_dry {
-    out "traj(dry, %(\$1Tl-Sel)u)";
+    out "traj(dry,%(\$1Tl-Sel)u)";
     in "dry";
 }
 traj_get {
-    out "traj(get, %(\$1Tl-Sel)u)";
+    out "traj(get,%(\$1Tl-Sel)u)";
     in "get";
 }
 traj_put {
-    out "traj(put, %(\$1Tl-Sel)u, %(\$1Plt-SP)u, %(\$1Samp-SP)u)";
+    out "traj(put,%(\$1Tl-Sel)u,%(\$1Plt-SP)u,%(\$1Samp-SP)u)";
     in "put";
 }
 traj_getput {
-    out "traj(getput, %(\$1Tl-Sel)u, %(\$1Plt-SP)u, %(\$1Samp-SP)u)";
+    out "traj(getput,%(\$1Tl-Sel)u,%(\$1Plt-SP)u,%(\$1Samp-SP)u)";
     in "getput";
 }
