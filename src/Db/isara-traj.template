@@ -20,12 +20,15 @@ record(mbbo, "$(P)Tl-Sel") {
     field(SXVL, "6")
     field(SVVL, "7")
     field(EIVL, "8")
+    field(VAL , "0")
 }
 
 record(longout, "$(P)Plt-SP") {
+    field(VAL , "0")
 }
 
 record(longout, "$(P)Samp-SP") {
+    field(VAL , "0")
 }
 
 

@@ -635,7 +635,7 @@
       <pv_name>$(P)Panic-Cmd</pv_name>
       <text>$(pv_name)</text>
       <x>12</x>
-      <y>352</y>
+      <y>461</y>
       <width>330</width>
     </widget>
     <widget type="action_button" version="3.0.0">
@@ -661,7 +661,7 @@
       </macros>
       <file>_isara-readback.bob</file>
       <x>12</x>
-      <y>304</y>
+      <y>413</y>
       <width>325</width>
       <height>30</height>
       <resize>2</resize>
@@ -674,7 +674,7 @@
       </macros>
       <file>_isara-readback.bob</file>
       <x>12</x>
-      <y>274</y>
+      <y>383</y>
       <width>325</width>
       <height>30</height>
       <resize>2</resize>
@@ -687,7 +687,7 @@
       </macros>
       <file>_isara-readback.bob</file>
       <x>12</x>
-      <y>244</y>
+      <y>353</y>
       <width>325</width>
       <height>30</height>
       <resize>2</resize>
@@ -728,10 +728,40 @@
       <name>Label_4</name>
       <text>Current State</text>
       <x>22</x>
-      <y>212</y>
+      <y>323</y>
       <width>310</width>
       <height>18</height>
       <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_5</name>
+      <text>Plate/Puck Select</text>
+      <x>42</x>
+      <y>212</y>
+      <width>130</width>
+      <height>30</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_6</name>
+      <text>Sample Select</text>
+      <x>42</x>
+      <y>251</y>
+      <width>130</width>
+      <height>30</height>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_1</name>
+      <pv_name>$(P)Plt-SP</pv_name>
+      <x>232</x>
+      <y>212</y>
+      <height>30</height>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_2</name>
+      <pv_name>$(P)Samp-SP</pv_name>
+      <x>232</x>
+      <y>251</y>
+      <height>30</height>
     </widget>
   </widget>
   <widget type="group" version="2.0.0">
@@ -1029,14 +1059,15 @@
   </widget>
   <widget type="group" version="2.0.0">
     <name>Digital Input</name>
-    <y>50</y>
+    <x>10</x>
+    <y>51</y>
     <width>280</width>
-    <height>130</height>
+    <height>138</height>
     <widget type="byte_monitor" version="2.0.0">
       <name>Byte Monitor</name>
       <pv_name>$(P)DI:0-I</pv_name>
       <x>2</x>
-      <y>24</y>
+      <y>37</y>
       <width>240</width>
       <height>7</height>
       <numBits>32</numBits>
@@ -1045,7 +1076,7 @@
       <name>Byte Monitor_1</name>
       <pv_name>$(P)DI:1-I</pv_name>
       <x>2</x>
-      <y>41</y>
+      <y>54</y>
       <width>240</width>
       <height>7</height>
       <numBits>32</numBits>
@@ -1054,7 +1085,7 @@
       <name>Byte Monitor_2</name>
       <pv_name>$(P)DI:2-I</pv_name>
       <x>2</x>
-      <y>58</y>
+      <y>71</y>
       <width>240</width>
       <height>7</height>
       <numBits>32</numBits>
@@ -1063,7 +1094,7 @@
       <name>Byte Monitor_3</name>
       <pv_name>$(P)DI:3-I</pv_name>
       <x>2</x>
-      <y>75</y>
+      <y>88</y>
       <width>240</width>
       <height>7</height>
       <numBits>32</numBits>
@@ -1072,7 +1103,7 @@
       <name>Label_8</name>
       <text>0</text>
       <x>232</x>
-      <y>3</y>
+      <y>6</y>
       <width>20</width>
     </widget>
     <widget type="label" version="2.0.0">
@@ -1096,7 +1127,7 @@
       </actions>
       <text>DI Details</text>
       <x>72</x>
-      <y>2</y>
+      <y>3</y>
       <height>20</height>
       <tooltip>$(actions)</tooltip>
     </widget>
@@ -1124,7 +1155,7 @@
     <x>990</x>
     <y>651</y>
     <width>360</width>
-    <height>160</height>
+    <height>189</height>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_1</name>
       <macros>
@@ -1146,7 +1177,7 @@
       </macros>
       <file>_isara-readback.bob</file>
       <x>2</x>
-      <y>62</y>
+      <y>92</y>
       <width>325</width>
       <height>30</height>
       <resize>2</resize>
@@ -1159,7 +1190,7 @@
       </macros>
       <file>_isara-readback.bob</file>
       <x>2</x>
-      <y>92</y>
+      <y>122</y>
       <width>325</width>
       <height>30</height>
       <resize>2</resize>
@@ -1170,6 +1201,19 @@
       <x>82</x>
       <y>1</y>
       <width>130</width>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_4</name>
+      <macros>
+        <DESC>Max. I/O Time</DESC>
+        <NAME>$(P)Scn:TmW-I</NAME>
+      </macros>
+      <file>_isara-readback.bob</file>
+      <x>2</x>
+      <y>63</y>
+      <width>325</width>
+      <height>30</height>
+      <resize>2</resize>
     </widget>
   </widget>
   <widget type="group" version="2.0.0">
@@ -1260,7 +1304,7 @@
       </action>
     </actions>
     <text>Status expert</text>
-    <x>450</x>
+    <x>430</x>
     <y>191</y>
     <width>120</width>
     <tooltip>$(actions)</tooltip>
@@ -1278,7 +1322,7 @@
       </action>
     </actions>
     <text>Command expert</text>
-    <x>320</x>
+    <x>300</x>
     <y>189</y>
     <width>120</width>
     <tooltip>$(actions)</tooltip>
