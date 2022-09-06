@@ -1,1 +1,1 @@
-function(isara_chop_bits)
+function(isara_group_bits)

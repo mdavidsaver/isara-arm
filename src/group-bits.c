@@ -11,7 +11,7 @@
 /* group bits into words
  *
  * record(aSub, "name") {
- *     field(SNAM, "ISARA Chop Bits")
+ *     field(SNAM, "ISARA Group Bits")
  *     field(INPA, "") # Input bit array
  *     field(FTA , "SHORT")
  *     field(NOA , "256")
@@ -23,7 +23,7 @@
  * }
  */
 static
-long isara_chop_bits(aSubRecord *prec)
+long isara_group_bits(aSubRecord *prec)
 {
     const epicsInt16 *inp;
     size_t c, o;
@@ -68,4 +68,4 @@ long isara_chop_bits(aSubRecord *prec)
     return 0;
 }
 
-epicsRegisterFunction(isara_chop_bits);
+epicsRegisterFunction(isara_group_bits);

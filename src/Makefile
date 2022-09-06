@@ -9,7 +9,7 @@ DBD += isaraSupport.dbd
 
 LIBRARY_HOST += isaraSupport
 
-LIB_SRCS += chop-bits.c
+LIB_SRCS += group-bits.c
 
 include $(TOP)/configure/RULES
 #----------------------------------------

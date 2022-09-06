@@ -228,11 +228,11 @@ record(aai, "$(P)DI-I_") {
     field(NELM, "256") # currently 112 will be used
     field(DTYP, "stream")
     field(INP , "@isara-status.proto bits(di) $(DEV)")
-    field(FLNK, "$(P)DI:Chop-I_")
+    field(FLNK, "$(P)DI:Group-I_")
 }
 
-record(aSub, "$(P)DI:Chop-I_") {
-    field(SNAM, "isara_chop_bits")
+record(aSub, "$(P)DI:Group-I_") {
+    field(SNAM, "isara_group_bits")
 
     field(FTA , "SHORT")
     field(NOA, "256")
@@ -268,11 +268,11 @@ record(aai, "$(P)DO-I_") {
     field(NELM, "256") # currently 112 will be used
     field(DTYP, "stream")
     field(INP , "@isara-status.proto bits(do) $(DEV)")
-    field(FLNK, "$(P)DO:Chop-I_")
+    field(FLNK, "$(P)DO:Group-I_")
 }
 
-record(aSub, "$(P)DO:Chop-I_") {
-    field(SNAM, "isara_chop_bits")
+record(aSub, "$(P)DO:Group-I_") {
+    field(SNAM, "isara_group_bits")
 
     field(FTA , "SHORT")
     field(NOA, "256")
