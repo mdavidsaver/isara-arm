@@ -60,7 +60,7 @@ class Path:
     # final arm position name
     ends: str
     # time to complete move
-    duration: float = 3.0
+    duration: float = 5.0
 
 # trajectories
 _paths = {
@@ -268,6 +268,8 @@ class ISARA:
                     self.S.s_traj = self.S.s_path = None
                     self.S.s_time = 0.0
 
+            self.S.gripDrying = self.S.path == 'dry'
+
     @gate_not_moving
     def cmd_poweron(self, args):
         self.S.power = True
@@ -283,11 +285,8 @@ class ISARA:
         self.S.speedRatio = min(0.01, self.S.speedRatio-1.0)
 
     def cmd_panic(self, args):
+        self.cmd_abort(args)
         self.S.power = False
-        self.S.path = ''
-        self.S.seqRun = self.S.seqPause = False
-        self.S.s_traj = self.S.s_path = None
-        self.S.s_time = 0.0
 
     def cmd_abort(self, args):
         self.S.path = ''

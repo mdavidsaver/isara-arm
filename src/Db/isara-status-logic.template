@@ -6,6 +6,49 @@
 #  DEV  - asyn port name of status socket
 #  SCAN - status scan rate
 
+# Prevent request of "dry" trajectory while moving (~redundant)
+# and for 90 seconds afterwards.
+# Frequent "dry" may damage gripper magnets.
+record(ao, "$(P)DryWt-SP") {
+    field(VAL , "90")
+    field(EGU , "s") # holdoff time in seconds
+}
+
+record(calcout, "$(P)DryDne-Sts_") {
+    field(INPA, "$(P)GripDry-Sts CP MS")
+    field(INPB, "$(P)DryWt-SP NPP")
+    field(CALC, "A")
+    # assume "drying" while disconnected.
+    # prevents bypass of holdoff during restart/reconnect
+    field(OOPT, "Transition To Zero") # start timer as drying completes
+    field(OCAL, "B")
+    field(DOPT, "Use OCAL")
+    field(OUT, "$(P)DryWt-I NPP MS")
+    field(FLNK, "$(P)DryPmt-Calc_")
+}
+record(calc, "$(P)DryWt-I") {
+    field(SCAN, "1 second")
+    field(CALC, "VAL?VAL-1:0")
+    field(EGU , "s")
+    field(FLNK, "$(P)DryPmt-Calc_")
+}
+record(calc, "$(P)DryPmt-Calc_") {
+    field(INPA, "$(P)DryDne-Sts_ NPP MS")
+    field(INPB, "$(P)DryDne-Sts_.SEVR")
+    field(INPC, "$(P)DryWt-I NPP")
+    # permit iif
+    # A - not currently drying
+    # B - drying status valid (status socket connected)
+    # C - hold off counter at zero
+    field(CALC, "!A&&!B&&!C")
+    field(FLNK, "$(P)DryPmt-I")
+}
+record(bi, "$(P)DryPmt-I") {
+    field(INP , "$(P)DryPmt-Calc_ MS")
+    field(ZNAM, "Hold off")
+    field(ONAM, "Permit")
+}
+
 # Status chain
 
 record(ai, "$(P)Scn:Strt-I_") {

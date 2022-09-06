@@ -17,6 +17,18 @@ traj_recover {
     out "traj(recover, %(\$1Tl-Sel)u)";
     in "recover";
 }
+traj_changetool {
+    out "traj(changetool, %(\$1Tl-Sel)u)";
+    in "changetool";
+}
+traj_soak {
+    out "traj(soak, %(\$1Tl-Sel)u)";
+    in "soak";
+}
+traj_dry {
+    out "traj(dry, %(\$1Tl-Sel)u)";
+    in "dry";
+}
 traj_get {
     out "traj(get, %(\$1Tl-Sel)u)";
     in "get";

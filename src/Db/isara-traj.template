@@ -50,6 +50,32 @@ record(bo, "$(P)Move:Rcvr-Cmd") {
     field(VAL , "0")
 }
 
+record(bo, "$(P)Move:Chg-Cmd") {
+    field(DTYP, "stream")
+    field(OUT , "@isara-command.proto traj_changetool($(P)) $(DEV)")
+    field(ZNAM, "Change Tool")
+    field(ONAM, "Change Tool")
+    field(VAL , "0")
+}
+
+record(bo, "$(P)Move:Sk-Cmd") {
+    field(DTYP, "stream")
+    field(OUT , "@isara-command.proto traj_soak($(P)) $(DEV)")
+    field(ZNAM, "Soak")
+    field(ONAM, "Soak")
+    field(VAL , "0")
+}
+
+record(bo, "$(P)Move:Dry-Cmd") {
+    field(DISV, "0")
+    field(SDIS, "$(P)DryPmt-I")
+    field(DTYP, "stream")
+    field(OUT , "@isara-command.proto traj_dry($(P)) $(DEV)")
+    field(ZNAM, "Dry")
+    field(ONAM, "Dry")
+    field(VAL , "0")
+}
+
 record(bo, "$(P)Move:Get-Cmd") {
     field(DTYP, "stream")
     field(OUT , "@isara-command.proto traj_get($(P)) $(DEV)")
