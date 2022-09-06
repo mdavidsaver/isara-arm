@@ -1,6 +1,6 @@
-record(bo, "$(R)-Cmd") {
+record(bo, "$(P)$(R)-Cmd") {
     field(DTYP, "stream")
-    field(OUT , "@isara-command.proto cmd($(CMD)) $(DEV)")
+    field(OUT , "@isara-command.proto cmd($(P),$(CMD)) $(DEV)")
     field(ZNAM, "$(ACTION=$(CMD))")
     field(ONAM, "$(ACTION=$(CMD))")
     field(DESC, "$(DESC=)")

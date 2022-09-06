@@ -1,4 +1,21 @@
 
+record(bo, "$(P)ClrErr-Cmd") {
+    field(DESC, "Clear last traj Err")
+    field(ZNAM, "Clear")
+    field(ONAM, "Clear")
+    field(VAL , "0")
+    field(FLNK, "$(P)NoErr-I_")
+}
+
+record(lso, "$(P)NoErr-I_") {
+    field(OUT, "$(P)LastErr-I PP")
+}
+
+record(lsi, "$(P)LastErr-I") {
+    field(DESC, "Last traj() error")
+    field(SIZV, "128")
+}
+
 # arguments for trajectories
 
 record(mbbo, "$(P)Tl-Sel") {

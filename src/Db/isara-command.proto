@@ -3,10 +3,14 @@
 LockTimeout  = 10000;
 ReplyTimeout = 10000;
 
+@mismatch {
+    in "%(\$1LastErr-I)[^\r]";
+}
+
 # Most commands take no arguments and simply echo on success
 cmd {
-    out "\$1";
-    in "\$1";
+    out "\$2";
+    in "\$2";
 }
 
 traj_home {
