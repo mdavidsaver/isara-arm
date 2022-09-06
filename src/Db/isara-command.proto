@@ -33,6 +33,10 @@ traj_get {
     out "traj(get,%(\$1Tl-Sel)u)";
     in "get";
 }
+traj_back {
+    out "traj(back,%(\$1Tl-Sel)u)";
+    in "back";
+}
 traj_put {
     out "traj(put,%(\$1Tl-Sel)u,%(\$1Plt-SP)u,%(\$1Samp-SP)u)";
     in "put";
@@ -40,4 +44,8 @@ traj_put {
 traj_getput {
     out "traj(getput,%(\$1Tl-Sel)u,%(\$1Plt-SP)u,%(\$1Samp-SP)u)";
     in "getput";
+}
+traj_pick {
+    out "traj(pick,%(\$1Tl-Sel)u,%(\$1Plt-SP)u,%(\$1Samp-SP)u,0,0,0,0,0,0)";
+    in "pick";
 }

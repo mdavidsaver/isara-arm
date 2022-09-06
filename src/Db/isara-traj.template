@@ -84,6 +84,14 @@ record(bo, "$(P)Move:Get-Cmd") {
     field(VAL , "0")
 }
 
+record(bo, "$(P)Move:Bck-Cmd") {
+    field(DTYP, "stream")
+    field(OUT , "@isara-command.proto traj_back($(P)) $(DEV)")
+    field(ZNAM, "Back")
+    field(ONAM, "Back")
+    field(VAL , "0")
+}
+
 record(bo, "$(P)Move:Put-Cmd") {
     field(DTYP, "stream")
     field(OUT , "@isara-command.proto traj_put($(P)) $(DEV)")
@@ -97,5 +105,13 @@ record(bo, "$(P)Move:GetPut-Cmd") {
     field(OUT , "@isara-command.proto traj_getput($(P)) $(DEV)")
     field(ZNAM, "Get+Put")
     field(ONAM, "Get+Put")
+    field(VAL , "0")
+}
+
+record(bo, "$(P)Move:Pck-Cmd") {
+    field(DTYP, "stream")
+    field(OUT , "@isara-command.proto traj_pick($(P)) $(DEV)")
+    field(ZNAM, "Pick")
+    field(ONAM, "Pick")
     field(VAL , "0")
 }
