@@ -11,8 +11,8 @@ file "asynRecord.db" {
 
 # "simple" control commands (without arguments)
 file "isara-simple-cmd.template" {
-{ DEV="\$(DEV)", R="\$(P)Pwr:On", CMD="poweron"}
-{ DEV="\$(DEV)", R="\$(P)Pwr:Off", CMD="poweroff"}
+{ DEV="\$(DEV)", R="\$(P)Pwr:On", CMD="on"}
+{ DEV="\$(DEV)", R="\$(P)Pwr:Off", CMD="off"}
 
 { DEV="\$(DEV)", R="\$(P)Spd:Up", CMD="speedup"}
 { DEV="\$(DEV)", R="\$(P)Spd:Dn", CMD="speeddown"}
