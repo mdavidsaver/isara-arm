@@ -8,7 +8,7 @@ file "asynRecord.db" {
 }
 
 file "isara-status-logic.template" {
-{P="\$(P)", DEV="\$(DEV)", SCAN="\$(SCAN=1 second)"}
+{P="\$(P)", DEV="\$(DEV)", SCAN="\$(SCAN=.2 second)"}
 }
 
 file "isara-bit.template" {
