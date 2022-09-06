@@ -21,15 +21,22 @@ record(bi, "$(P)Pwr-Sts") {
     field(ONAM, "On")
     field(FLNK, "$(P)DI-I_")
 }
+# referenced by state protocol
 record(bi, "$(P)Rmt-Sts") {
+    field(DISV, "-99999") # never disabled
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS") # propagate alarm on disconnect
     field(ZNAM, "Local")
     field(ONAM, "Remote")
 }
 record(bi, "$(P)Flt-Sts") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
     field(ZNAM, "0")
     field(ONAM, "1")
 }
 record(mbbo, "$(P)Tool-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
     field(ZRST, "ToolChanger")
     field(ONST, "Cryotong")
     field(TWST, "SingleGripper")
@@ -49,91 +56,168 @@ record(mbbo, "$(P)Tool-I") {
     field(SVVL, "7")
     field(EIVL, "8")
 }
-record(stringin, "$(P)Pos:Name-I") {}
-record(stringin, "$(P)Path:Name-I") {}
+record(stringin, "$(P)Pos:Name-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
+}
+record(stringin, "$(P)Path:Name-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
+}
 record(bi, "$(P)Grp:A-Sts") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
     field(ZNAM, "0")
     field(ONAM, "1")
 }
 record(bi, "$(P)Grp:B-Sts") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
     field(ZNAM, "0")
     field(ONAM, "1")
 }
-record(longin, "$(P)Pck:A-I") {}
-record(longin, "$(P)Samp:A-I") {}
-record(longin, "$(P)Pck:B-I") {}
-record(longin, "$(P)Samp:B-I") {}
-record(longin, "$(P)Pck:Dif-I") {}
-record(longin, "$(P)Samp:Dif-I") {}
-record(longin, "$(P)Plt:Tl-I") {}
-record(longin, "$(P)Plt:Dif-I") {}
-record(stringin, "$(P)DM:Lst-I") {}
+record(longin, "$(P)Pck:A-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
+}
+record(longin, "$(P)Samp:A-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
+}
+record(longin, "$(P)Pck:B-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
+}
+record(longin, "$(P)Samp:B-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
+}
+record(longin, "$(P)Pck:Dif-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
+}
+record(longin, "$(P)Samp:Dif-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
+}
+record(longin, "$(P)Plt:Tl-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
+}
+record(longin, "$(P)Plt:Dif-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
+}
+record(stringin, "$(P)DM:Lst-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
+}
 record(bi, "$(P)Seq:Run-Sts") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
     field(ZNAM, "Stop")
     field(ONAM, "Move")
 }
 record(bi, "$(P)Seq:Paus-Sts") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
     field(ZNAM, "Normal")
     field(ONAM, "Pause")
 }
 record(ai, "$(P)Speed-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
     field(PREC, "1")
     field(EGU, "%")
 }
 record(bi, "$(P)LN2:Reg-Sts") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
     field(ZNAM, "Off")
     field(ONAM, "On")
 }
-record(longin, "$(P)LN2:SoakPha-I") {}
+record(longin, "$(P)LN2:SoakPha-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
+}
 record(ai, "$(P)LN2:Lvl-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
     field(PREC, "1")
     field(EGU, "%")
 }
 record(ai, "$(P)LN2:Max-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
     field(PREC, "1")
     field(EGU, "%")
 }
 record(ai, "$(P)LN2:Min-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
     field(PREC, "1")
     field(EGU, "%")
 }
 record(bi, "$(P)CamTrk-Sts") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
     field(ZNAM, "Idle")
     field(ONAM, "Track")
 }
 record(bi, "$(P)GripDry-Sts") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
     field(ZNAM, "Idle")
     field(ONAM, "Drying")
 }
 record(bi, "$(P)LN2:PS-Sts") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
     field(ZNAM, "Off")
     field(ONAM, "On")
 }
-record(stringin, "$(P)LastMsg-I") {}
+record(stringin, "$(P)LastMsg-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
+}
 record(mbbiDirect, "$(P)Alarm-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
     field(NOBT, "32")
 }
 record(ai, "$(P)Pos:X-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
     field(PREC, "1")
     field(EGU , "mm")
 }
 record(ai, "$(P)Pos:Y-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
     field(PREC, "1")
     field(EGU , "mm")
 }
 record(ai, "$(P)Pos:Z-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
     field(PREC, "1")
     field(EGU , "mm")
 }
 record(ai, "$(P)Pos:RX-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
     field(PREC, "1")
     field(EGU , "deg")
 }
 record(ai, "$(P)Pos:RY-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
     field(PREC, "1")
     field(EGU , "deg")
 }
 record(ai, "$(P)Pos:RZ-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
     field(PREC, "1")
     field(EGU , "deg")
 }
@@ -224,47 +308,171 @@ record(ai, "$(P)SD:PltN-I") {
     field(INP , "@isara-status.proto sampledata($(P)SD:) $(DEV)")
     field(FLNK, "$(P)Scn:End-I_")
 }
-record(ai, "$(P)SD:PltTm-I") {}
-record(ai, "$(P)SD:PckN-I") {}
-record(ai, "$(P)SD:SampN-I") {}
-record(ai, "$(P)SD:PckT-I") {}
-record(ai, "$(P)SD:AirTm-I") {}
-record(ai, "$(P)SD:PPTm-I") {}
-record(ai, "$(P)SD:PutTm-I") {}
-record(ai, "$(P)SD:GnTm-I") {}
-record(ai, "$(P)SD:GetTm-I") {}
-record(ai, "$(P)SD:SampTm-I") {}
-record(longin, "$(P)SD:Cnt:OK-I") {}
-record(longin, "$(P)SD:Cnt:Flt-I") {}
-record(stringin, "$(P)SD:Pck1-I") {}
-record(stringin, "$(P)SD:Pck2-I") {}
-record(stringin, "$(P)SD:Pck3-I") {}
-record(stringin, "$(P)SD:Pck4-I") {}
-record(stringin, "$(P)SD:Pck5-I") {}
-record(stringin, "$(P)SD:Pck6-I") {}
-record(stringin, "$(P)SD:Pck7-I") {}
-record(stringin, "$(P)SD:Pck8-I") {}
-record(stringin, "$(P)SD:Pck9-I") {}
-record(stringin, "$(P)SD:Pck10-I") {}
-record(stringin, "$(P)SD:Pck11-I") {}
-record(stringin, "$(P)SD:Pck12-I") {}
-record(stringin, "$(P)SD:Pck13-I") {}
-record(stringin, "$(P)SD:Pck14-I") {}
-record(stringin, "$(P)SD:Pck15-I") {}
-record(stringin, "$(P)SD:Pck16-I") {}
-record(stringin, "$(P)SD:Pck17-I") {}
-record(stringin, "$(P)SD:Pck18-I") {}
-record(stringin, "$(P)SD:Pck19-I") {}
-record(stringin, "$(P)SD:Pck20-I") {}
-record(stringin, "$(P)SD:Pck21-I") {}
-record(stringin, "$(P)SD:Pck22-I") {}
-record(stringin, "$(P)SD:Pck23-I") {}
-record(stringin, "$(P)SD:Pck24-I") {}
-record(stringin, "$(P)SD:Pck25-I") {}
-record(stringin, "$(P)SD:Pck26-I") {}
-record(stringin, "$(P)SD:Pck27-I") {}
-record(stringin, "$(P)SD:Pck28-I") {}
-record(stringin, "$(P)SD:Pck29-I") {}
+# referenced by sampledata protocol
+record(ai, "$(P)SD:PltTm-I") {
+    field(DISV, "-99999") # never disabled
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS") # propagate alarm on disconnect
+}
+record(ai, "$(P)SD:PckN-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(ai, "$(P)SD:SampN-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(ai, "$(P)SD:PckT-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(ai, "$(P)SD:AirTm-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(ai, "$(P)SD:PPTm-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(ai, "$(P)SD:PutTm-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(ai, "$(P)SD:GnTm-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(ai, "$(P)SD:GetTm-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(ai, "$(P)SD:SampTm-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(longin, "$(P)SD:Cnt:OK-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(longin, "$(P)SD:Cnt:Flt-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck1-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck2-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck3-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck4-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck5-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck6-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck7-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck8-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck9-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck10-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck11-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck12-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck13-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck14-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck15-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck16-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck17-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck18-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck19-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck20-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck21-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck22-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck23-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck24-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck25-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck26-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck27-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck28-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
+record(stringin, "$(P)SD:Pck29-I") {
+    field(DISV, "-99999")
+    field(SDIS, "$(P)SD:PltN-I.SEVR CP MS")
+}
 
 # status scan status
 
@@ -276,10 +484,20 @@ record(ai, "$(P)Scn:End-I_") {
 # measured time for all I/O
 record(calc, "$(P)Scn:Tm-I") {
     field(DESC, "Time to SCAN")
-    field(INPA, "$(P)Scn:Strt-I_")
-    field(INPB, "$(P)Scn:End-I_")
+    field(INPA, "$(P)Scn:Strt-I_ NPP MS")
+    field(INPB, "$(P)Scn:End-I_ NPP MS")
     field(INPC, "1000")
     field(CALC, "(B-A)*C")
+    field(EGU , "ms")
+    field(PREC, "3")
+    field(ADEL, "10")
+    field(FLNK, "$(P)Scn:TmW-I")
+}
+
+# latch longest time
+record(calc, "$(P)Scn:TmW-I") {
+    field(INPA, "$(P)Scn:Tm-I NPP MS")
+    field(CALC, "A>VAL?A:VAL")
     field(EGU , "ms")
     field(PREC, "3")
     field(FLNK, "$(P)Scn:Cnt-I")
