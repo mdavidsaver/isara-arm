@@ -94,7 +94,7 @@ class State:
     # values returned in reply to b'state' command
     # 0
     power: bool = False
-    remote: bool = False
+    remote: bool = True
     fault_stop: bool = False
     tool: Tool = Tool.DoubleGripper
     position: str = 'HOME'
@@ -271,18 +271,18 @@ class ISARA:
             self.S.gripDrying = self.S.path == 'dry'
 
     @gate_not_moving
-    def cmd_poweron(self, args):
+    def cmd_on(self, args):
         self.S.power = True
 
     @gate_not_moving
-    def cmd_poweroff(self, args):
+    def cmd_off(self, args):
         self.S.power = False
 
     def cmd_speedup(self, args):
-        self.S.speedRatio = max(100.0, self.S.speedRatio+1.0)
+        self.S.speedRatio = min(100.0, self.S.speedRatio*2.0)
 
     def cmd_speeddown(self, args):
-        self.S.speedRatio = min(0.01, self.S.speedRatio-1.0)
+        self.S.speedRatio = max(0.01, self.S.speedRatio/2.0)
 
     def cmd_panic(self, args):
         self.cmd_abort(args)
@@ -351,7 +351,12 @@ class ISARA:
                     reply = None
 
                 else:
-                    meth = getattr(self, 'cmd_' + M.group(1).decode())
+                    try:
+                        meth = getattr(self, 'cmd_' + M.group(1).decode())
+                    except AttributeError:
+                        _log.exception('Not command %r', M.groups())
+                        writer.write(b'Command not found\r')
+                        continue
 
                     reply = meth((M.group(2) or b'').split(b','))
 
