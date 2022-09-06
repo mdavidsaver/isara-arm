@@ -40,24 +40,24 @@ file "isara-bit.template" {
 {N="\$(P)Debug", INP="\$(P)DI:0-I.B5"}
 {N="\$(P)Warning",       INP="\$(P)DI:0-I.B6"}
 {N="\$(P)ManualSeqMode", INP="\$(P)DI:0-I.B7"}
-{N="\$(P)ES:MCP",        INP="\$(P)DI:0-I.B8"}
-{N="\$(P)ES:WMS",        INP="\$(P)DI:0-I.B9"}
-{N="\$(P)ES:USA",        INP="\$(P)DI:0-I.BA"}
-{N="\$(P)ES:USB",        INP="\$(P)DI:0-I.BB"}
-{N="\$(P)ES:USEN",       INP="\$(P)DI:0-I.BC"}
-{N="\$(P)ES:DOOR",       INP="\$(P)DI:0-I.BD"}
+{N="\$(P)ES:MCP",        INP="\$(P)DI:0-I.B8", ZNAM="Open", ONAM="Closed", ZSV="MAJOR"}
+{N="\$(P)ES:WMS",        INP="\$(P)DI:0-I.B9", ZNAM="Open", ONAM="Closed", ZSV="MAJOR"}
+{N="\$(P)ES:USA",        INP="\$(P)DI:0-I.BA", ZNAM="Open", ONAM="Closed", ZSV="MAJOR"}
+{N="\$(P)ES:USB",        INP="\$(P)DI:0-I.BB", ZNAM="Open", ONAM="Closed", ZSV="MAJOR"}
+{N="\$(P)ES:USEN",       INP="\$(P)DI:0-I.BC", ZNAM="Open", ONAM="Closed", ZSV="MAJOR"}
+{N="\$(P)ES:DOOR",       INP="\$(P)DI:0-I.BD", ZNAM="Open", ONAM="Closed", ZSV="MAJOR"}
 {N="\$(P)ES:INTERN",     INP="\$(P)DI:0-I.BE"}
 {N="\$(P)DI:15", INP="\$(P)DI:0-I.BF"}
 {N="\$(P)ToolChanger",   INP="\$(P)DI:0-I.B10"}
-{N="\$(P)GripA:Op",  INP="\$(P)DI:0-I.B11"}
-{N="\$(P)GripA:Cl",  INP="\$(P)DI:0-I.B12"}
-{N="\$(P)GripB:Op",  INP="\$(P)DI:0-I.B13"}
-{N="\$(P)GripB:Cl",  INP="\$(P)DI:0-I.B14"}
+{N="\$(P)GripA:Op",  INP="\$(P)DI:0-I.B11", ZNAM="Not Open", ONAM="Open"}
+{N="\$(P)GripA:Cl",  INP="\$(P)DI:0-I.B12", ZNAM="Not Closed", ONAM="Closed"}
+{N="\$(P)GripB:Op",  INP="\$(P)DI:0-I.B13", ZNAM="Not Open", ONAM="Open"}
+{N="\$(P)GripB:Cl",  INP="\$(P)DI:0-I.B14", ZNAM="Not Closed", ONAM="Closed"}
 {N="\$(P)BlowAir",       INP="\$(P)DI:0-I.B15"}
-{N="\$(P)SGripOpened",   INP="\$(P)DI:0-I.B16"}
-{N="\$(P)SGripClosed",   INP="\$(P)DI:0-I.B17"}
-{N="\$(P)CGripOpened",   INP="\$(P)DI:0-I.B18"}
-{N="\$(P)CGripClosed",   INP="\$(P)DI:0-I.B19"}
+{N="\$(P)SGripOpened",   INP="\$(P)DI:0-I.B16", ZNAM="Not Closed", ONAM="Closed"}
+{N="\$(P)SGripClosed",   INP="\$(P)DI:0-I.B17", ZNAM="Not Closed", ONAM="Closed"}
+{N="\$(P)CGripOpened",   INP="\$(P)DI:0-I.B18", ZNAM="Not Closed", ONAM="Closed"}
+{N="\$(P)CGripClosed",   INP="\$(P)DI:0-I.B19", ZNAM="Not Closed", ONAM="Closed"}
 {N="\$(P)DI:26", INP="\$(P)DI:0-I.B1A"}
 {N="\$(P)DI:27", INP="\$(P)DI:0-I.B1B"}
 {N="\$(P)DI:28",        INP="\$(P)DI:0-I.B1C"}
@@ -145,17 +145,17 @@ file "isara-bit.template" {
 {N="\$(P)DI:110",        INP="\$(P)DI:3-I.BE"}
 {N="\$(P)DI:111",        INP="\$(P)DI:3-I.BF"}
 # DO bits
-{N="\$(P)PwrON",        INP="\$(P)DO:0-I.B0"}
+{N="\$(P)PwrON",        INP="\$(P)DO:0-I.B0", ZNAM="Off", ONAM="On"}
 {N="\$(P)FltAck",       INP="\$(P)DO:0-I.B1"}
 {N="\$(P)Stop", INP="\$(P)DO:0-I.B2"}
 {N="\$(P)Pause",        INP="\$(P)DO:0-I.B3"}
 {N="\$(P)AckEndSeq",    INP="\$(P)DO:0-I.B4"}
 {N="\$(P)AckManualSeq", INP="\$(P)DO:0-I.B5"}
 {N="\$(P)DO:6", INP="\$(P)DO:0-I.B6"}
-{N="\$(P)WarmDewar",    INP="\$(P)DO:0-I.B7"}
-{N="\$(P)ColdDewar",    INP="\$(P)DO:0-I.B8"}
-{N="\$(P)LidOpened",    INP="\$(P)DO:0-I.B9"}
-{N="\$(P)LidClosed",    INP="\$(P)DO:0-I.BA"}
+{N="\$(P)WarmDewar",    INP="\$(P)DO:0-I.B7", ZNAM="Not Warm", ONAM="Warm"}
+{N="\$(P)ColdDewar",    INP="\$(P)DO:0-I.B8", ZNAM="Not Cold", ONAM="Cold"}
+{N="\$(P)LidOpened",    INP="\$(P)DO:0-I.B9", ZNAM="Not Open", ONAM="Open"}
+{N="\$(P)LidClosed",    INP="\$(P)DO:0-I.BA", ZNAM="Not Closed", ONAM="Closed"}
 {N="\$(P)Grp:OpA",      INP="\$(P)DO:0-I.BB"}
 {N="\$(P)Grp:ClA",      INP="\$(P)DO:0-I.BC"}
 {N="\$(P)Grp:OpB",      INP="\$(P)DO:0-I.BD"}
@@ -201,35 +201,35 @@ file "isara-bit.template" {
 {N="\$(P)DO:53",        INP="\$(P)DO:1-I.B15"}
 {N="\$(P)DO:54",        INP="\$(P)DO:1-I.B16"}
 {N="\$(P)DO:55",        INP="\$(P)DO:1-I.B17"}
-{N="\$(P)Pck:1",        INP="\$(P)DO:1-I.B18"}
-{N="\$(P)Pck:2",        INP="\$(P)DO:1-I.B19"}
-{N="\$(P)Pck:3",        INP="\$(P)DO:1-I.B1A"}
-{N="\$(P)Pck:4",        INP="\$(P)DO:1-I.B1B"}
-{N="\$(P)Pck:5",        INP="\$(P)DO:1-I.B1C"}
-{N="\$(P)Pck:6",        INP="\$(P)DO:1-I.B1D"}
-{N="\$(P)Pck:7",        INP="\$(P)DO:1-I.B1E"}
-{N="\$(P)Pck:8",        INP="\$(P)DO:1-I.B1F"}
-{N="\$(P)Pck:9",        INP="\$(P)DO:2-I.B0"}
-{N="\$(P)Pck:10",       INP="\$(P)DO:2-I.B1"}
-{N="\$(P)Pck:11",       INP="\$(P)DO:2-I.B2"}
-{N="\$(P)Pck:12",       INP="\$(P)DO:2-I.B3"}
-{N="\$(P)Pck:13",       INP="\$(P)DO:2-I.B4"}
-{N="\$(P)Pck:14",       INP="\$(P)DO:2-I.B5"}
-{N="\$(P)Pck:15",       INP="\$(P)DO:2-I.B6"}
-{N="\$(P)Pck:16",       INP="\$(P)DO:2-I.B7"}
-{N="\$(P)Pck:17",       INP="\$(P)DO:2-I.B8"}
-{N="\$(P)Pck:18",       INP="\$(P)DO:2-I.B9"}
-{N="\$(P)Pck:19",       INP="\$(P)DO:2-I.BA"}
-{N="\$(P)Pck:20",       INP="\$(P)DO:2-I.BB"}
-{N="\$(P)Pck:21",       INP="\$(P)DO:2-I.BC"}
-{N="\$(P)Pck:22",       INP="\$(P)DO:2-I.BD"}
-{N="\$(P)Pck:23",       INP="\$(P)DO:2-I.BE"}
-{N="\$(P)Pck:24",       INP="\$(P)DO:2-I.BF"}
-{N="\$(P)Pck:25",       INP="\$(P)DO:2-I.B10"}
-{N="\$(P)Pck:26",       INP="\$(P)DO:2-I.B11"}
-{N="\$(P)Pck:27",       INP="\$(P)DO:2-I.B12"}
-{N="\$(P)Pck:28",       INP="\$(P)DO:2-I.B13"}
-{N="\$(P)Pck:29",       INP="\$(P)DO:2-I.B14"}
+{N="\$(P)Pck:1",        INP="\$(P)DO:1-I.B18", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:2",        INP="\$(P)DO:1-I.B19", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:3",        INP="\$(P)DO:1-I.B1A", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:4",        INP="\$(P)DO:1-I.B1B", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:5",        INP="\$(P)DO:1-I.B1C", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:6",        INP="\$(P)DO:1-I.B1D", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:7",        INP="\$(P)DO:1-I.B1E", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:8",        INP="\$(P)DO:1-I.B1F", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:9",        INP="\$(P)DO:2-I.B0", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:10",       INP="\$(P)DO:2-I.B1", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:11",       INP="\$(P)DO:2-I.B2", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:12",       INP="\$(P)DO:2-I.B3", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:13",       INP="\$(P)DO:2-I.B4", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:14",       INP="\$(P)DO:2-I.B5", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:15",       INP="\$(P)DO:2-I.B6", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:16",       INP="\$(P)DO:2-I.B7", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:17",       INP="\$(P)DO:2-I.B8", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:18",       INP="\$(P)DO:2-I.B9", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:19",       INP="\$(P)DO:2-I.BA", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:20",       INP="\$(P)DO:2-I.BB", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:21",       INP="\$(P)DO:2-I.BC", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:22",       INP="\$(P)DO:2-I.BD", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:23",       INP="\$(P)DO:2-I.BE", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:24",       INP="\$(P)DO:2-I.BF", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:25",       INP="\$(P)DO:2-I.B10", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:26",       INP="\$(P)DO:2-I.B11", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:27",       INP="\$(P)DO:2-I.B12", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:28",       INP="\$(P)DO:2-I.B13", ZNAM="Empty", ONAM="Present"}
+{N="\$(P)Pck:29",       INP="\$(P)DO:2-I.B14", ZNAM="Empty", ONAM="Present"}
 {N="\$(P)DO:85",        INP="\$(P)DO:2-I.B15"}
 {N="\$(P)DO:86",        INP="\$(P)DO:2-I.B16"}
 {N="\$(P)DO:87",        INP="\$(P)DO:2-I.B17"}
