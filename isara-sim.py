@@ -23,7 +23,17 @@ _log = logging.getLogger()
 
 # <cmd>
 # <cmd> '(' <args> ')'
-_cmd = re.compile(rb'([a-z_]+)(?:\(([^)]*)\))?')
+_cmd = re.compile(rb'^([a-z_]+)(?:\(([a-z0-9,.]*)\))?$')
+# robot seems to have a simplistic parser, which doesn't eg.
+# expect a space ' ' before a comma ',' when decoding arguments.
+#
+# so "traj(home,3)" is _not_ the same as "traj(home, 3)".
+# the first works, while the second triggers an error.
+
+assert _cmd.match(b'on')
+assert _cmd.match(b'traj(home,3)')
+assert not _cmd.match(b'traj(home, 3)')
+assert _cmd.match(b'setspeed(50.0)')
 
 class Tool(IntEnum):
     ToolChanger = 0
@@ -145,8 +155,6 @@ class State:
     s_time: float = 0.0
     # path of current move
     s_path: Path = None
-    # client which initiated move
-    s_client: asyncio.StreamWriter = None
 
     def state(self) -> [str]:
         S = [
@@ -257,10 +265,6 @@ class ISARA:
                 if self.S.s_time >= self.S.s_path.duration:
                     _log.info('Move complete %r, %r', self.S.s_traj, self.S.s_path)
 
-                    if self.S.s_client is not None:
-                        self.S.s_client.write(self.S.s_traj + b'\r')
-                        await self.S.s_client.drain()
-
                     self.S.path = ''
                     self.S.position = self.S.s_path.ends
                     self.S.seqRun = False
@@ -283,6 +287,13 @@ class ISARA:
 
     def cmd_speeddown(self, args):
         self.S.speedRatio = max(0.01, self.S.speedRatio/2.0)
+
+    def cmd_setspeed(self, args):
+        spd = float(args[0])
+        if spd>=0.01 and spd<=100.0:
+            self.S.speedRatio = spd
+        else:
+            return b'Order rejected'
 
     def cmd_panic(self, args):
         self.cmd_abort(args)
@@ -322,17 +333,19 @@ class ISARA:
         self.S.ln2PhaSep = False
 
     @gate_powered
+    @gate_not_moving
     def cmd_traj(self, args):
         path = _paths.get(args[0])
         if path is not None:
             self.S.s_path = path
             self.S.s_traj = args[0]
             self.S.s_time = 0.0
+            self.S.position = ''
 
             self.S.path = args[0].decode()
             self.S.seqRun = True
             _log.info('Moving on %r %r', self.S.path, path)
-            return False # defer reply
+            return args[0]
 
         else:
             _log.error('Ignore unknown traj(%r)', args)
@@ -342,76 +355,78 @@ class ISARA:
     async def new_cmd_client(self, reader: asyncio.StreamReader, writer: asyncio.StreamWriter):
         """Handle client on Command socket
         """
+        peer = writer.get_extra_info('peername')
+        _log.info('Command client %r connects', peer)
         try:
             while self.run:
                 line = reply = (await reader.readuntil(b'\r'))[:-1]
                 M = _cmd.match(line)
                 if M is None:
-                    _log.error('Pretend success for unknown/unmodeled %r', line)
-                    reply = None
+                    _log.error('Malformed command %r', line)
+                    writer.write(b'Command not found\r')
+                    continue
 
-                else:
-                    try:
-                        meth = getattr(self, 'cmd_' + M.group(1).decode())
-                    except AttributeError:
-                        _log.exception('Not command %r', M.groups())
-                        writer.write(b'Command not found\r')
-                        continue
+                try:
+                    meth = getattr(self, 'cmd_' + M.group(1).decode())
+                except AttributeError:
+                    _log.exception('Not command %r', M.groups())
+                    writer.write(b'Command not found\r')
+                    continue
 
-                    reply = meth((M.group(2) or b'').split(b','))
-
-                    if asyncio.iscoroutine(reply):
-                        reply = await reply
+                reply = meth((M.group(2) or b'').split(b','))
+                assert reply is None or isinstance(reply, bytes), reply
 
                 if reply is None:
-                    reply = line # most commands just echo on success
-
-                elif reply is False:
-                    self.S.s_client = writer
-                    continue # defer reply
+                    reply = M.group(1) # most commands just echo name on success
 
                 writer.write(reply + b'\r')
                 await writer.drain()
 
         finally:
-            if self.S.s_client is writer:
-                _log.warning('Client orphans move')
-                self.S.s_client = None
             if not writer.is_closing():
                 writer.close()
+            _log.info('Command client %r disconnects', peer)
 
     @task_guard
     async def new_sts_client(self, reader: asyncio.StreamReader, writer: asyncio.StreamWriter):
         """Handle client on Status socket
         """
-        while self.run:
-            line = (await reader.readuntil(b'\r'))[:-1]
-            if line==b'position':
-                ret = ','.join(['%.3f'%p for p in self.S.pos])
-                writer.write(f'position({ret})\r'.encode())
+        peer = writer.get_extra_info('peername')
+        _log.info('Status client %r connects', peer)
+        try:
+            while self.run:
+                line = (await reader.readuntil(b'\r'))[:-1]
+                if line==b'position':
+                    ret = ','.join(['%.3f'%p for p in self.S.pos])
+                    writer.write(f'position({ret})\r'.encode())
 
-            elif line==b'state':
-                ret = ','.join(self.S.state())
-                writer.write(f'state({ret})\r'.encode())
+                elif line==b'state':
+                    ret = ','.join(self.S.state())
+                    writer.write(f'state({ret})\r'.encode())
 
-            elif line==b'di':
-                ret = ','.join(['1' if p else '0' for p in self.S.di])
-                writer.write(f'di({ret})\r'.encode())
+                elif line==b'di':
+                    ret = ','.join(['1' if p else '0' for p in self.S.di])
+                    writer.write(f'di({ret})\r'.encode())
 
-            elif line==b'do':
-                ret = ','.join(['1' if p else '0' for p in self.S.do])
-                writer.write(f'do({ret})\r'.encode())
+                elif line==b'do':
+                    ret = ','.join(['1' if p else '0' for p in self.S.do])
+                    writer.write(f'do({ret})\r'.encode())
 
-            elif line==b'message':
-                writer.write(self.S.lastMsg.encode() + b'\r')
+                elif line==b'message':
+                    writer.write(self.S.lastMsg.encode() + b'\r')
 
-            elif line==b'sampledata':
-                writer.write(b'sampledata(0.0,0.0,9.0,8.0,0.0,24.98,0.0,14.19,52.11,13.13,79.46,1202,21,0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,)\r')
+                elif line==b'sampledata':
+                    writer.write(b'sampledata(0.0,0.0,9.0,8.0,0.0,24.98,0.0,14.19,52.11,13.13,79.46,1202,21,0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,)\r')
 
-            else:
-                writer.write(b'Unexpected status command\r')
+                else:
+                    writer.write(b'Unexpected status command\r')
 
-            await writer.drain()
+                await writer.drain()
+
+        finally:
+            if not writer.is_closing():
+                writer.close()
+            _log.info('Status client %r disconnects', peer)
 
 def getargs():
     from argparse import ArgumentParser
