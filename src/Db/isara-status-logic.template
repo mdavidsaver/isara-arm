@@ -158,14 +158,14 @@ record(stringin, "$(P)DM:Lst-I") {
 record(bi, "$(P)Seq:Run-Sts") {
     field(DISV, "-99999")
     field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
-    field(ZNAM, "Stop")
-    field(ONAM, "Move")
+    field(ZNAM, "Stopped")
+    field(ONAM, "Moving")
 }
 record(bi, "$(P)Seq:Paus-Sts") {
     field(DISV, "-99999")
     field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
     field(ZNAM, "Normal")
-    field(ONAM, "Pause")
+    field(ONAM, "Paused")
 }
 record(ai, "$(P)Speed-I") {
     field(DISV, "-99999")
@@ -249,18 +249,24 @@ record(ai, "$(P)Pos:Z-I") {
 record(ai, "$(P)Pos:RX-I") {
     field(DISV, "-99999")
     field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
+    field(HOPR, "180")
+    field(HOPR, "-180")
     field(PREC, "1")
     field(EGU , "deg")
 }
 record(ai, "$(P)Pos:RY-I") {
     field(DISV, "-99999")
     field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
+    field(HOPR, "180")
+    field(HOPR, "-180")
     field(PREC, "1")
     field(EGU , "deg")
 }
 record(ai, "$(P)Pos:RZ-I") {
     field(DISV, "-99999")
     field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
+    field(HOPR, "180")
+    field(HOPR, "-180")
     field(PREC, "1")
     field(EGU , "deg")
 }
