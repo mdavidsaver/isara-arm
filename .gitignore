@@ -6,5 +6,6 @@ O.*/
 /opi/
 /configure/*.local
 iocBoot/*/envPaths
+iocBoot/*/as/
 *.dbl
 *.log

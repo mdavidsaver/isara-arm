@@ -38,6 +38,7 @@ record(mbbo, "$(P)Tl-Sel") {
     field(SVVL, "7")
     field(EIVL, "8")
     field(VAL , "0")
+    info(autosaveFields_pass0, "VAL")
 }
 
 record(longout, "$(P)Plt-SP") {
@@ -50,6 +51,7 @@ record(longout, "$(P)Plt-SP") {
     field(LSV , "INVALID")
     field(IVOA, "Set output to IVOV")
     field(IVOV, "0")
+    info(autosaveFields_pass0, "VAL")
 }
 
 record(longout, "$(P)Samp-SP") {
@@ -62,12 +64,14 @@ record(longout, "$(P)Samp-SP") {
     field(LSV , "INVALID")
     field(IVOA, "Set output to IVOV")
     field(IVOV, "0")
+    info(autosaveFields_pass0, "VAL")
 }
 
 record(bo, "$(P)DM-Sel") {
     field(ZNAM, "Skip")
     field(ONAM, "Scan")
     field(VAL , "0")
+    info(autosaveFields_pass0, "VAL")
 }
 
 record(longout, "$(P)Plt:N-SP") {
@@ -80,6 +84,7 @@ record(longout, "$(P)Plt:N-SP") {
     field(LSV , "INVALID")
     field(IVOA, "Set output to IVOV")
     field(IVOV, "0")
+    info(autosaveFields_pass0, "VAL")
 }
 
 record(longout, "$(P)Samp:N-SP") {
@@ -92,24 +97,28 @@ record(longout, "$(P)Samp:N-SP") {
     field(LSV , "INVALID")
     field(IVOA, "Set output to IVOV")
     field(IVOV, "0")
+    info(autosaveFields_pass0, "VAL")
 }
 
 record(bo, "$(P)SampT-Sel") {
     field(ZNAM, "Other")
     field(ONAM, "Hampton Crys Cap")
     field(VAL , "0")
+    info(autosaveFields_pass0, "VAL")
 }
 
 record(bo, "$(P)SampT:N-Sel") {
     field(ZNAM, "Other")
     field(ONAM, "Hampton Crys Cap")
     field(VAL , "0")
+    info(autosaveFields_pass0, "VAL")
 }
 
 record(bo, "$(P)SampDet-Sel") {
     field(ZNAM, "Enable")
     field(ONAM, "Skip")
     field(VAL , "0")
+    info(autosaveFields_pass0, "VAL")
 }
 
 # omit Gonio shift X,Y,Z
