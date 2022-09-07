@@ -23,6 +23,13 @@
 
 # Suggestion.  Define the following in configure/RELEASE.local
 
+# Optional.  Inly used if BUILD_ISARA_DEMO=YES (the default, cf. CONFIG_SITE)
+#AUTOSAVE=/path/to/autosave
+#PVDATA=/path/to/pvData
+#PVACCESS=/path/to/pvAccess
+#PVA2PVA=/path/to/pva2pva
+
+# Required
 #ASYN=/path/to/asyn
 #STREAM=/path/to/asyn
 

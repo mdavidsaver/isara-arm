@@ -12,6 +12,10 @@ include $(TOP)/configure/CONFIG
 
 DB_INSTALLS += $(ASYN)/db/asynRecord.db
 
+ifneq ($(AUTOSAVE),)
+DB_INSTALLS += $(firstword $(wildcard $(AUTOSAVE)/asApp/Db/save_restoreStatus.db $(AUTOSAVE)/db/save_restoreStatus.db))
+endif
+
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add
 # <anyname>_template = <templatename>
