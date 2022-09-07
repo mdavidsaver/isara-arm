@@ -170,7 +170,7 @@ record(bi, "$(P)Seq:Paus-Sts") {
 record(ai, "$(P)Speed-I") {
     field(DISV, "-99999")
     field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
-    field(PREC, "1")
+    field(PREC, "2")
     field(EGU, "%")
 }
 record(bi, "$(P)LN2:Reg-Sts") {

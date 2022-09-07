@@ -83,6 +83,10 @@ file "isara-traj-cmd.template" {
 # omit teachcompliancez (cf. teach*)
 }
 
+file "isara-command-logic.template" {
+{ DEV="\$(DEV)", P="\$(P)"}
+}
+
 file "isara-traj-logic.template" {
 { DEV="\$(DEV)", P="\$(P)"}
 }

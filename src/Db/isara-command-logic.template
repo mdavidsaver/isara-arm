@@ -1,0 +1,33 @@
+
+record(bo, "$(P)ClrErr-Cmd") {
+    field(DESC, "Clear last Err")
+    field(ZNAM, "Clear")
+    field(ONAM, "Clear")
+    field(VAL , "0")
+    field(FLNK, "$(P)NoErr-I_")
+}
+
+record(lso, "$(P)NoErr-I_") {
+    field(OUT, "$(P)LastErr-I PP")
+}
+
+record(lsi, "$(P)LastErr-I") {
+    field(DESC, "Last command error")
+    field(SIZV, "128")
+}
+
+record(ao, "$(P)Speed-SP") {
+    field(DTYP, "stream")
+    field(OUT , "@isara-command.proto setspeed($(P)) $(DEV)")
+    field(PREC, "2")
+    field(EGU , "%")
+    field(HIGH, "100.001")
+    field(HOPR, "100.0")
+    field(LOPR, "0.01")
+    field(LOW , "0.01")
+    field(HSV , "INVALID")
+    field(LSV , "INVALID")
+    field(IVOA, "Set output to IVOV")
+    field(IVOV, "0.01")
+    info(autosaveFields_pass0, "VAL")
+}

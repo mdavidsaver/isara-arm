@@ -17,6 +17,11 @@ cmd {
     in "\$2";
 }
 
+setspeed {
+    out "setspeed(%.2f)";
+    in "setspeed";
+}
+
 # traj argument PVs, in order
 # "$(P)Tl-Sel" or "$(P)Tl-I"
 # "$(P)Plt-SP"
