@@ -31,6 +31,7 @@
 
 # Required
 #ASYN=/path/to/asyn
+#BUSY=/path/to/busy
 #STREAM=/path/to/asyn
 
 # EPICS_BASE should appear last so earlier modules can override stuff:

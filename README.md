@@ -6,6 +6,7 @@ Requires:
 
 - [EPICS](https://epics-controls.org/) [Base](https://epics.anl.gov/)
 - [Asyn](https://epics-modules.github.io/master/asyn/)
+- [busy](https://github.com/epics-modules/busy)
 - [StreamDevice](https://paulscherrerinstitute.github.io/StreamDevice/) built with the optional PCRE support
 
 https://www.irelec-alcen.com/en/synchrotrons/x-ray-crystallography-isara-sample-changer

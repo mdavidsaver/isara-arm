@@ -1,4 +1,34 @@
-record(bo, "$(P)Move:$(N)-Cmd") {
+# client writes 1 to start move
+record(busy, "$(P)Move:$(N)-Cmd") {
+    field(SDIS, "$(SDIS=)")
+    field(DISV, "$(DISV=-1)")
+    field(ZNAM, "Idle")
+    field(ONAM, "$(LABEL=$(N))")
+    field(VAL , "0")
+    field(OUT , "$(P)Move:$(N):G-Cmd_.PROC PP")
+}
+record(bo, "$(P)Move:$(N):G-Cmd_") {
+    # busyRecord writes OUT both at start and end.
+    # we disable on end to avoid a repeated start
+    field(SDIS, "$(P)Move:$(N)-Cmd")
+    field(DISV, "0")
+    # busy!=0, really start the move
+    field(FLNK , "$(P)Move:$(N)-Cmd_")
+}
+
+record(calcout, "$(P)Move:$(N)-Calc_") {
+    # moving status changes
+    field(INPA, "$(P)Seq:Run-Sts CP MS")
+    field(CALC, "A")
+    # catch moving -> stopped edge
+    field(OOPT, "Transition To Zero")
+    field(DOPT, "Use OCAL")
+    # write 0 to busy
+    field(OCAL, "0")
+    field(OUT , "$(P)Move:$(N)-Cmd PP MS")
+}
+
+record(bo, "$(P)Move:$(N)-Cmd_") {
     field(SDIS, "$(SDIS=)")
     field(DISV, "$(DISV=-1)")
     field(DTYP, "stream")

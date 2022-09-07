@@ -17,11 +17,12 @@ isaraDemo_DBD += base.dbd
 isaraDemo_DBD += system.dbd
 
 isaraDemo_DBD += asyn.dbd drvAsynIPPort.dbd
+isaraDemo_DBD += busySupport.dbd
 isaraDemo_DBD += stream.dbd
 
 isaraDemo_DBD += isaraSupport.dbd
 
-isaraDemo_LIBS += stream asyn
+isaraDemo_LIBS += stream busy asyn
 isaraDemo_LIBS += isaraSupport
 
 ifneq (,$(AUTOSAVE))
