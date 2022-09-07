@@ -51,6 +51,38 @@ file "isara-simple-cmd.template" {
 #{ DEV="\$(DEV)", P="\$(P)", R="", CMD=""}
 }
 
-file "isara-traj.template" {
+file "isara-traj-cmd.template" {
+{ DEV="\$(DEV)", P="\$(P)", N="Home"    , PROTO="toolonly"   , ARGS=",home" }
+{ DEV="\$(DEV)", P="\$(P)", N="Rcvr"    , PROTO="toolonly"   , ARGS=",recover"   , LABEL="Recover" }
+{ DEV="\$(DEV)", P="\$(P)", N="Put"     , PROTO="allargs"    , ARGS=",put" }
+{ DEV="\$(DEV)", P="\$(P)", N="Get"     , PROTO="tooldm"     , ARGS=",get" }
+
+{ DEV="\$(DEV)", P="\$(P)", N="GetPut"  , PROTO="allargs"    , ARGS=",getput" }
+{ DEV="\$(DEV)", P="\$(P)", N="Pck"     , PROTO="toolpltsamp", ARGS=",pick" }
+{ DEV="\$(DEV)", P="\$(P)", N="DM"      , PROTO="toolpltsamp", ARGS=",datamatrix", LABEL="Scan DM" }
+{ DEV="\$(DEV)", P="\$(P)", N="Bck"     , PROTO="toolonly"   , ARGS=",back"      , LABEL="Back" }
+{ DEV="\$(DEV)", P="\$(P)", N="Sk"      , PROTO="toolonly"   , ARGS=",soak"      , LABEL="Soak" }
+
+{ DEV="\$(DEV)", P="\$(P)", N="Dry"     , PROTO="toolonly"   , ARGS=",dry",  DISV="0", SDIS="\$(P)DryPmt-I"}
+{ DEV="\$(DEV)", P="\$(P)", N="ToDif"   , PROTO="toolpltsamp", ARGS=",gotodif" }
+{ DEV="\$(DEV)", P="\$(P)", N="PutPlt"  , PROTO="toolplt"    , ARGS=",putplate" }
+{ DEV="\$(DEV)", P="\$(P)", N="GetPlt"  , PROTO="toolonly"   , ARGS=",getplate" }
+{ DEV="\$(DEV)", P="\$(P)", N="Plt2Dif" , PROTO="toolplt"    , ARGS=",platetodif" }
+
+# omit teach* commands (use hand controller)
+{ DEV="\$(DEV)", P="\$(P)", N="Chg"     , PROTO="changetool"                     , LABEL="Change Tool" }
+
+# omit toolcal (cf. teach*)
+
+{ DEV="\$(DEV)", P="\$(P)", N="PutHt"   , PROTO="allargs" , ARGS=",putht" }
+{ DEV="\$(DEV)", P="\$(P)", N="GetHt"   , PROTO="tooldm"  , ARGS=",getht" }
+{ DEV="\$(DEV)", P="\$(P)", N="GetPutHt", PROTO="allargs" , ARGS=",getput" }
+{ DEV="\$(DEV)", P="\$(P)", N="BckHt"   , PROTO="toolonly", ARGS=",backht" }
+# omit teachhotpuck (cf. teach*)
+
+# omit teachcompliancez (cf. teach*)
+}
+
+file "isara-traj-logic.template" {
 { DEV="\$(DEV)", P="\$(P)"}
 }

@@ -1,0 +1,116 @@
+
+record(bo, "$(P)ClrErr-Cmd") {
+    field(DESC, "Clear last traj Err")
+    field(ZNAM, "Clear")
+    field(ONAM, "Clear")
+    field(VAL , "0")
+    field(FLNK, "$(P)NoErr-I_")
+}
+
+record(lso, "$(P)NoErr-I_") {
+    field(OUT, "$(P)LastErr-I PP")
+}
+
+record(lsi, "$(P)LastErr-I") {
+    field(DESC, "Last traj() error")
+    field(SIZV, "128")
+}
+
+# arguments for traj()
+
+record(mbbo, "$(P)Tl-Sel") {
+    field(ZRST, "ToolChanger")
+    field(ONST, "Cryotong")
+    field(TWST, "SingleGripper")
+    field(THST, "DoubleGripper")
+    field(FRST, "MiniSpineGripper")
+    field(FVST, "RotatingGripper")
+    field(SXST, "PlateGripper")
+    field(SVST, "Spare")
+    field(EIST, "LaserTool")
+    field(ZRVL, "0")
+    field(ONVL, "1")
+    field(TWVL, "2")
+    field(THVL, "3")
+    field(FRVL, "4")
+    field(FVVL, "5")
+    field(SXVL, "6")
+    field(SVVL, "7")
+    field(EIVL, "8")
+    field(VAL , "0")
+}
+
+record(longout, "$(P)Plt-SP") {
+    field(VAL , "0")
+    field(HIGH, "30")
+    field(HOPR, "29")
+    field(LOPR, "0")
+    field(LOW , "-1")
+    field(HSV , "INVALID")
+    field(LSV , "INVALID")
+    field(IVOA, "Set output to IVOV")
+    field(IVOV, "0")
+}
+
+record(longout, "$(P)Samp-SP") {
+    field(VAL , "0")
+    field(HIGH, "101")
+    field(HOPR, "100") # TODO: actual limit on sample number?
+    field(LOPR, "0")
+    field(LOW , "-1")
+    field(HSV , "INVALID")
+    field(LSV , "INVALID")
+    field(IVOA, "Set output to IVOV")
+    field(IVOV, "0")
+}
+
+record(bo, "$(P)DM-Sel") {
+    field(ZNAM, "Skip")
+    field(ONAM, "Scan")
+    field(VAL , "0")
+}
+
+record(longout, "$(P)Plt:N-SP") {
+    field(VAL , "0")
+    field(HIGH, "30")
+    field(HOPR, "29")
+    field(LOPR, "0")
+    field(LOW , "-1")
+    field(HSV , "INVALID")
+    field(LSV , "INVALID")
+    field(IVOA, "Set output to IVOV")
+    field(IVOV, "0")
+}
+
+record(longout, "$(P)Samp:N-SP") {
+    field(VAL , "0")
+    field(HIGH, "101")
+    field(HOPR, "100") # TODO: actual limit on sample number?
+    field(LOPR, "0")
+    field(LOW , "-1")
+    field(HSV , "INVALID")
+    field(LSV , "INVALID")
+    field(IVOA, "Set output to IVOV")
+    field(IVOV, "0")
+}
+
+record(bo, "$(P)SampT-Sel") {
+    field(ZNAM, "Other")
+    field(ONAM, "Hampton Crys Cap")
+    field(VAL , "0")
+}
+
+record(bo, "$(P)SampT:N-Sel") {
+    field(ZNAM, "Other")
+    field(ONAM, "Hampton Crys Cap")
+    field(VAL , "0")
+}
+
+record(bo, "$(P)SampDet-Sel") {
+    field(ZNAM, "Enable")
+    field(ONAM, "Skip")
+    field(VAL , "0")
+}
+
+# omit Gonio shift X,Y,Z
+# TODO: should these be integer or decimal?

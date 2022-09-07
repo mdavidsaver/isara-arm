@@ -3,6 +3,10 @@
 LockTimeout  = 10000;
 ReplyTimeout = 10000;
 
+# all proto blocks take at least one argument,
+# "\$1" which should be "$(P)" the record prefix.
+
+# capture and store mis-matched reply
 @mismatch {
     in "%(\$1LastErr-I)[^\r]";
 }
@@ -13,43 +17,95 @@ cmd {
     in "\$2";
 }
 
-traj_home {
-    out "traj(home,%(\$1Tl-Sel)u)";
-    in "home";
+# traj argument PVs, in order
+# "$(P)Tl-Sel" or "$(P)Tl-I"
+# "$(P)Plt-SP"
+# "$(P)Samp-SP"
+# "$(P)DM-Sel"
+# "$(P)Plt:N-SP"
+# "$(P)Samp:N-SP"
+# "$(P)SampT-Sel"
+# "$(P)SampT:N-Sel"
+# "$(P)SampDet-Sel"
+# no PVs for Gonio shift X,Y,Z
+# TODO: should these be integer or decimal?
+
+# use the current tool (readback)
+traj_toolonly {
+    out "traj(\$2,%(\$1Tl-I)u)";
+    in "\$2";
 }
-traj_recover {
-    out "traj(recover,%(\$1Tl-Sel)u)";
-    in "recover";
-}
+
+# use the selected (next) tool
 traj_changetool {
     out "traj(changetool,%(\$1Tl-Sel)u)";
     in "changetool";
 }
-traj_soak {
-    out "traj(soak,%(\$1Tl-Sel)u)";
-    in "soak";
+
+traj_toolplt {
+    out "traj(\$2"
+        # 1
+        ",%(\$1Tl-I)u"
+        ",%(\$1Plt-SP)u"
+        ")";
+    in "\$2";
 }
-traj_dry {
-    out "traj(dry,%(\$1Tl-Sel)u)";
-    in "dry";
+
+traj_tooldm {
+    out "traj(\$2"
+        # 1
+        ",%(\$1Tl-I)u"
+        ",0"
+        ",0"
+        ",%(\$1DM-Sel)u"
+        # 5
+        ",0"
+        ",0"
+        ",0"
+        ",0"
+        ",0"
+        # 10
+        ",0" # TODO
+        ",0" # TODO
+        ",0" # TODO
+        ")";
+    in "\$2";
 }
-traj_get {
-    out "traj(get,%(\$1Tl-Sel)u)";
-    in "get";
+
+traj_toolpltsamp {
+    out "traj(\$2"
+        # 1
+        ",%(\$1Tl-I)u"
+        ",%(\$1Plt-SP)u"
+        ",%(\$1Samp-SP)u"
+        ",%(\$1DM-Sel)u"
+        # 5
+        ",0"
+        ",0"
+        ",%(\$1SampT-Sel)u"
+        ",0"
+        ",%(\$1SampDet-Sel)u"
+        ")";
+    in "\$2";
 }
-traj_back {
-    out "traj(back,%(\$1Tl-Sel)u)";
-    in "back";
-}
-traj_put {
-    out "traj(put,%(\$1Tl-Sel)u,%(\$1Plt-SP)u,%(\$1Samp-SP)u)";
-    in "put";
-}
-traj_getput {
-    out "traj(getput,%(\$1Tl-Sel)u,%(\$1Plt-SP)u,%(\$1Samp-SP)u)";
-    in "getput";
-}
-traj_pick {
-    out "traj(pick,%(\$1Tl-Sel)u,%(\$1Plt-SP)u,%(\$1Samp-SP)u,0,0,0,0,0,0)";
-    in "pick";
+
+traj_allargs {
+    out "traj(\$2"
+        # 1
+        ",%(\$1Tl-I)u"
+        ",%(\$1Plt-SP)u"
+        ",%(\$1Samp-SP)u"
+        ",%(\$1DM-Sel)u"
+        # 5
+        ",%(\$1Plt:N-SP)u"
+        ",%(\$1Samp:N-SP)u"
+        ",%(\$1SampT-Sel)u"
+        ",%(\$1SampT:N-Sel)u"
+        ",%(\$1SampDet-Sel)u"
+        # 10
+        ",0" # TODO
+        ",0" # TODO
+        ",0" # TODO
+        ")";
+    in "\$2";
 }

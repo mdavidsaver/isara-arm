@@ -11,7 +11,7 @@ state {
        # 1
        ",%(\$1Rmt-Sts)b"
        ",%(\$1Flt-Sts)b"
-       ",%(\$1Tool-I)[^,)]"
+       ",%(\$1Tl-I)[^,)]"
        ",%(\$1Pos:Name-I)[^,)]"
        ",%(\$1Path:Name-I)[^,)]"
        ",%(\$1Grp:A-Sts)b"

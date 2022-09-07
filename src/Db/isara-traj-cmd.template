@@ -1,0 +1,9 @@
+record(bo, "$(P)Move:$(N)-Cmd") {
+    field(SDIS, "$(SDIS=)")
+    field(DISV, "$(DISV=-1)")
+    field(DTYP, "stream")
+    field(OUT , "@isara-command.proto traj_$(PROTO)($(P)$(ARGS=)) $(DEV)")
+    field(ZNAM, "$(LABEL=$(N))")
+    field(ONAM, "$(LABEL=$(N))")
+    field(VAL , "0")
+}

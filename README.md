@@ -10,7 +10,7 @@ Requires:
 
 https://www.irelec-alcen.com/en/synchrotrons/x-ray-crystallography-isara-sample-changer
 
-Based on document ISARA-NS-05 - ISARA Sample Changer, List of socket commands
+Based on document ISARA-NS-05 rev. 13 - ISARA Sample Changer, List of socket commands
 
 ## Current State
 

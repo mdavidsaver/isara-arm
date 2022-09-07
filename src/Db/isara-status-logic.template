@@ -77,7 +77,7 @@ record(bi, "$(P)Flt-Sts") {
     field(ZNAM, "0")
     field(ONAM, "1")
 }
-record(mbbo, "$(P)Tool-I") {
+record(mbbo, "$(P)Tl-I") {
     field(DISV, "-99999")
     field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
     field(ZRST, "ToolChanger")
