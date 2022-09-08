@@ -311,6 +311,10 @@ class ISARA:
     def cmd_restart(self, args):
         self.S.seqPause = False
 
+    def cmd_reset(self, args):
+        """Clear latched alarms
+        """
+
     @gate_not_moving
     def cmd_openlid(self, args):
         pass
