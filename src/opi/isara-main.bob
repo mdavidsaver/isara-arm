@@ -5,7 +5,7 @@
     <P>TST:</P>
   </macros>
   <width>1315</width>
-  <height>1080</height>
+  <height>1470</height>
   <widget type="label" version="2.0.0">
     <name>Label</name>
     <class>TITLE</class>
@@ -24,24 +24,11 @@
     </foreground_color>
     <transparent use_class="true">true</transparent>
   </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display</name>
-    <macros>
-      <DESC>$(P)LastMsg-I</DESC>
-      <NAME>$(P)LastMsg-I</NAME>
-    </macros>
-    <file>_isara-readback.bob</file>
-    <x>40</x>
-    <y>249</y>
-    <width>325</width>
-    <height>30</height>
-    <resize>2</resize>
-  </widget>
   <widget type="group" version="2.0.0">
-    <name>Status</name>
-    <x>570</x>
+    <name>Faults</name>
+    <x>405</x>
     <y>90</y>
-    <width>375</width>
+    <width>540</width>
     <height>140</height>
     <widget type="action_button" version="3.0.0">
       <name>Action Button</name>
@@ -54,44 +41,20 @@
       </actions>
       <pv_name>$(P)Reset-Cmd</pv_name>
       <text>Reset</text>
-      <x>2</x>
-      <y>72</y>
-      <width>90</width>
-    </widget>
-    <widget type="embedded" version="2.0.0">
-      <name>Embedded Display</name>
-      <macros>
-        <DESC>$(P)Alarm-I</DESC>
-        <NAME>$(P)Alarm-I</NAME>
-      </macros>
-      <file>_isara-readback.bob</file>
-      <x>2</x>
-      <y>33</y>
-      <width>325</width>
-      <height>30</height>
-      <resize>2</resize>
-    </widget>
-    <widget type="embedded" version="2.0.0">
-      <name>Embedded Display</name>
-      <macros>
-        <DESC>$(P)Flt-Sts</DESC>
-        <NAME>$(P)Flt-Sts</NAME>
-      </macros>
-      <file>_isara-readback.bob</file>
-      <x>2</x>
-      <y>3</y>
-      <width>325</width>
-      <height>30</height>
-      <resize>2</resize>
+      <x>417</x>
+      <y>2</y>
+      <width>76</width>
+      <height>43</height>
     </widget>
     <widget type="byte_monitor" version="2.0.0">
       <name>Byte Monitor_8</name>
       <pv_name>$(P)Alarm-I</pv_name>
-      <x>81</x>
-      <y>59</y>
-      <width>240</width>
-      <height>7</height>
+      <x>7</x>
+      <y>80</y>
+      <width>250</width>
+      <height>15</height>
       <numBits>32</numBits>
+      <square>true</square>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button_4</name>
@@ -106,10 +69,87 @@
         </action>
       </actions>
       <text>Details</text>
-      <x>222</x>
-      <y>75</y>
-      <height>20</height>
+      <x>82</x>
+      <y>45</y>
+      <width>70</width>
       <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_15</name>
+      <pv_name>$(P)Flt-Sts</pv_name>
+      <x>7</x>
+      <y>45</y>
+      <width>70</width>
+      <height>30</height>
+      <off_color>
+        <color name="OK" red="0" green="255" blue="0">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="MAJOR" red="255" green="0" blue="0">
+        </color>
+      </on_color>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_16</name>
+      <pv_name>$(P)Fault-Sts</pv_name>
+      <x>335</x>
+      <y>2</y>
+      <width>70</width>
+      <height>43</height>
+      <off_color>
+        <color name="OK" red="0" green="255" blue="0">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="MAJOR" red="255" green="0" blue="0">
+        </color>
+      </on_color>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_17</name>
+      <pv_name>$(P)ES-Sts</pv_name>
+      <x>434</x>
+      <y>63</y>
+      <width>70</width>
+      <height>30</height>
+      <off_color>
+        <color name="MAJOR" red="255" green="0" blue="0">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="OK" red="0" green="255" blue="0">
+        </color>
+      </on_color>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_27</name>
+      <text>E-Stop</text>
+      <x>377</x>
+      <y>63</y>
+      <width>57</width>
+      <height>31</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_32</name>
+      <text>(DI) Fault</text>
+      <x>237</x>
+      <y>2</y>
+      <width>77</width>
+      <height>43</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_31</name>
+      <text>(ST) Fault</text>
+      <x>7</x>
+      <y>12</y>
+      <width>145</width>
     </widget>
   </widget>
   <widget type="group" version="2.0.0">
@@ -146,41 +186,13 @@
       <x>6</x>
       <y>3</y>
     </widget>
-    <widget type="led" version="2.0.0">
-      <name>LED_1</name>
-      <pv_name>$(P)Pwr-Sts</pv_name>
-      <x>6</x>
-      <y>38</y>
-      <width>100</width>
-      <height>30</height>
-      <off_color>
-        <color name="MINOR" red="255" green="128" blue="0">
-        </color>
-      </off_color>
-      <square>true</square>
-      <labels_from_pv>true</labels_from_pv>
-    </widget>
-    <widget type="led" version="2.0.0">
-      <name>LED_6</name>
-      <pv_name>$(P)PwrON-Sts</pv_name>
-      <x>6</x>
-      <y>73</y>
-      <width>100</width>
-      <height>30</height>
-      <off_color>
-        <color name="MINOR" red="255" green="128" blue="0">
-        </color>
-      </off_color>
-      <square>true</square>
-      <labels_from_pv>true</labels_from_pv>
-    </widget>
   </widget>
   <widget type="group" version="2.0.0">
     <name>Move</name>
     <x>400</x>
-    <y>240</y>
+    <y>279</y>
     <width>390</width>
-    <height>840</height>
+    <height>731</height>
     <widget type="action_button" version="3.0.0">
       <name>Action Button</name>
       <actions>
@@ -239,65 +251,20 @@
       <y>42</y>
       <width>110</width>
     </widget>
-    <widget type="action_button" version="3.0.0">
-      <name>Action Button</name>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name)</pv_name>
-          <value>0</value>
-          <description>WritePV</description>
-        </action>
-      </actions>
-      <pv_name>$(P)Panic-Cmd</pv_name>
-      <text>Panic Stop</text>
-      <x>12</x>
-      <y>767</y>
-      <width>330</width>
-      <font>
-        <font family="Liberation Sans" style="BOLD" size="14.0">
-        </font>
-      </font>
-      <foreground_color>
-        <color name="STOP" red="255" green="0" blue="0">
-        </color>
-      </foreground_color>
-    </widget>
-    <widget type="embedded" version="2.0.0">
-      <name>Embedded Display</name>
-      <macros>
-        <DESC>$(P)Path:Name-I</DESC>
-        <NAME>$(P)Path:Name-I</NAME>
-      </macros>
-      <file>_isara-readback.bob</file>
-      <x>12</x>
-      <y>724</y>
-      <width>325</width>
-      <height>30</height>
-      <resize>2</resize>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_4</name>
-      <text>Current State</text>
-      <x>22</x>
-      <y>666</y>
-      <width>310</width>
-      <height>18</height>
-      <horizontal_alignment>1</horizontal_alignment>
-    </widget>
     <widget type="label" version="2.0.0">
       <name>Label_5</name>
       <text>Plate/Puck Select</text>
-      <x>12</x>
+      <x>82</x>
       <y>260</y>
-      <width>170</width>
+      <width>138</width>
       <height>30</height>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_6</name>
       <text>Sample Select</text>
-      <x>12</x>
+      <x>82</x>
       <y>299</y>
-      <width>170</width>
+      <width>138</width>
       <height>30</height>
     </widget>
     <widget type="textentry" version="3.0.0">
@@ -326,9 +293,9 @@
       <pv_name>$(P)Abort-Cmd</pv_name>
       <text>Abort Movement</text>
       <x>12</x>
-      <y>615</y>
-      <width>330</width>
-      <height>40</height>
+      <y>255</y>
+      <width>60</width>
+      <height>284</height>
       <font>
         <font family="Liberation Sans" style="BOLD" size="14.0">
         </font>
@@ -337,6 +304,7 @@
         <color name="Attention" red="255" green="160" blue="0">
         </color>
       </foreground_color>
+      <rotation_step>1</rotation_step>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button_8</name>
@@ -428,20 +396,6 @@
       <y>155</y>
       <width>70</width>
     </widget>
-    <widget type="led" version="2.0.0">
-      <name>LED_2</name>
-      <pv_name>$(P)Seq:Run-Sts</pv_name>
-      <x>262</x>
-      <y>666</y>
-      <width>70</width>
-      <height>18</height>
-      <on_color>
-        <color red="0" green="0" blue="255">
-        </color>
-      </on_color>
-      <square>true</square>
-      <labels_from_pv>true</labels_from_pv>
-    </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button_16</name>
       <actions>
@@ -472,34 +426,6 @@
       <y>155</y>
       <width>70</width>
     </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_1</name>
-      <pv_name>$(P)LastErr-I</pv_name>
-      <x>12</x>
-      <y>696</y>
-      <width>320</width>
-      <foreground_color>
-        <color name="Attention" red="255" green="160" blue="0">
-        </color>
-      </foreground_color>
-      <format>6</format>
-    </widget>
-    <widget type="action_button" version="3.0.0">
-      <name>Action Button_17</name>
-      <actions>
-        <action type="write_pv">
-          <pv_name>$(pv_name)</pv_name>
-          <value>0</value>
-          <description>WritePV</description>
-        </action>
-      </actions>
-      <pv_name>$(P)ClrErr-Cmd</pv_name>
-      <text>0</text>
-      <x>332</x>
-      <y>696</y>
-      <width>20</width>
-      <height>21</height>
-    </widget>
     <widget type="label" version="2.0.0">
       <name>Label_12</name>
       <text>Current Tool</text>
@@ -519,17 +445,17 @@
     <widget type="label" version="2.0.0">
       <name>Label_13</name>
       <text>Plate/Puck Select Next</text>
-      <x>12</x>
+      <x>82</x>
       <y>369</y>
-      <width>170</width>
+      <width>138</width>
       <height>30</height>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_14</name>
       <text>Sample Select Next</text>
-      <x>12</x>
+      <x>82</x>
       <y>404</y>
-      <width>170</width>
+      <width>138</width>
       <height>30</height>
     </widget>
     <widget type="textentry" version="3.0.0">
@@ -549,17 +475,17 @@
     <widget type="label" version="2.0.0">
       <name>Label_15</name>
       <text>Sample Type</text>
-      <x>12</x>
+      <x>82</x>
       <y>439</y>
-      <width>170</width>
+      <width>138</width>
       <height>30</height>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_16</name>
       <text>Scan Datamatrix</text>
-      <x>12</x>
+      <x>82</x>
       <y>334</y>
-      <width>170</width>
+      <width>138</width>
       <height>30</height>
     </widget>
     <widget type="combo" version="2.0.0">
@@ -583,17 +509,17 @@
     <widget type="label" version="2.0.0">
       <name>Label_17</name>
       <text>Sample Type Next</text>
-      <x>12</x>
+      <x>82</x>
       <y>474</y>
-      <width>170</width>
+      <width>138</width>
       <height>30</height>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_18</name>
       <text>Sample Detect</text>
-      <x>12</x>
+      <x>82</x>
       <y>509</y>
-      <width>170</width>
+      <width>138</width>
       <height>30</height>
     </widget>
     <widget type="combo" version="2.0.0">
@@ -605,7 +531,7 @@
     <widget type="polyline" version="2.0.0">
       <name>Polyline_3</name>
       <x>12</x>
-      <y>556</y>
+      <y>601</y>
       <width>340</width>
       <height>2</height>
       <points>
@@ -621,7 +547,7 @@
       <name>Label_2</name>
       <text>Next Tool</text>
       <x>12</x>
-      <y>573</y>
+      <y>618</y>
       <width>108</width>
       <height>30</height>
     </widget>
@@ -629,7 +555,7 @@
       <name>Text Entry</name>
       <pv_name>$(P)Tl-Sel</pv_name>
       <x>120</x>
-      <y>573</y>
+      <y>618</y>
       <width>152</width>
       <background_color>
         <color name="Write_Background" red="128" green="255" blue="255">
@@ -652,7 +578,7 @@
       <pv_name>$(P)Move:Chg-Cmd</pv_name>
       <text>Change</text>
       <x>282</x>
-      <y>573</y>
+      <y>618</y>
       <width>70</width>
     </widget>
     <widget type="led" version="2.0.0">
@@ -769,11 +695,156 @@
         </font>
       </font>
     </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_7</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(pv_name)</pv_name>
+          <value>0</value>
+          <description>Zero argument PV</description>
+        </action>
+      </actions>
+      <pv_name>$(P)Plt-SP</pv_name>
+      <text>0</text>
+      <x>339</x>
+      <y>260</y>
+      <width>13</width>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_18</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(pv_name)</pv_name>
+          <value>0</value>
+          <description>Zero argument PV</description>
+        </action>
+      </actions>
+      <pv_name>$(P)Samp-SP</pv_name>
+      <text>0</text>
+      <x>339</x>
+      <y>299</y>
+      <width>13</width>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_19</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(pv_name)</pv_name>
+          <value>0</value>
+          <description>Zero argument PV</description>
+        </action>
+      </actions>
+      <pv_name>$(P)Plt:N-SP</pv_name>
+      <text>0</text>
+      <x>339</x>
+      <y>369</y>
+      <width>13</width>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_20</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(pv_name)</pv_name>
+          <value>0</value>
+          <description>Zero argument PV</description>
+        </action>
+      </actions>
+      <pv_name>$(P)Samp:N-SP</pv_name>
+      <text>0</text>
+      <x>339</x>
+      <y>404</y>
+      <width>13</width>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(pv_name)</pv_name>
+          <value>0</value>
+          <description>WritePV</description>
+        </action>
+      </actions>
+      <pv_name>$(P)Panic-Cmd</pv_name>
+      <text>Panic Stop</text>
+      <x>12</x>
+      <y>660</y>
+      <width>330</width>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="STOP" red="255" green="0" blue="0">
+        </color>
+      </foreground_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_28</name>
+      <text>Gonio shift</text>
+      <x>12</x>
+      <y>551</y>
+      <width>70</width>
+      <height>30</height>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_6</name>
+      <pv_name>$(P)Gn:X-SP</pv_name>
+      <x>120</x>
+      <y>551</y>
+      <width>51</width>
+      <height>30</height>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_7</name>
+      <pv_name>$(P)Gn:Y-SP</pv_name>
+      <x>202</x>
+      <y>551</y>
+      <width>51</width>
+      <height>30</height>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_8</name>
+      <pv_name>$(P)Gn:Z-SP</pv_name>
+      <x>281</x>
+      <y>551</y>
+      <width>51</width>
+      <height>30</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_1</name>
+      <text>X</text>
+      <x>98</x>
+      <y>551</y>
+      <width>22</width>
+      <height>30</height>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_3</name>
+      <text>Y</text>
+      <x>182</x>
+      <y>551</y>
+      <width>22</width>
+      <height>30</height>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_4</name>
+      <text>Z</text>
+      <x>253</x>
+      <y>551</y>
+      <width>22</width>
+      <height>30</height>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
   </widget>
   <widget type="group" version="2.0.0">
     <name>Movement Speed</name>
     <x>790</x>
-    <y>664</y>
+    <y>592</y>
     <width>160</width>
     <height>391</height>
     <widget type="action_button" version="3.0.0">
@@ -848,7 +919,7 @@
   <widget type="group" version="2.0.0">
     <name>Position</name>
     <x>945</x>
-    <y>319</y>
+    <y>424</y>
     <width>370</width>
     <height>260</height>
     <widget type="embedded" version="2.0.0">
@@ -947,7 +1018,7 @@
     <name>LN2</name>
     <x>945</x>
     <width>370</width>
-    <height>319</height>
+    <height>424</height>
     <widget type="action_button" version="3.0.0">
       <name>Action Button</name>
       <actions>
@@ -958,10 +1029,10 @@
         </action>
       </actions>
       <pv_name>$(P)LN2Reg:On-Cmd</pv_name>
-      <text>Regulate On</text>
+      <text>Reg. On</text>
       <x>12</x>
       <y>12</y>
-      <width>120</width>
+      <width>105</width>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button</name>
@@ -973,10 +1044,9 @@
         </action>
       </actions>
       <pv_name>$(P)LN2Reg:Off-Cmd</pv_name>
-      <text>Regulate Off</text>
-      <x>142</x>
+      <text>Reg. Off</text>
+      <x>227</x>
       <y>12</y>
-      <width>130</width>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button</name>
@@ -988,10 +1058,10 @@
         </action>
       </actions>
       <pv_name>$(P)LN2PS:On-Cmd</pv_name>
-      <text>Phase Sep. On</text>
+      <text>Pha. Sep. On</text>
       <x>12</x>
       <y>62</y>
-      <width>120</width>
+      <width>105</width>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button</name>
@@ -1003,23 +1073,9 @@
         </action>
       </actions>
       <pv_name>$(P)LN2PS:Off-Cmd</pv_name>
-      <text>Phase Sep. Off</text>
-      <x>142</x>
+      <text>Pha. Sep. Off</text>
+      <x>227</x>
       <y>62</y>
-      <width>130</width>
-    </widget>
-    <widget type="embedded" version="2.0.0">
-      <name>Embedded Display</name>
-      <macros>
-        <DESC>$(P)LN2:Lvl-I</DESC>
-        <NAME>$(P)LN2:Lvl-I</NAME>
-      </macros>
-      <file>_isara-readback.bob</file>
-      <x>12</x>
-      <y>261</y>
-      <width>325</width>
-      <height>30</height>
-      <resize>2</resize>
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display</name>
@@ -1029,7 +1085,7 @@
       </macros>
       <file>_isara-readback.bob</file>
       <x>12</x>
-      <y>231</y>
+      <y>211</y>
       <width>325</width>
       <height>30</height>
       <resize>2</resize>
@@ -1042,33 +1098,7 @@
       </macros>
       <file>_isara-readback.bob</file>
       <x>12</x>
-      <y>201</y>
-      <width>325</width>
-      <height>30</height>
-      <resize>2</resize>
-    </widget>
-    <widget type="embedded" version="2.0.0">
-      <name>Embedded Display</name>
-      <macros>
-        <DESC>$(P)LN2:PS-Sts</DESC>
-        <NAME>$(P)LN2:PS-Sts</NAME>
-      </macros>
-      <file>_isara-readback.bob</file>
-      <x>12</x>
-      <y>171</y>
-      <width>325</width>
-      <height>30</height>
-      <resize>2</resize>
-    </widget>
-    <widget type="embedded" version="2.0.0">
-      <name>Embedded Display</name>
-      <macros>
-        <DESC>$(P)LN2:Reg-Sts</DESC>
-        <NAME>$(P)LN2:Reg-Sts</NAME>
-      </macros>
-      <file>_isara-readback.bob</file>
-      <x>12</x>
-      <y>141</y>
+      <y>183</y>
       <width>325</width>
       <height>30</height>
       <resize>2</resize>
@@ -1081,67 +1111,172 @@
       </macros>
       <file>_isara-readback.bob</file>
       <x>12</x>
-      <y>111</y>
+      <y>153</y>
       <width>325</width>
       <height>30</height>
       <resize>2</resize>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_13</name>
+      <pv_name>$(P)LN2:Reg-Sts</pv_name>
+      <x>128</x>
+      <y>12</y>
+      <width>89</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_14</name>
+      <pv_name>$(P)LN2:PS-Sts</pv_name>
+      <x>128</x>
+      <y>62</y>
+      <width>89</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="progressbar" version="2.0.0">
+      <name>Progress Bar</name>
+      <pv_name>$(P)LN2:Lvl-I</pv_name>
+      <x>12</x>
+      <y>98</y>
+      <width>320</width>
+      <fill_color>
+        <color red="0" green="179" blue="255">
+        </color>
+      </fill_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_21</name>
+      <text>LN2 Level</text>
+      <x>12</x>
+      <y>123</y>
+      <width>140</width>
+      <height>30</height>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_7</name>
+      <pv_name>$(P)LN2:Lvl-I</pv_name>
+      <x>168</x>
+      <y>123</y>
+      <width>166</width>
+      <height>30</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_5</name>
+      <macros>
+        <DESC>$(P)ColdDewar-Sts</DESC>
+        <NAME>$(P)ColdDewar-Sts</NAME>
+      </macros>
+      <file>_isara-bit.bob</file>
+      <x>12</x>
+      <y>241</y>
+      <width>325</width>
+      <height>30</height>
+      <resize>2</resize>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_6</name>
+      <macros>
+        <DESC>$(P)WarmDewar-Sts</DESC>
+        <NAME>$(P)WarmDewar-Sts</NAME>
+      </macros>
+      <file>_isara-bit.bob</file>
+      <x>12</x>
+      <y>271</y>
+      <width>325</width>
+      <height>30</height>
+      <resize>2</resize>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Embedded Display_10</name>
+      <macros>
+        <DESC>$(P)LN2RegRqst-Sts</DESC>
+        <NAME>$(P)LN2RegRqst-Sts</NAME>
+      </macros>
+      <file>_isara-bit.bob</file>
+      <x>12</x>
+      <y>301</y>
+      <width>325</width>
+      <height>30</height>
+      <resize>2</resize>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_22</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(pv_name)</pv_name>
+          <value>0</value>
+          <description>WritePV</description>
+        </action>
+      </actions>
+      <pv_name>$(P)LN2DC:Off-Cmd</pv_name>
+      <text>Cust. Reg. Off</text>
+      <x>227</x>
+      <y>357</y>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_21</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(pv_name)</pv_name>
+          <value>0</value>
+          <description>WritePV</description>
+        </action>
+      </actions>
+      <pv_name>$(P)LN2DC:On-Cmd</pv_name>
+      <text>Cust. Reg. On</text>
+      <x>12</x>
+      <y>357</y>
+      <width>105</width>
     </widget>
   </widget>
   <widget type="group" version="2.0.0">
     <name>Digital Input</name>
     <x>10</x>
-    <y>90</y>
-    <width>280</width>
-    <height>138</height>
+    <y>135</y>
+    <width>395</width>
+    <height>90</height>
     <widget type="byte_monitor" version="2.0.0">
       <name>Byte Monitor</name>
       <pv_name>$(P)DI:0-I</pv_name>
-      <x>2</x>
-      <y>37</y>
-      <width>240</width>
+      <x>3</x>
+      <y>6</y>
+      <width>308</width>
       <height>7</height>
       <numBits>32</numBits>
+      <square>true</square>
     </widget>
     <widget type="byte_monitor" version="2.0.0">
       <name>Byte Monitor_1</name>
       <pv_name>$(P)DI:1-I</pv_name>
-      <x>2</x>
-      <y>54</y>
-      <width>240</width>
+      <x>3</x>
+      <y>18</y>
+      <width>308</width>
       <height>7</height>
       <numBits>32</numBits>
+      <square>true</square>
     </widget>
     <widget type="byte_monitor" version="2.0.0">
       <name>Byte Monitor_2</name>
       <pv_name>$(P)DI:2-I</pv_name>
-      <x>2</x>
-      <y>71</y>
-      <width>240</width>
+      <x>3</x>
+      <y>30</y>
+      <width>308</width>
       <height>7</height>
       <numBits>32</numBits>
+      <square>true</square>
     </widget>
     <widget type="byte_monitor" version="2.0.0">
       <name>Byte Monitor_3</name>
       <pv_name>$(P)DI:3-I</pv_name>
-      <x>2</x>
-      <y>88</y>
-      <width>240</width>
+      <x>3</x>
+      <y>42</y>
+      <width>308</width>
       <height>7</height>
       <numBits>32</numBits>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_8</name>
-      <text>0</text>
-      <x>232</x>
-      <y>6</y>
-      <width>20</width>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_10</name>
-      <text>31</text>
-      <x>2</x>
-      <y>3</y>
-      <width>20</width>
+      <square>true</square>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button_2</name>
@@ -1155,11 +1290,18 @@
           <description>Open Display</description>
         </action>
       </actions>
-      <text>DI Details</text>
-      <x>72</x>
-      <y>3</y>
-      <height>20</height>
+      <text>Detail</text>
+      <x>331</x>
+      <width>28</width>
+      <height>49</height>
+      <rotation_step>1</rotation_step>
       <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_8</name>
+      <text>0</text>
+      <x>311</x>
+      <width>20</width>
     </widget>
   </widget>
   <widget type="action_button" version="3.0.0">
@@ -1171,19 +1313,35 @@
           <P>$(P)SD:</P>
         </macros>
         <target>tab</target>
-        <description>Open Display</description>
+        <description>Sample Stats.</description>
+      </action>
+      <action type="open_display">
+        <file>asynRecord.bob</file>
+        <macros>
+          <R>Prt:Ctl-Asyn</R>
+        </macros>
+        <target>tab</target>
+        <description>Control Expert</description>
+      </action>
+      <action type="open_display">
+        <file>asynRecord.bob</file>
+        <macros>
+          <R>Prt:St-Asyn</R>
+        </macros>
+        <target>tab</target>
+        <description>Status Expert</description>
       </action>
     </actions>
-    <text>Last Sample Data</text>
-    <x>20</x>
-    <y>60</y>
-    <width>150</width>
+    <text>Related</text>
+    <x>420</x>
+    <y>50</y>
+    <width>135</width>
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="group" version="2.0.0">
     <name>Driver Status SCAN</name>
     <x>945</x>
-    <y>579</y>
+    <y>684</y>
     <width>370</width>
     <height>189</height>
     <widget type="embedded" version="2.0.0">
@@ -1263,58 +1421,55 @@
   </widget>
   <widget type="group" version="2.0.0">
     <name>Digital Output</name>
-    <x>290</x>
-    <y>90</y>
-    <width>280</width>
-    <height>139</height>
+    <x>10</x>
+    <y>50</y>
+    <width>395</width>
+    <height>85</height>
     <widget type="byte_monitor" version="2.0.0">
       <name>Byte Monitor_4</name>
       <pv_name>$(P)DO:0-I</pv_name>
-      <x>2</x>
-      <y>37</y>
-      <width>240</width>
+      <x>3</x>
+      <y>9</y>
+      <width>308</width>
       <height>7</height>
       <numBits>32</numBits>
+      <square>true</square>
     </widget>
     <widget type="byte_monitor" version="2.0.0">
       <name>Byte Monitor_5</name>
       <pv_name>$(P)DO:1-I</pv_name>
-      <x>2</x>
-      <y>54</y>
-      <width>240</width>
+      <x>3</x>
+      <y>21</y>
+      <width>308</width>
       <height>7</height>
       <numBits>32</numBits>
+      <square>true</square>
     </widget>
     <widget type="byte_monitor" version="2.0.0">
       <name>Byte Monitor_6</name>
       <pv_name>$(P)DO:2-I</pv_name>
-      <x>2</x>
-      <y>71</y>
-      <width>240</width>
+      <x>3</x>
+      <y>33</y>
+      <width>308</width>
       <height>7</height>
       <numBits>32</numBits>
+      <square>true</square>
     </widget>
     <widget type="byte_monitor" version="2.0.0">
       <name>Byte Monitor_7</name>
       <pv_name>$(P)DO:3-I</pv_name>
-      <x>2</x>
-      <y>88</y>
-      <width>240</width>
+      <x>3</x>
+      <y>45</y>
+      <width>308</width>
       <height>7</height>
       <numBits>32</numBits>
+      <square>true</square>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_9</name>
       <text>0</text>
-      <x>230</x>
-      <y>8</y>
-      <width>20</width>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_11</name>
-      <text>31</text>
-      <x>2</x>
-      <y>7</y>
+      <x>311</x>
+      <y>3</y>
       <width>20</width>
     </widget>
     <widget type="action_button" version="3.0.0">
@@ -1329,48 +1484,14 @@
           <description>Open Display</description>
         </action>
       </actions>
-      <text>DO Details</text>
-      <x>62</x>
-      <y>7</y>
-      <height>20</height>
+      <text>Detail</text>
+      <x>331</x>
+      <y>3</y>
+      <width>28</width>
+      <height>49</height>
+      <rotation_step>1</rotation_step>
       <tooltip>$(actions)</tooltip>
     </widget>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button_5</name>
-    <actions>
-      <action type="open_display">
-        <file>asynRecord.bob</file>
-        <macros>
-          <R>Prt:St-Asyn</R>
-        </macros>
-        <target>tab</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Status expert</text>
-    <x>310</x>
-    <y>60</y>
-    <width>120</width>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button_6</name>
-    <actions>
-      <action type="open_display">
-        <file>asynRecord.bob</file>
-        <macros>
-          <R>Prt:Ctl-Asyn</R>
-        </macros>
-        <target>tab</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Command expert</text>
-    <x>180</x>
-    <y>60</y>
-    <width>120</width>
-    <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_3</name>
@@ -1419,7 +1540,7 @@
     <x>790</x>
     <y>424</y>
     <width>155</width>
-    <height>240</height>
+    <height>168</height>
     <widget type="action_button" version="3.0.0">
       <name>Action Button</name>
       <actions>
@@ -1446,44 +1567,14 @@
       <pv_name>$(P)Lid:Cls-Cmd</pv_name>
       <text>Close</text>
       <x>6</x>
-      <y>177</y>
-    </widget>
-    <widget type="led" version="2.0.0">
-      <name>LED_7</name>
-      <pv_name>$(P)LidOpened-Sts</pv_name>
-      <x>6</x>
-      <y>37</y>
-      <width>100</width>
-      <height>30</height>
-      <square>true</square>
-      <labels_from_pv>true</labels_from_pv>
-    </widget>
-    <widget type="led" version="2.0.0">
-      <name>LED_8</name>
-      <pv_name>$(P)OpenLidRqst-Sts</pv_name>
-      <x>6</x>
-      <y>72</y>
-      <width>100</width>
-      <height>30</height>
-      <square>true</square>
-      <labels_from_pv>true</labels_from_pv>
-    </widget>
-    <widget type="led" version="2.0.0">
-      <name>LED_9</name>
-      <pv_name>$(P)CloseLidRqst-Sts</pv_name>
-      <x>6</x>
-      <y>107</y>
-      <width>100</width>
-      <height>30</height>
-      <square>true</square>
-      <labels_from_pv>true</labels_from_pv>
+      <y>106</y>
     </widget>
     <widget type="led" version="2.0.0">
       <name>LED_10</name>
       <pv_name>$(P)LidClosed-Sts</pv_name>
-      <x>6</x>
-      <y>142</y>
-      <width>100</width>
+      <x>22</x>
+      <y>71</y>
+      <width>75</width>
       <height>30</height>
       <square>true</square>
       <labels_from_pv>true</labels_from_pv>
@@ -1492,9 +1583,9 @@
   <widget type="group" version="2.0.0">
     <name>Misc</name>
     <x>20</x>
-    <y>580</y>
+    <y>509</y>
     <width>380</width>
-    <height>448</height>
+    <height>327</height>
     <widget type="action_button" version="3.0.0">
       <name>Action Button</name>
       <actions>
@@ -1633,38 +1724,12 @@
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display</name>
       <macros>
-        <DESC>$(P)Grp:B-Sts</DESC>
-        <NAME>$(P)Grp:B-Sts</NAME>
-      </macros>
-      <file>_isara-readback.bob</file>
-      <x>12</x>
-      <y>210</y>
-      <width>325</width>
-      <height>30</height>
-      <resize>2</resize>
-    </widget>
-    <widget type="embedded" version="2.0.0">
-      <name>Embedded Display</name>
-      <macros>
-        <DESC>$(P)Grp:A-Sts</DESC>
-        <NAME>$(P)Grp:A-Sts</NAME>
-      </macros>
-      <file>_isara-readback.bob</file>
-      <x>12</x>
-      <y>240</y>
-      <width>325</width>
-      <height>30</height>
-      <resize>2</resize>
-    </widget>
-    <widget type="embedded" version="2.0.0">
-      <name>Embedded Display</name>
-      <macros>
         <DESC>$(P)GripDry-Sts</DESC>
         <NAME>$(P)GripDry-Sts</NAME>
       </macros>
       <file>_isara-readback.bob</file>
       <x>12</x>
-      <y>270</y>
+      <y>204</y>
       <width>325</width>
       <height>30</height>
       <resize>2</resize>
@@ -1677,7 +1742,7 @@
       </macros>
       <file>_isara-readback.bob</file>
       <x>12</x>
-      <y>300</y>
+      <y>234</y>
       <width>325</width>
       <height>30</height>
       <resize>2</resize>
@@ -1690,7 +1755,7 @@
       </macros>
       <file>_isara-readback.bob</file>
       <x>12</x>
-      <y>330</y>
+      <y>264</y>
       <width>325</width>
       <height>30</height>
       <resize>2</resize>
@@ -1699,61 +1764,9 @@
   <widget type="group" version="2.0.0">
     <name>Sample Presence</name>
     <x>20</x>
-    <y>281</y>
+    <y>279</y>
     <width>380</width>
-    <height>299</height>
-    <widget type="embedded" version="2.0.0">
-      <name>Embedded Display</name>
-      <macros>
-        <DESC>$(P)Pck:A-I</DESC>
-        <NAME>$(P)Pck:A-I</NAME>
-      </macros>
-      <file>_isara-readback.bob</file>
-      <x>22</x>
-      <y>21</y>
-      <width>325</width>
-      <height>30</height>
-      <resize>2</resize>
-    </widget>
-    <widget type="embedded" version="2.0.0">
-      <name>Embedded Display</name>
-      <macros>
-        <DESC>$(P)Samp:A-I</DESC>
-        <NAME>$(P)Samp:A-I</NAME>
-      </macros>
-      <file>_isara-readback.bob</file>
-      <x>22</x>
-      <y>51</y>
-      <width>325</width>
-      <height>30</height>
-      <resize>2</resize>
-    </widget>
-    <widget type="embedded" version="2.0.0">
-      <name>Embedded Display</name>
-      <macros>
-        <DESC>$(P)Pck:B-I</DESC>
-        <NAME>$(P)Pck:B-I</NAME>
-      </macros>
-      <file>_isara-readback.bob</file>
-      <x>22</x>
-      <y>81</y>
-      <width>325</width>
-      <height>30</height>
-      <resize>2</resize>
-    </widget>
-    <widget type="embedded" version="2.0.0">
-      <name>Embedded Display</name>
-      <macros>
-        <DESC>$(P)Samp:B-I</DESC>
-        <NAME>$(P)Samp:B-I</NAME>
-      </macros>
-      <file>_isara-readback.bob</file>
-      <x>22</x>
-      <y>111</y>
-      <width>325</width>
-      <height>30</height>
-      <resize>2</resize>
-    </widget>
+    <height>230</height>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display</name>
       <macros>
@@ -1761,34 +1774,8 @@
         <NAME>$(P)Plt:Dif-I</NAME>
       </macros>
       <file>_isara-readback.bob</file>
-      <x>22</x>
-      <y>141</y>
-      <width>325</width>
-      <height>30</height>
-      <resize>2</resize>
-    </widget>
-    <widget type="embedded" version="2.0.0">
-      <name>Embedded Display</name>
-      <macros>
-        <DESC>$(P)Pck:Dif-I</DESC>
-        <NAME>$(P)Pck:Dif-I</NAME>
-      </macros>
-      <file>_isara-readback.bob</file>
-      <x>22</x>
-      <y>171</y>
-      <width>325</width>
-      <height>30</height>
-      <resize>2</resize>
-    </widget>
-    <widget type="embedded" version="2.0.0">
-      <name>Embedded Display</name>
-      <macros>
-        <DESC>$(P)Samp:Dif-I</DESC>
-        <NAME>$(P)Samp:Dif-I</NAME>
-      </macros>
-      <file>_isara-readback.bob</file>
-      <x>22</x>
-      <y>201</y>
+      <x>12</x>
+      <y>140</y>
       <width>325</width>
       <height>30</height>
       <resize>2</resize>
@@ -1800,11 +1787,297 @@
         <NAME>$(P)Plt:Tl-I</NAME>
       </macros>
       <file>_isara-readback.bob</file>
-      <x>22</x>
-      <y>231</y>
+      <x>12</x>
+      <y>170</y>
       <width>325</width>
       <height>30</height>
       <resize>2</resize>
     </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_22</name>
+      <text>Grip A</text>
+      <x>2</x>
+      <y>40</y>
+      <width>50</width>
+      <height>30</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_23</name>
+      <text>Puck</text>
+      <x>62</x>
+      <y>12</y>
+      <width>52</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_24</name>
+      <text>Sample</text>
+      <x>134</x>
+      <y>12</y>
+      <width>70</width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_8</name>
+      <pv_name>$(P)Pck:A-I</pv_name>
+      <x>62</x>
+      <y>40</y>
+      <width>54</width>
+      <height>30</height>
+      <font>
+        <font name="Header 3" family="Liberation Sans" style="BOLD" size="16.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_9</name>
+      <pv_name>$(P)Pck:B-I</pv_name>
+      <x>62</x>
+      <y>75</y>
+      <width>54</width>
+      <height>30</height>
+      <font>
+        <font name="Header 3" family="Liberation Sans" style="BOLD" size="16.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_10</name>
+      <pv_name>$(P)Pck:Dif-I</pv_name>
+      <x>64</x>
+      <y>110</y>
+      <width>54</width>
+      <height>30</height>
+      <font>
+        <font name="Header 3" family="Liberation Sans" style="BOLD" size="16.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_11</name>
+      <pv_name>$(P)Samp:A-I</pv_name>
+      <x>134</x>
+      <y>40</y>
+      <width>49</width>
+      <height>30</height>
+      <font>
+        <font name="Header 3" family="Liberation Sans" style="BOLD" size="16.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_12</name>
+      <pv_name>$(P)Samp:B-I</pv_name>
+      <x>134</x>
+      <y>75</y>
+      <width>49</width>
+      <height>30</height>
+      <font>
+        <font name="Header 3" family="Liberation Sans" style="BOLD" size="16.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_13</name>
+      <pv_name>$(P)Samp:Dif-I</pv_name>
+      <x>134</x>
+      <y>110</y>
+      <width>49</width>
+      <height>30</height>
+      <font>
+        <font name="Header 3" family="Liberation Sans" style="BOLD" size="16.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_25</name>
+      <text>Grip B</text>
+      <x>2</x>
+      <y>75</y>
+      <width>50</width>
+      <height>30</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_26</name>
+      <text>Dif.</text>
+      <x>2</x>
+      <y>110</y>
+      <width>50</width>
+      <height>30</height>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>Text Update_14</name>
+      <pv_name>$(P)Samp:A-Sts</pv_name>
+      <x>188</x>
+      <y>40</y>
+      <width>70</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>Text Update_15</name>
+      <pv_name>$(P)Samp:B-Sts</pv_name>
+      <x>188</x>
+      <y>75</y>
+      <width>70</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>Text Update_16</name>
+      <pv_name>$(P)Samp:Dif-Sts</pv_name>
+      <x>188</x>
+      <y>110</y>
+      <width>70</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>Text Update_17</name>
+      <pv_name>$(P)Grp:A-Sts</pv_name>
+      <x>268</x>
+      <y>40</y>
+      <width>69</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>Text Update_18</name>
+      <pv_name>$(P)Grp:B-Sts</pv_name>
+      <x>268</x>
+      <y>75</y>
+      <width>69</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_1</name>
+    <pv_name>$(P)Pwr-Sts</pv_name>
+    <x>830</x>
+    <y>305</y>
+    <width>75</width>
+    <height>30</height>
+    <off_color>
+      <color name="MINOR" red="255" green="128" blue="0">
+      </color>
+    </off_color>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_6</name>
+    <pv_name>$(P)PwrON-Sts</pv_name>
+    <x>830</x>
+    <y>340</y>
+    <width>75</width>
+    <height>30</height>
+    <off_color>
+      <color name="MINOR" red="255" green="128" blue="0">
+      </color>
+    </off_color>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_7</name>
+    <pv_name>$(P)LidOpened-Sts</pv_name>
+    <x>830</x>
+    <y>479</y>
+    <width>75</width>
+    <height>30</height>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_7</name>
+    <macros>
+      <DESC>$(P)FltAck-Sts</DESC>
+      <NAME>$(P)FltAck-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>590</x>
+    <y>60</y>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_8</name>
+    <macros>
+      <DESC>$(P)SafetyRestartNeeded-Sts</DESC>
+      <NAME>$(P)SafetyRestartNeeded-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>590</x>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_9</name>
+    <macros>
+      <DESC>$(P)SafetyAck-Sts</DESC>
+      <NAME>$(P)SafetyAck-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>590</x>
+    <y>30</y>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>$(P)LastErr-I</pv_name>
+    <x>152</x>
+    <y>259</y>
+    <width>608</width>
+    <foreground_color>
+      <color name="Attention" red="255" green="160" blue="0">
+      </color>
+    </foreground_color>
+    <format>6</format>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_17</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>0</value>
+        <description>Clear Last Error Message</description>
+      </action>
+    </actions>
+    <pv_name>$(P)ClrErr-Cmd</pv_name>
+    <text>0</text>
+    <x>760</x>
+    <y>259</y>
+    <width>20</width>
+    <height>21</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_19</name>
+    <pv_name>$(P)LastMsg-I</pv_name>
+    <x>152</x>
+    <y>228</y>
+    <width>608</width>
+    <format>6</format>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_29</name>
+    <text>Sys. Msg.</text>
+    <x>20</x>
+    <y>230</y>
+    <width>120</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_30</name>
+    <text>Last Cmd. Err.</text>
+    <x>20</x>
+    <y>259</y>
+    <width>120</width>
   </widget>
 </display>
