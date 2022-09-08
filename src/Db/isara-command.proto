@@ -32,8 +32,9 @@ setspeed {
 # "$(P)SampT-Sel"
 # "$(P)SampT:N-Sel"
 # "$(P)SampDet-Sel"
-# no PVs for Gonio shift X,Y,Z
-# TODO: should these be integer or decimal?
+# "$(P)Gn:X-SP"
+# "$(P)Gn:Y-SP"
+# "$(P)Gn:Z-SP"
 
 # use the current tool (readback)
 traj_toolonly {
@@ -70,9 +71,9 @@ traj_tooldm {
         ",0"
         ",0"
         # 10
-        ",0" # TODO
-        ",0" # TODO
-        ",0" # TODO
+        ",%(\$1Gn:X-SP)d"
+        ",%(\$1Gn:Y-SP)d"
+        ",%(\$1Gn:Z-SP)d"
         ")";
     in "\$2";
 }
@@ -108,9 +109,9 @@ traj_allargs {
         ",%(\$1SampT:N-Sel)u"
         ",%(\$1SampDet-Sel)u"
         # 10
-        ",0" # TODO
-        ",0" # TODO
-        ",0" # TODO
+        ",%(\$1Gn:X-SP)d"
+        ",%(\$1Gn:Y-SP)d"
+        ",%(\$1Gn:Z-SP)d"
         ")";
     in "\$2";
 }

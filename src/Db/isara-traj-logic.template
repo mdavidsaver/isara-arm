@@ -104,5 +104,21 @@ record(bo, "$(P)SampDet-Sel") {
     info(autosaveFields_pass0, "VAL")
 }
 
-# omit Gonio shift X,Y,Z
-# TODO: should these be integer or decimal?
+record(longout, "$(P)Gn:X-SP") {
+    field(DESC, "Gonio X shift")
+    field(VAL , "0")
+    field(EGU , "um")
+    info(autosaveFields_pass0, "VAL")
+}
+record(longout, "$(P)Gn:Y-SP") {
+    field(DESC, "Gonio Y shift")
+    field(VAL , "0")
+    field(EGU , "um")
+    info(autosaveFields_pass0, "VAL")
+}
+record(longout, "$(P)Gn:Z-SP") {
+    field(DESC, "Gonio Z shift")
+    field(VAL , "0")
+    field(EGU , "um")
+    info(autosaveFields_pass0, "VAL")
+}
