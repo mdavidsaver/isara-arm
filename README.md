@@ -4,7 +4,10 @@ EPICS Driver for X-ray crystallography ISARA sample changer.
 
 https://www.irelec-alcen.com/en/synchrotrons/x-ray-crystallography-isara-sample-changer
 
-Based on document ISARA-NS-05 rev. 13 - ISARA Sample Changer, List of socket commands
+Based on document:
+
+- ISARA-NS-05 rev. 13 - ISARA Sample Changer, List of socket commands
+- ISARA-NS-12 rev. 2  - I/O List, for interpreting `di`/`do` responses
 
 Requires:
 
@@ -15,7 +18,7 @@ Requires:
 
 Optional:
 
-- [autosave](https://github.com/epics-modules/autosave)
+- [autosave](https://github.com/epics-modules/autosave) (persist user arguments to trajectory commands)
 
 ## Current State
 

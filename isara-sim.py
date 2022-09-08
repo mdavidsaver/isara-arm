@@ -3,7 +3,7 @@
 Bare bones simulation of ISARA sample auto-mounter arm.
 
 Based on vendor docs:
-  ISARA-NS-05 rev. 12, April 2019  - requests and replies
+  ISARA-NS-05 rev. 13, August 2022  - requests and replies
   ISARA-NS-12 rev. 2, August 2014  - DI/DO signal list
   Vendor does not allow reproduction/distribution of docs :.(
 """
