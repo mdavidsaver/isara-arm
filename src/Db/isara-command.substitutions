@@ -48,6 +48,9 @@ file "isara-simple-cmd.template" {
 { DEV="\$(DEV)", P="\$(P)", R="LN2PS:On", CMD="ps_regulon"}
 { DEV="\$(DEV)", P="\$(P)", R="LN2PS:Off", CMD="ps_reguloff"}
 
+{ DEV="\$(DEV)", P="\$(P)", R="LN2DC:On", CMD="dc_regulon"}
+{ DEV="\$(DEV)", P="\$(P)", R="LN2DC:Off", CMD="dc_reguloff"}
+
 #{ DEV="\$(DEV)", P="\$(P)", R="", CMD=""}
 }
 

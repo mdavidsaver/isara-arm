@@ -32,21 +32,21 @@ file "isara-bit.template" {
 {N="\$(P)Alm:DwrFlt", INP="\$(P)Alarm-I.B17", ZNAM="OK", ONAM="Alarm", OSV="MAJOR"}
 {N="\$(P)Alm:PSFlt",  INP="\$(P)Alarm-I.B18", ZNAM="OK", ONAM="Alarm", OSV="MAJOR"}
 # DI bits
-{N="\$(P)Standby",       INP="\$(P)DI:0-I.B0"}
-{N="\$(P)SeqReady",      INP="\$(P)DI:0-I.B1"}
-{N="\$(P)SeqRunning",    INP="\$(P)DI:0-I.B2"}
-{N="\$(P)SeqPaused",     INP="\$(P)DI:0-I.B3"}
-{N="\$(P)Fault", INP="\$(P)DI:0-I.B4"}
+{N="\$(P)Standby",       INP="\$(P)DI:0-I.B0", ZNAM="Not Standby", ONAM="Standby"}
+{N="\$(P)SeqReady",      INP="\$(P)DI:0-I.B1", ZNAM="Not Ready", ONAM="Ready"}
+{N="\$(P)SeqRunning",    INP="\$(P)DI:0-I.B2", ZNAM="No Move", ONAM="Move"}
+{N="\$(P)SeqPaused",     INP="\$(P)DI:0-I.B3", ZNAM="Normal", ONAM="Pause"}
+{N="\$(P)Fault", INP="\$(P)DI:0-I.B4", ZNAM="OK", ONAM="Alarm", OSV="MAJOR"}
 {N="\$(P)Debug", INP="\$(P)DI:0-I.B5"}
-{N="\$(P)Warning",       INP="\$(P)DI:0-I.B6"}
+{N="\$(P)Warning",       INP="\$(P)DI:0-I.B6", ZNAM="OK", ONAM="Warning", OSV="MAJOR"}
 {N="\$(P)ManualSeqMode", INP="\$(P)DI:0-I.B7"}
 {N="\$(P)ES:MCP",        INP="\$(P)DI:0-I.B8", ZNAM="Open", ONAM="Closed", ZSV="MAJOR"}
 {N="\$(P)ES:WMS",        INP="\$(P)DI:0-I.B9", ZNAM="Open", ONAM="Closed", ZSV="MAJOR"}
 {N="\$(P)ES:USA",        INP="\$(P)DI:0-I.BA", ZNAM="Open", ONAM="Closed", ZSV="MAJOR"}
 {N="\$(P)ES:USB",        INP="\$(P)DI:0-I.BB", ZNAM="Open", ONAM="Closed", ZSV="MAJOR"}
 {N="\$(P)ES:USEN",       INP="\$(P)DI:0-I.BC", ZNAM="Open", ONAM="Closed", ZSV="MAJOR"}
-{N="\$(P)ES:DOOR",       INP="\$(P)DI:0-I.BD", ZNAM="Open", ONAM="Closed", ZSV="MAJOR"}
-{N="\$(P)ES:INTERN",     INP="\$(P)DI:0-I.BE"}
+{N="\$(P)ES:DOOR",       INP="\$(P)DI:0-I.BD", ZNAM="Closed", ONAM="Open", OSV="MAJOR"}
+{N="\$(P)ES:INTERN",     INP="\$(P)DI:0-I.BE", ZNAM="OK", ONAM="Fault", OSV="MAJOR"}
 {N="\$(P)DI:15", INP="\$(P)DI:0-I.BF"}
 {N="\$(P)ToolChanger",   INP="\$(P)DI:0-I.B10"}
 {N="\$(P)GripA:Op",  INP="\$(P)DI:0-I.B11", ZNAM="Not Open", ONAM="Open"}

@@ -6,6 +6,8 @@
 #  DEV  - asyn port name of status socket
 #  SCAN - status scan rate
 
+# move running timer
+
 record(calc, "$(P)MvnT-I") {
     field(DESC, "Movement timer")
     field(SCAN, "1 second")
@@ -15,6 +17,62 @@ record(calc, "$(P)MvnT-I") {
     # D - scratch
     field(CALC, "D:=(A&&!B)?0:(A?VAL+C:VAL);B:=A;D")
     field(EGU , "s")
+}
+
+# E-Stop aggregation
+
+record(calcout, "$(P)ES-Calc_") {
+    field(INPA, "$(P)ES:MCP-Sts CP MS")    # 1 ok
+    field(INPB, "$(P)ES:WMS-Sts CP MS")    # 1 ok
+    field(INPC, "$(P)ES:USA-Sts CP MS")    # 1 ok
+    field(INPD, "$(P)ES:USB-Sts CP MS")    # 1 ok
+    field(INPE, "$(P)ES:USEN-Sts CP MS")   # 1 ok
+    field(INPF, "$(P)ES:DOOR-Sts CP MS")   # 0 ok
+    field(INPG, "$(P)ES:INTERN-Sts CP MS") # 0 ok
+    field(CALC, "A&&B&&C&&D&&E&&!F&&!G")
+    field(FLNK, "$(P)ES-Sts")
+}
+record(bi, "$(P)ES-Sts") {
+    field(DESC, "E-Stop summary")
+    field(INP , "$(P)ES-Calc_ MS")
+    field(ZNAM, "Fault")
+    field(ONAM, "Normal")
+    field(ZSV , "MAJOR")
+}
+
+# sample present/absent
+
+record(calcout, "$(P)Samp:A-Calc_") {
+    field(INPA, "$(P)Pck:A-I CP MS")
+    field(INPB, "$(P)Samp:A-I CP MS")
+    field(CALC, "A>0||B>0")
+    field(OUT , "$(P)Samp:A-Sts PP MS")
+}
+record(bi, "$(P)Samp:A-Sts") {
+    field(ZNAM, "Empty")
+    field(ONAM, "Present")
+}
+
+record(calcout, "$(P)Samp:B-Calc_") {
+    field(INPA, "$(P)Pck:B-I CP MS")
+    field(INPB, "$(P)Samp:B-I CP MS")
+    field(CALC, "A>0||B>0")
+    field(OUT , "$(P)Samp:B-Sts PP MS")
+}
+record(bi, "$(P)Samp:B-Sts") {
+    field(ZNAM, "Empty")
+    field(ONAM, "Present")
+}
+
+record(calcout, "$(P)Samp:Dif-Calc_") {
+    field(INPA, "$(P)Pck:Dif-I CP MS")
+    field(INPB, "$(P)Samp:Dif-I CP MS")
+    field(CALC, "A>0||B>0")
+    field(OUT , "$(P)Samp:Dif-Sts PP MS")
+}
+record(bi, "$(P)Samp:Dif-Sts") {
+    field(ZNAM, "Empty")
+    field(ONAM, "Present")
 }
 
 # Prevent request of "dry" trajectory while moving (~redundant)
@@ -85,8 +143,9 @@ record(bi, "$(P)Rmt-Sts") {
 record(bi, "$(P)Flt-Sts") {
     field(DISV, "-99999")
     field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
-    field(ZNAM, "0")
-    field(ONAM, "1")
+    field(ZNAM, "Ok")
+    field(ONAM, "Fault")
+    field(OSV , "MAJOR")
 }
 record(mbbo, "$(P)Tl-I") {
     field(DISV, "-99999")
@@ -121,14 +180,14 @@ record(stringin, "$(P)Path:Name-I") {
 record(bi, "$(P)Grp:A-Sts") {
     field(DISV, "-99999")
     field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
-    field(ZNAM, "0")
-    field(ONAM, "1")
+    field(ZNAM, "Open")
+    field(ONAM, "Closed")
 }
 record(bi, "$(P)Grp:B-Sts") {
     field(DISV, "-99999")
     field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
-    field(ZNAM, "0")
-    field(ONAM, "1")
+    field(ZNAM, "Open")
+    field(ONAM, "Closed")
 }
 record(longin, "$(P)Pck:A-I") {
     field(DISV, "-99999")
@@ -211,18 +270,24 @@ record(ai, "$(P)LN2:Lvl-I") {
     field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
     field(PREC, "1")
     field(EGU, "%")
+    field(HOPR, "100")
+    field(LOPR, "0")
 }
 record(ai, "$(P)LN2:Max-I") {
     field(DISV, "-99999")
     field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
     field(PREC, "1")
     field(EGU, "%")
+    field(HOPR, "100")
+    field(LOPR, "0")
 }
 record(ai, "$(P)LN2:Min-I") {
     field(DISV, "-99999")
     field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
     field(PREC, "1")
     field(EGU, "%")
+    field(HOPR, "100")
+    field(LOPR, "0")
 }
 record(bi, "$(P)CamTrk-Sts") {
     field(DISV, "-99999")
