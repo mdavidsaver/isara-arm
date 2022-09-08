@@ -2,6 +2,10 @@
 
 EPICS Driver for X-ray crystallography ISARA sample changer.
 
+https://www.irelec-alcen.com/en/synchrotrons/x-ray-crystallography-isara-sample-changer
+
+Based on document ISARA-NS-05 rev. 13 - ISARA Sample Changer, List of socket commands
+
 Requires:
 
 - [EPICS](https://epics-controls.org/) [Base](https://epics.anl.gov/)
@@ -9,9 +13,9 @@ Requires:
 - [busy](https://github.com/epics-modules/busy)
 - [StreamDevice](https://paulscherrerinstitute.github.io/StreamDevice/) built with the optional PCRE support
 
-https://www.irelec-alcen.com/en/synchrotrons/x-ray-crystallography-isara-sample-changer
+Optional:
 
-Based on document ISARA-NS-05 rev. 13 - ISARA Sample Changer, List of socket commands
+- [autosave](https://github.com/epics-modules/autosave)
 
 ## Current State
 
@@ -33,6 +37,20 @@ Concurrently:
 ```sh
 cd iocBoot/iocsim
 ./st.cmd
+```
+
+OPI screen files are installed under `opi/`.
+
+## Including in an IOC.
+
+See `isaraDemoApp/src/Makefile`.
+
+## Build options
+
+To omit building/installing the `isaraDemo` executable.
+
+```sh
+echo "BUILD_ISARA_DEMO=NO" >> configure/CONFIG_SITE.local
 ```
 
 ## Other work
