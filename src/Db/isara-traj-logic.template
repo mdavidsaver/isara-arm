@@ -39,8 +39,8 @@ record(longout, "$(P)Plt-SP") {
 
 record(longout, "$(P)Samp-SP") {
     field(VAL , "0")
-    field(HIGH, "101")
-    field(HOPR, "100") # TODO: actual limit on sample number?
+    field(HIGH, "17")
+    field(HOPR, "16")
     field(LOPR, "0")
     field(LOW , "-1")
     field(HSV , "INVALID")
@@ -72,8 +72,8 @@ record(longout, "$(P)Plt:N-SP") {
 
 record(longout, "$(P)Samp:N-SP") {
     field(VAL , "0")
-    field(HIGH, "101")
-    field(HOPR, "100") # TODO: actual limit on sample number?
+    field(HIGH, "17")
+    field(HOPR, "16")
     field(LOPR, "0")
     field(LOW , "-1")
     field(HSV , "INVALID")

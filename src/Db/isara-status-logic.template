@@ -132,26 +132,38 @@ record(bi, "$(P)Grp:B-Sts") {
 }
 record(longin, "$(P)Pck:A-I") {
     field(DISV, "-99999")
+    field(LOPR, "-1")
+    field(HOPR, "29")
     field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
 }
 record(longin, "$(P)Samp:A-I") {
     field(DISV, "-99999")
+    field(LOPR, "-1")
+    field(HOPR, "16")
     field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
 }
 record(longin, "$(P)Pck:B-I") {
     field(DISV, "-99999")
+    field(LOPR, "-1")
+    field(HOPR, "29")
     field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
 }
 record(longin, "$(P)Samp:B-I") {
     field(DISV, "-99999")
+    field(LOPR, "-1")
+    field(HOPR, "16")
     field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
 }
 record(longin, "$(P)Pck:Dif-I") {
     field(DISV, "-99999")
+    field(LOPR, "-1")
+    field(HOPR, "29")
     field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
 }
 record(longin, "$(P)Samp:Dif-I") {
     field(DISV, "-99999")
+    field(LOPR, "-1")
+    field(HOPR, "16")
     field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
 }
 record(longin, "$(P)Plt:Tl-I") {
