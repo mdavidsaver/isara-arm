@@ -6,6 +6,17 @@
 #  DEV  - asyn port name of status socket
 #  SCAN - status scan rate
 
+record(calc, "$(P)MvnT-I") {
+    field(DESC, "Movement timer")
+    field(SCAN, "1 second")
+    field(INPA, "$(P)Seq:Run-Sts CP MS")
+    # B - previous run state
+    field(INPC, "1") # must match SCAN
+    # D - scratch
+    field(CALC, "D:=(A&&!B)?0:(A?VAL+C:VAL);B:=A;D")
+    field(EGU , "s")
+}
+
 # Prevent request of "dry" trajectory while moving (~redundant)
 # and for 90 seconds afterwards.
 # Frequent "dry" may damage gripper magnets.
