@@ -307,9 +307,11 @@ record(bi, "$(P)LN2:PS-Sts") {
     field(ZNAM, "Off")
     field(ONAM, "On")
 }
-record(stringin, "$(P)LastMsg-I") {
+record(aai, "$(P)LastMsg-I") {
     field(DISV, "-99999")
     field(SDIS, "$(P)Pwr-Sts.SEVR CP MS")
+    field(FTVL, "CHAR")
+    field(NELM, "128")
 }
 record(mbbiDirect, "$(P)Alarm-I") {
     field(DISV, "-99999")
