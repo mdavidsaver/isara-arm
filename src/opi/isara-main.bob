@@ -186,6 +186,34 @@
       <x>6</x>
       <y>3</y>
     </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_1</name>
+      <pv_name>$(P)Pwr-Sts</pv_name>
+      <x>19</x>
+      <y>38</y>
+      <width>75</width>
+      <height>30</height>
+      <off_color>
+        <color name="MINOR" red="255" green="128" blue="0">
+        </color>
+      </off_color>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_6</name>
+      <pv_name>$(P)PwrON-Sts</pv_name>
+      <x>19</x>
+      <y>73</y>
+      <width>75</width>
+      <height>30</height>
+      <off_color>
+        <color name="MINOR" red="255" green="128" blue="0">
+        </color>
+      </off_color>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
   </widget>
   <widget type="group" version="2.0.0">
     <name>Move</name>
@@ -293,18 +321,17 @@
       <pv_name>$(P)Abort-Cmd</pv_name>
       <text>Abort Movement</text>
       <x>12</x>
-      <y>255</y>
-      <width>60</width>
-      <height>284</height>
+      <y>660</y>
+      <width>146</width>
+      <height>28</height>
       <font>
         <font family="Liberation Sans" style="BOLD" size="14.0">
         </font>
       </font>
-      <foreground_color>
+      <background_color>
         <color name="Attention" red="255" green="160" blue="0">
         </color>
-      </foreground_color>
-      <rotation_step>1</rotation_step>
+      </background_color>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button_8</name>
@@ -766,17 +793,17 @@
       </actions>
       <pv_name>$(P)Panic-Cmd</pv_name>
       <text>Panic Stop</text>
-      <x>12</x>
+      <x>202</x>
       <y>660</y>
-      <width>330</width>
+      <width>146</width>
       <font>
         <font family="Liberation Sans" style="BOLD" size="14.0">
         </font>
       </font>
-      <foreground_color>
+      <background_color>
         <color name="STOP" red="255" green="0" blue="0">
         </color>
-      </foreground_color>
+      </background_color>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_28</name>
@@ -1420,7 +1447,7 @@
     </widget>
   </widget>
   <widget type="group" version="2.0.0">
-    <name>Digital Output</name>
+    <name>Digital Output Monitor</name>
     <x>10</x>
     <y>50</y>
     <width>395</width>
@@ -1572,8 +1599,18 @@
     <widget type="led" version="2.0.0">
       <name>LED_10</name>
       <pv_name>$(P)LidClosed-Sts</pv_name>
-      <x>22</x>
+      <x>19</x>
       <y>71</y>
+      <width>75</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_7</name>
+      <pv_name>$(P)LidOpened-Sts</pv_name>
+      <x>19</x>
+      <y>37</y>
       <width>75</width>
       <height>30</height>
       <square>true</square>
@@ -1596,10 +1633,10 @@
         </action>
       </actions>
       <pv_name>$(P)Mgt:On-Cmd</pv_name>
-      <text>$(pv_name)</text>
+      <text>Magnet On</text>
       <x>12</x>
       <y>10</y>
-      <width>160</width>
+      <width>106</width>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button</name>
@@ -1611,10 +1648,10 @@
         </action>
       </actions>
       <pv_name>$(P)Mgt:Off-Cmd</pv_name>
-      <text>$(pv_name)</text>
+      <text>Magnet Off</text>
       <x>12</x>
       <y>50</y>
-      <width>160</width>
+      <width>106</width>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button</name>
@@ -1626,10 +1663,10 @@
         </action>
       </actions>
       <pv_name>$(P)Htr:On-Cmd</pv_name>
-      <text>$(pv_name)</text>
-      <x>182</x>
+      <text>Heater On</text>
+      <x>134</x>
       <y>10</y>
-      <width>160</width>
+      <width>106</width>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button</name>
@@ -1641,10 +1678,10 @@
         </action>
       </actions>
       <pv_name>$(P)Htr:Off-Cmd</pv_name>
-      <text>$(pv_name)</text>
-      <x>182</x>
+      <text>Heater Off</text>
+      <x>134</x>
       <y>50</y>
-      <width>160</width>
+      <width>106</width>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button</name>
@@ -1658,7 +1695,7 @@
       <pv_name>$(P)BRDM:Clr-Cmd</pv_name>
       <text>$(pv_name)</text>
       <x>12</x>
-      <y>159</y>
+      <y>164</y>
       <width>160</width>
     </widget>
     <widget type="action_button" version="3.0.0">
@@ -1671,10 +1708,10 @@
         </action>
       </actions>
       <pv_name>$(P)Tl:OpnA-Cmd</pv_name>
-      <text>$(pv_name)</text>
+      <text>Grip A Open</text>
       <x>12</x>
       <y>94</y>
-      <width>160</width>
+      <width>106</width>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button</name>
@@ -1686,10 +1723,10 @@
         </action>
       </actions>
       <pv_name>$(P)Tl:ClsA-Cmd</pv_name>
-      <text>$(pv_name)</text>
+      <text>Grip A Close</text>
       <x>12</x>
       <y>129</y>
-      <width>160</width>
+      <width>106</width>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button</name>
@@ -1701,10 +1738,10 @@
         </action>
       </actions>
       <pv_name>$(P)Tl:OpnB-Cmd</pv_name>
-      <text>$(pv_name)</text>
-      <x>182</x>
+      <text>Grip B Open</text>
+      <x>134</x>
       <y>94</y>
-      <width>160</width>
+      <width>106</width>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button</name>
@@ -1716,10 +1753,10 @@
         </action>
       </actions>
       <pv_name>$(P)Tl:ClsB-Cmd</pv_name>
-      <text>$(pv_name)</text>
-      <x>182</x>
+      <text>Grip B Close</text>
+      <x>134</x>
       <y>129</y>
-      <width>160</width>
+      <width>106</width>
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display</name>
@@ -1953,44 +1990,6 @@
       <square>true</square>
       <labels_from_pv>true</labels_from_pv>
     </widget>
-  </widget>
-  <widget type="led" version="2.0.0">
-    <name>LED_1</name>
-    <pv_name>$(P)Pwr-Sts</pv_name>
-    <x>830</x>
-    <y>305</y>
-    <width>75</width>
-    <height>30</height>
-    <off_color>
-      <color name="MINOR" red="255" green="128" blue="0">
-      </color>
-    </off_color>
-    <square>true</square>
-    <labels_from_pv>true</labels_from_pv>
-  </widget>
-  <widget type="led" version="2.0.0">
-    <name>LED_6</name>
-    <pv_name>$(P)PwrON-Sts</pv_name>
-    <x>830</x>
-    <y>340</y>
-    <width>75</width>
-    <height>30</height>
-    <off_color>
-      <color name="MINOR" red="255" green="128" blue="0">
-      </color>
-    </off_color>
-    <square>true</square>
-    <labels_from_pv>true</labels_from_pv>
-  </widget>
-  <widget type="led" version="2.0.0">
-    <name>LED_7</name>
-    <pv_name>$(P)LidOpened-Sts</pv_name>
-    <x>830</x>
-    <y>479</y>
-    <width>75</width>
-    <height>30</height>
-    <square>true</square>
-    <labels_from_pv>true</labels_from_pv>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_7</name>
