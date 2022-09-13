@@ -1,0 +1,74 @@
+name: ISARA
+
+# Trigger on pushes and PRs to any branch
+on:
+  push:
+    paths-ignore:
+      - '**/*.md'
+      - '**/*.txt'
+  pull_request:
+
+env:
+  SETUP_PATH: .ci
+
+jobs:
+  test:
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+    env:
+      CMP: ${{ matrix.cmp }}
+      BCFG: ${{ matrix.configuration }}
+      MODULES: AUTOSAVE ASYN BUSY STREAM
+      BASE: ${{ matrix.base }}
+      BASE_RECURSIVE: NO
+      ASYN: ${{ matrix.asyn }}
+      BUSY: ${{ matrix.busy }}
+      STREAM: ${{ matrix.stream }}
+      AUTOSAVE: ${{ matrix.autosave }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        # Job names also name artifacts, character limitations apply
+        include:
+          - name: "Latest"
+            os: ubuntu-latest
+            cmp: gcc
+            configuration: default
+            base: "7.0"
+            asyn: "master"
+            busy: "master"
+            stream: "master"
+            autosave: "master"
+
+          - name: "BNL"
+            os: ubuntu-latest
+            cmp: gcc
+            configuration: default
+            base: "R7.0.5"
+            asyn: "R4-41"
+            busy: "R1-7-3"
+            stream: "2.8.10"
+            autosave: "R5-10-2"
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+
+    - name: "Linux OS Deps"
+      shell: bash
+      run: |
+        sudo apt-get update
+        sudo apt-get -y install libpcre3-dev
+
+    - name: Prepare and compile EPICS dependencies
+      run: python .ci/cue.py prepare
+
+    - name: Build main module
+      run: python .ci/cue.py build
+
+# currently no tests to run...
+#    - name: Run test
+#      shell: bash
+#      run: ./bin/*/plugin-test
