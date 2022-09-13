@@ -8,6 +8,10 @@
 #include <registryFunction.h>
 #include <epicsExport.h>
 
+#ifndef HAS_ALARM_MESSAGE
+#  define recGblSetSevrMsg(REC, STAT, SEVR, ...) recGblSetSevr(REC, STAT, SEVR)
+#endif
+
 /* group bits into words
  *
  * record(aSub, "name") {
