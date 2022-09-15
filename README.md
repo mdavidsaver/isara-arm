@@ -12,7 +12,7 @@ Based on document:
 Requires:
 
 - [EPICS](https://epics-controls.org/) [Base](https://epics.anl.gov/)
-- [Asyn](https://epics-modules.github.io/master/asyn/)
+- [asyn](https://epics-modules.github.io/master/asyn/)
 - [busy](https://github.com/epics-modules/busy)
 - [StreamDevice](https://paulscherrerinstitute.github.io/StreamDevice/) built with the optional PCRE support
 
@@ -24,12 +24,31 @@ Optional:
 
 **Untested** and under active development!
 
-## Contents
+## Including in an IOC.
 
-This module builds `isaraDemo` IOC executable,
-and includes `iocBoot/iocdemo/st.cmd` for use with it.
+```make
+PROD_IOC += myIoc
 
-A minimally functional simulator is provided for driver testing:
+myIoc_DBD += asyn.dbd drvAsynIPPort.dbd
+myIoc_DBD += busySupport.dbd
+myIoc_DBD += stream.dbd
+myIoc_DBD += isaraSupport.dbd
+
+myIoc_LIBS += stream
+myIoc_LIBS += busy
+myIoc_LIBS += asyn
+myIoc_LIBS += isaraSupport
+
+...
+```
+
+See for a working example: `isaraDemoApp/src/Makefile`.
+
+## isaraDemo IOC
+
+By default this module builds the `isaraDemo` IOC executable,
+which can be used to run `iocBoot/iocsim/st.cmd` in conjunction
+with the included (minimal) device simulator.
 
 ```sh
 ./isara-sim.py -S 10001
@@ -44,11 +63,7 @@ cd iocBoot/iocsim
 
 OPI screen files are installed under `opi/`.
 
-## Including in an IOC.
-
-See `isaraDemoApp/src/Makefile`.
-
-## Build options
+### Skip building demo IOC
 
 To omit building/installing the `isaraDemo` executable.
 
