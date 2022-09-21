@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
   <name>ISARA $(P)</name>
-  <macros>
-    <P>TST:</P>
-  </macros>
-  <width>1315</width>
-  <height>1470</height>
+  <width>1507</width>
+  <height>1025</height>
   <widget type="label" version="2.0.0">
     <name>Label</name>
     <class>TITLE</class>
@@ -130,11 +127,12 @@
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_27</name>
-      <text>E-Stop</text>
-      <x>377</x>
+      <text>E-Stops</text>
+      <x>367</x>
       <y>63</y>
       <width>57</width>
       <height>31</height>
+      <vertical_alignment>1</vertical_alignment>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_32</name>
@@ -143,6 +141,7 @@
       <y>2</y>
       <width>77</width>
       <height>43</height>
+      <vertical_alignment>1</vertical_alignment>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_31</name>
@@ -948,97 +947,78 @@
     <x>945</x>
     <y>424</y>
     <width>370</width>
-    <height>260</height>
-    <widget type="embedded" version="2.0.0">
-      <name>Embedded Display</name>
-      <macros>
-        <DESC>$(P)Pos:Name-I</DESC>
-        <NAME>$(P)Pos:Name-I</NAME>
-      </macros>
-      <file>_isara-readback.bob</file>
-      <x>12</x>
-      <y>12</y>
-      <width>325</width>
+    <height>189</height>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_20</name>
+      <pv_name>$(P)Pos:Name-I</pv_name>
+      <x>152</x>
+      <y>2</y>
+      <width>166</width>
       <height>30</height>
-      <resize>2</resize>
     </widget>
-    <widget type="embedded" version="2.0.0">
-      <name>Embedded Display</name>
-      <macros>
-        <DESC>$(P)Pos:RX-I</DESC>
-        <NAME>$(P)Pos:RX-I</NAME>
-      </macros>
-      <file>_isara-readback.bob</file>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_21</name>
+      <pv_name>$(P)Pos:X-I</pv_name>
       <x>12</x>
-      <y>192</y>
-      <width>325</width>
+      <y>40</y>
+      <width>81</width>
       <height>30</height>
-      <resize>2</resize>
     </widget>
-    <widget type="embedded" version="2.0.0">
-      <name>Embedded Display</name>
-      <macros>
-        <DESC>$(P)Pos:RY-I</DESC>
-        <NAME>$(P)Pos:RY-I</NAME>
-      </macros>
-      <file>_isara-readback.bob</file>
-      <x>12</x>
-      <y>162</y>
-      <width>325</width>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_22</name>
+      <pv_name>$(P)Pos:Y-I</pv_name>
+      <x>107</x>
+      <y>40</y>
+      <width>81</width>
       <height>30</height>
-      <resize>2</resize>
     </widget>
-    <widget type="embedded" version="2.0.0">
-      <name>Embedded Display</name>
-      <macros>
-        <DESC>$(P)Pos:RZ-I</DESC>
-        <NAME>$(P)Pos:RZ-I</NAME>
-      </macros>
-      <file>_isara-readback.bob</file>
-      <x>12</x>
-      <y>132</y>
-      <width>325</width>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_23</name>
+      <pv_name>$(P)Pos:Z-I</pv_name>
+      <x>207</x>
+      <y>40</y>
+      <width>81</width>
       <height>30</height>
-      <resize>2</resize>
     </widget>
-    <widget type="embedded" version="2.0.0">
-      <name>Embedded Display</name>
-      <macros>
-        <DESC>$(P)Pos:X-I</DESC>
-        <NAME>$(P)Pos:X-I</NAME>
-      </macros>
-      <file>_isara-readback.bob</file>
+    <widget type="label" version="2.0.0">
+      <name>Label_33</name>
+      <text>Current X/Y/Z</text>
       <x>12</x>
-      <y>102</y>
-      <width>325</width>
+      <y>2</y>
+      <width>116</width>
       <height>30</height>
-      <resize>2</resize>
     </widget>
-    <widget type="embedded" version="2.0.0">
-      <name>Embedded Display</name>
-      <macros>
-        <DESC>$(P)Pos:Y-I</DESC>
-        <NAME>$(P)Pos:Y-I</NAME>
-      </macros>
-      <file>_isara-readback.bob</file>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_24</name>
+      <pv_name>$(P)Pos:RX-I</pv_name>
       <x>12</x>
-      <y>72</y>
-      <width>325</width>
+      <y>118</y>
+      <width>81</width>
       <height>30</height>
-      <resize>2</resize>
     </widget>
-    <widget type="embedded" version="2.0.0">
-      <name>Embedded Display</name>
-      <macros>
-        <DESC>$(P)Pos:Z-I</DESC>
-        <NAME>$(P)Pos:Z-I</NAME>
-      </macros>
-      <file>_isara-readback.bob</file>
+    <widget type="label" version="2.0.0">
+      <name>Label_35</name>
+      <text>Current RX/RY/RZ</text>
       <x>12</x>
-      <y>42</y>
-      <width>325</width>
+      <y>80</y>
+      <width>140</width>
       <height>30</height>
-      <resize>2</resize>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_25</name>
+      <pv_name>$(P)Pos:RY-I</pv_name>
+      <x>107</x>
+      <y>118</y>
+      <width>81</width>
+      <height>30</height>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_26</name>
+      <pv_name>$(P)Pos:RZ-I</pv_name>
+      <x>207</x>
+      <y>118</y>
+      <width>81</width>
+      <height>30</height>
     </widget>
   </widget>
   <widget type="group" version="2.0.0">
@@ -1107,12 +1087,12 @@
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display</name>
       <macros>
-        <DESC>$(P)LN2:Max-I</DESC>
+        <DESC>LN2:Max-I</DESC>
         <NAME>$(P)LN2:Max-I</NAME>
       </macros>
       <file>_isara-readback.bob</file>
       <x>12</x>
-      <y>211</y>
+      <y>270</y>
       <width>325</width>
       <height>30</height>
       <resize>2</resize>
@@ -1120,12 +1100,12 @@
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display</name>
       <macros>
-        <DESC>$(P)LN2:Min-I</DESC>
+        <DESC>LN2:Min-I</DESC>
         <NAME>$(P)LN2:Min-I</NAME>
       </macros>
       <file>_isara-readback.bob</file>
       <x>12</x>
-      <y>183</y>
+      <y>240</y>
       <width>325</width>
       <height>30</height>
       <resize>2</resize>
@@ -1133,12 +1113,12 @@
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display</name>
       <macros>
-        <DESC>$(P)LN2:SoakPha-I</DESC>
+        <DESC>LN2:SoakPha-I</DESC>
         <NAME>$(P)LN2:SoakPha-I</NAME>
       </macros>
       <file>_isara-readback.bob</file>
       <x>12</x>
-      <y>153</y>
+      <y>210</y>
       <width>325</width>
       <height>30</height>
       <resize>2</resize>
@@ -1191,40 +1171,14 @@
       <height>30</height>
     </widget>
     <widget type="embedded" version="2.0.0">
-      <name>Embedded Display_5</name>
-      <macros>
-        <DESC>$(P)ColdDewar-Sts</DESC>
-        <NAME>$(P)ColdDewar-Sts</NAME>
-      </macros>
-      <file>_isara-bit.bob</file>
-      <x>12</x>
-      <y>241</y>
-      <width>325</width>
-      <height>30</height>
-      <resize>2</resize>
-    </widget>
-    <widget type="embedded" version="2.0.0">
-      <name>Embedded Display_6</name>
-      <macros>
-        <DESC>$(P)WarmDewar-Sts</DESC>
-        <NAME>$(P)WarmDewar-Sts</NAME>
-      </macros>
-      <file>_isara-bit.bob</file>
-      <x>12</x>
-      <y>271</y>
-      <width>325</width>
-      <height>30</height>
-      <resize>2</resize>
-    </widget>
-    <widget type="embedded" version="2.0.0">
       <name>Embedded Display_10</name>
       <macros>
-        <DESC>$(P)LN2RegRqst-Sts</DESC>
+        <DESC>LN2RegRqst-Sts</DESC>
         <NAME>$(P)LN2RegRqst-Sts</NAME>
       </macros>
       <file>_isara-bit.bob</file>
       <x>12</x>
-      <y>301</y>
+      <y>300</y>
       <width>325</width>
       <height>30</height>
       <resize>2</resize>
@@ -1257,6 +1211,44 @@
       <x>12</x>
       <y>357</y>
       <width>105</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_36</name>
+      <text>Dewar</text>
+      <x>117</x>
+      <y>158</y>
+      <width>110</width>
+      <height>30</height>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_19</name>
+      <pv_name>$(P)WarmDewar-Sts</pv_name>
+      <x>12</x>
+      <y>158</y>
+      <width>89</width>
+      <height>30</height>
+      <on_color>
+        <color name="Attention" red="255" green="160" blue="0">
+        </color>
+      </on_color>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_18</name>
+      <pv_name>$(P)ColdDewar-Sts</pv_name>
+      <x>237</x>
+      <y>158</y>
+      <width>89</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
     </widget>
   </widget>
   <widget type="group" version="2.0.0">
@@ -1359,16 +1351,16 @@
         <description>Status Expert</description>
       </action>
     </actions>
-    <text>Related</text>
+    <text>Related Screens</text>
     <x>420</x>
     <y>50</y>
-    <width>135</width>
+    <width>155</width>
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="group" version="2.0.0">
     <name>Driver Status SCAN</name>
-    <x>945</x>
-    <y>684</y>
+    <x>20</x>
+    <y>836</y>
     <width>370</width>
     <height>189</height>
     <widget type="embedded" version="2.0.0">
@@ -1761,7 +1753,7 @@
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display</name>
       <macros>
-        <DESC>$(P)GripDry-Sts</DESC>
+        <DESC>GripDry-Sts</DESC>
         <NAME>$(P)GripDry-Sts</NAME>
       </macros>
       <file>_isara-readback.bob</file>
@@ -1774,7 +1766,7 @@
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display</name>
       <macros>
-        <DESC>$(P)CamTrk-Sts</DESC>
+        <DESC>CamTrk-Sts</DESC>
         <NAME>$(P)CamTrk-Sts</NAME>
       </macros>
       <file>_isara-readback.bob</file>
@@ -1787,7 +1779,7 @@
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display</name>
       <macros>
-        <DESC>$(P)DM:Lst-I</DESC>
+        <DESC>DM:Lst-I</DESC>
         <NAME>$(P)DM:Lst-I</NAME>
       </macros>
       <file>_isara-readback.bob</file>
@@ -1807,7 +1799,7 @@
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display</name>
       <macros>
-        <DESC>$(P)Plt:Dif-I</DESC>
+        <DESC>Plt:Dif-I</DESC>
         <NAME>$(P)Plt:Dif-I</NAME>
       </macros>
       <file>_isara-readback.bob</file>
@@ -1820,7 +1812,7 @@
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display</name>
       <macros>
-        <DESC>$(P)Plt:Tl-I</DESC>
+        <DESC>Plt:Tl-I</DESC>
         <NAME>$(P)Plt:Tl-I</NAME>
       </macros>
       <file>_isara-readback.bob</file>
@@ -1994,7 +1986,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_7</name>
     <macros>
-      <DESC>$(P)FltAck-Sts</DESC>
+      <DESC>FltAck-Sts</DESC>
       <NAME>$(P)FltAck-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -2007,7 +1999,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_8</name>
     <macros>
-      <DESC>$(P)SafetyRestartNeeded-Sts</DESC>
+      <DESC>SafetyRestartNeeded-Sts</DESC>
       <NAME>$(P)SafetyRestartNeeded-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -2019,7 +2011,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_9</name>
     <macros>
-      <DESC>$(P)SafetyAck-Sts</DESC>
+      <DESC>SafetyAck-Sts</DESC>
       <NAME>$(P)SafetyAck-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -2078,5 +2070,362 @@
     <x>20</x>
     <y>259</y>
     <width>120</width>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Pucks</name>
+    <x>945</x>
+    <y>613</y>
+    <width>562</width>
+    <height>310</height>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:6-Sts</pv_name>
+      <x>52</x>
+      <y>72</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:7-Sts</pv_name>
+      <x>128</x>
+      <y>72</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:8-Sts</pv_name>
+      <x>204</x>
+      <y>72</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:9-Sts</pv_name>
+      <x>280</x>
+      <y>72</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:10-Sts</pv_name>
+      <x>356</x>
+      <y>72</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:11-Sts</pv_name>
+      <x>432</x>
+      <y>72</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:1-Sts</pv_name>
+      <x>94</x>
+      <y>32</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:2-Sts</pv_name>
+      <x>170</x>
+      <y>32</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:3-Sts</pv_name>
+      <x>246</x>
+      <y>32</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:4-Sts</pv_name>
+      <x>322</x>
+      <y>32</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:5-Sts</pv_name>
+      <x>398</x>
+      <y>32</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:12-Sts</pv_name>
+      <x>94</x>
+      <y>112</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:13-Sts</pv_name>
+      <x>170</x>
+      <y>112</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:14-Sts</pv_name>
+      <x>246</x>
+      <y>112</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:15-Sts</pv_name>
+      <x>322</x>
+      <y>112</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:16-Sts</pv_name>
+      <x>398</x>
+      <y>112</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:17-Sts</pv_name>
+      <x>52</x>
+      <y>152</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:18-Sts</pv_name>
+      <x>128</x>
+      <y>152</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:19-Sts</pv_name>
+      <x>204</x>
+      <y>152</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:20-Sts</pv_name>
+      <x>280</x>
+      <y>152</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:21-Sts</pv_name>
+      <x>356</x>
+      <y>152</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:22-Sts</pv_name>
+      <x>432</x>
+      <y>152</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:23-Sts</pv_name>
+      <x>94</x>
+      <y>192</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:24-Sts</pv_name>
+      <x>170</x>
+      <y>192</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:25-Sts</pv_name>
+      <x>246</x>
+      <y>192</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:26-Sts</pv_name>
+      <x>322</x>
+      <y>192</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:27-Sts</pv_name>
+      <x>398</x>
+      <y>192</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:28-Sts</pv_name>
+      <x>209</x>
+      <y>232</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_21</name>
+      <pv_name>$(P)Pck:29-Sts</pv_name>
+      <x>285</x>
+      <y>232</y>
+      <width>71</width>
+      <height>30</height>
+      <square>true</square>
+      <labels_from_pv>true</labels_from_pv>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_10</name>
+      <text>1</text>
+      <x>15</x>
+      <y>32</y>
+      <width>19</width>
+      <height>30</height>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_11</name>
+      <text>6</text>
+      <x>15</x>
+      <y>72</y>
+      <width>19</width>
+      <height>30</height>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_34</name>
+      <text>12</text>
+      <x>15</x>
+      <y>112</y>
+      <width>19</width>
+      <height>30</height>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_37</name>
+      <text>17</text>
+      <x>15</x>
+      <y>152</y>
+      <width>19</width>
+      <height>30</height>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_38</name>
+      <text>23</text>
+      <x>15</x>
+      <y>192</y>
+      <width>19</width>
+      <height>30</height>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_39</name>
+      <text>28</text>
+      <x>15</x>
+      <y>232</y>
+      <width>19</width>
+      <height>30</height>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
   </widget>
 </display>

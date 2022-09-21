@@ -23,7 +23,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)AirTm-I</DESC>
+      <DESC>AirTm-I</DESC>
       <NAME>$(P)AirTm-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -36,7 +36,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Cnt:Flt-I</DESC>
+      <DESC>Cnt:Flt-I</DESC>
       <NAME>$(P)Cnt:Flt-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -49,7 +49,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Cnt:OK-I</DESC>
+      <DESC>Cnt:OK-I</DESC>
       <NAME>$(P)Cnt:OK-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -62,7 +62,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)GetTm-I</DESC>
+      <DESC>GetTm-I</DESC>
       <NAME>$(P)GetTm-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -75,7 +75,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)GnTm-I</DESC>
+      <DESC>GnTm-I</DESC>
       <NAME>$(P)GnTm-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -88,7 +88,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)PPTm-I</DESC>
+      <DESC>PPTm-I</DESC>
       <NAME>$(P)PPTm-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -101,7 +101,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck1-I</DESC>
+      <DESC>Pck1-I</DESC>
       <NAME>$(P)Pck1-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -114,7 +114,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck10-I</DESC>
+      <DESC>Pck10-I</DESC>
       <NAME>$(P)Pck10-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -127,7 +127,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck11-I</DESC>
+      <DESC>Pck11-I</DESC>
       <NAME>$(P)Pck11-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -140,7 +140,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck12-I</DESC>
+      <DESC>Pck12-I</DESC>
       <NAME>$(P)Pck12-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -153,7 +153,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck13-I</DESC>
+      <DESC>Pck13-I</DESC>
       <NAME>$(P)Pck13-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -166,7 +166,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck14-I</DESC>
+      <DESC>Pck14-I</DESC>
       <NAME>$(P)Pck14-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -179,7 +179,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck15-I</DESC>
+      <DESC>Pck15-I</DESC>
       <NAME>$(P)Pck15-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -192,7 +192,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck16-I</DESC>
+      <DESC>Pck16-I</DESC>
       <NAME>$(P)Pck16-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -205,7 +205,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck17-I</DESC>
+      <DESC>Pck17-I</DESC>
       <NAME>$(P)Pck17-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -218,7 +218,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck18-I</DESC>
+      <DESC>Pck18-I</DESC>
       <NAME>$(P)Pck18-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -231,7 +231,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck19-I</DESC>
+      <DESC>Pck19-I</DESC>
       <NAME>$(P)Pck19-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -244,7 +244,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck2-I</DESC>
+      <DESC>Pck2-I</DESC>
       <NAME>$(P)Pck2-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -257,7 +257,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck20-I</DESC>
+      <DESC>Pck20-I</DESC>
       <NAME>$(P)Pck20-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -270,7 +270,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck21-I</DESC>
+      <DESC>Pck21-I</DESC>
       <NAME>$(P)Pck21-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -283,7 +283,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck22-I</DESC>
+      <DESC>Pck22-I</DESC>
       <NAME>$(P)Pck22-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -296,7 +296,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck23-I</DESC>
+      <DESC>Pck23-I</DESC>
       <NAME>$(P)Pck23-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -309,7 +309,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck24-I</DESC>
+      <DESC>Pck24-I</DESC>
       <NAME>$(P)Pck24-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -322,7 +322,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck25-I</DESC>
+      <DESC>Pck25-I</DESC>
       <NAME>$(P)Pck25-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -335,7 +335,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck26-I</DESC>
+      <DESC>Pck26-I</DESC>
       <NAME>$(P)Pck26-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -348,7 +348,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck27-I</DESC>
+      <DESC>Pck27-I</DESC>
       <NAME>$(P)Pck27-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -361,7 +361,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck28-I</DESC>
+      <DESC>Pck28-I</DESC>
       <NAME>$(P)Pck28-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -374,7 +374,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck29-I</DESC>
+      <DESC>Pck29-I</DESC>
       <NAME>$(P)Pck29-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -387,7 +387,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck3-I</DESC>
+      <DESC>Pck3-I</DESC>
       <NAME>$(P)Pck3-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -400,7 +400,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck4-I</DESC>
+      <DESC>Pck4-I</DESC>
       <NAME>$(P)Pck4-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -413,7 +413,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck5-I</DESC>
+      <DESC>Pck5-I</DESC>
       <NAME>$(P)Pck5-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -426,7 +426,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck6-I</DESC>
+      <DESC>Pck6-I</DESC>
       <NAME>$(P)Pck6-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -439,7 +439,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck7-I</DESC>
+      <DESC>Pck7-I</DESC>
       <NAME>$(P)Pck7-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -452,7 +452,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck8-I</DESC>
+      <DESC>Pck8-I</DESC>
       <NAME>$(P)Pck8-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -465,7 +465,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Pck9-I</DESC>
+      <DESC>Pck9-I</DESC>
       <NAME>$(P)Pck9-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -478,7 +478,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)PckN-I</DESC>
+      <DESC>PckN-I</DESC>
       <NAME>$(P)PckN-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -491,7 +491,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)PckT-I</DESC>
+      <DESC>PckT-I</DESC>
       <NAME>$(P)PckT-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -504,7 +504,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)PltN-I</DESC>
+      <DESC>PltN-I</DESC>
       <NAME>$(P)PltN-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -517,7 +517,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)PltTm-I</DESC>
+      <DESC>PltTm-I</DESC>
       <NAME>$(P)PltTm-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -530,7 +530,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)PutTm-I</DESC>
+      <DESC>PutTm-I</DESC>
       <NAME>$(P)PutTm-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -543,7 +543,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)SampN-I</DESC>
+      <DESC>SampN-I</DESC>
       <NAME>$(P)SampN-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>
@@ -556,7 +556,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)SampTm-I</DESC>
+      <DESC>SampTm-I</DESC>
       <NAME>$(P)SampTm-I</NAME>
     </macros>
     <file>_isara-readback.bob</file>

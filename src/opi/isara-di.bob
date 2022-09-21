@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
   <name>ISARA DI $(P)</name>
-  <width>550</width>
-  <height>3391</height>
+  <width>1155</width>
+  <height>1750</height>
   <widget type="label" version="2.0.0">
     <name>Label</name>
     <class>TITLE</class>
@@ -24,7 +24,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)AirBlowerRqst-Sts</DESC>
+      <DESC>AirBlowerRqst-Sts</DESC>
       <NAME>$(P)AirBlowerRqst-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -37,7 +37,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)AirSupplyRqst-Sts</DESC>
+      <DESC>AirSupplyRqst-Sts</DESC>
       <NAME>$(P)AirSupplyRqst-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -50,7 +50,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)BlowAir-Sts</DESC>
+      <DESC>BlowAir-Sts</DESC>
       <NAME>$(P)BlowAir-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -63,7 +63,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)BrakeUnlocked-Sts</DESC>
+      <DESC>BrakeUnlocked-Sts</DESC>
       <NAME>$(P)BrakeUnlocked-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -76,7 +76,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)CGripClosed-Sts</DESC>
+      <DESC>CGripClosed-Sts</DESC>
       <NAME>$(P)CGripClosed-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -89,7 +89,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)CGripOpened-Sts</DESC>
+      <DESC>CGripOpened-Sts</DESC>
       <NAME>$(P)CGripOpened-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -102,7 +102,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)CloseLidRqst-Sts</DESC>
+      <DESC>CloseLidRqst-Sts</DESC>
       <NAME>$(P)CloseLidRqst-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -115,12 +115,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:28-Sts</DESC>
+      <DESC>DI:28-Sts</DESC>
       <NAME>$(P)DI:28-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>901</y>
+    <x>830</x>
+    <y>880</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -128,12 +128,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:31-Sts</DESC>
+      <DESC>DI:31-Sts</DESC>
       <NAME>$(P)DI:31-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>871</y>
+    <x>830</x>
+    <y>850</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -141,12 +141,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:103-Sts</DESC>
+      <DESC>DI:103-Sts</DESC>
       <NAME>$(P)DI:103-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>841</y>
+    <x>830</x>
+    <y>820</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -154,12 +154,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:104-Sts</DESC>
+      <DESC>DI:104-Sts</DESC>
       <NAME>$(P)DI:104-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>811</y>
+    <x>830</x>
+    <y>790</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -167,12 +167,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:105-Sts</DESC>
+      <DESC>DI:105-Sts</DESC>
       <NAME>$(P)DI:105-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>781</y>
+    <x>830</x>
+    <y>760</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -180,12 +180,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:106-Sts</DESC>
+      <DESC>DI:106-Sts</DESC>
       <NAME>$(P)DI:106-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>751</y>
+    <x>830</x>
+    <y>730</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -193,12 +193,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:107-Sts</DESC>
+      <DESC>DI:107-Sts</DESC>
       <NAME>$(P)DI:107-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>721</y>
+    <x>830</x>
+    <y>700</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -206,12 +206,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:108-Sts</DESC>
+      <DESC>DI:108-Sts</DESC>
       <NAME>$(P)DI:108-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>691</y>
+    <x>830</x>
+    <y>670</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -219,12 +219,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:109-Sts</DESC>
+      <DESC>DI:109-Sts</DESC>
       <NAME>$(P)DI:109-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>661</y>
+    <x>830</x>
+    <y>640</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -232,12 +232,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:110-Sts</DESC>
+      <DESC>DI:110-Sts</DESC>
       <NAME>$(P)DI:110-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>631</y>
+    <x>830</x>
+    <y>610</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -245,12 +245,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:111-Sts</DESC>
+      <DESC>DI:111-Sts</DESC>
       <NAME>$(P)DI:111-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>601</y>
+    <x>830</x>
+    <y>580</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -258,12 +258,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:15-Sts</DESC>
+      <DESC>DI:15-Sts</DESC>
       <NAME>$(P)DI:15-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>571</y>
+    <x>830</x>
+    <y>550</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -271,12 +271,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:26-Sts</DESC>
+      <DESC>DI:26-Sts</DESC>
       <NAME>$(P)DI:26-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>541</y>
+    <x>830</x>
+    <y>520</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -284,12 +284,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:27-Sts</DESC>
+      <DESC>DI:27-Sts</DESC>
       <NAME>$(P)DI:27-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>511</y>
+    <x>830</x>
+    <y>490</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -297,12 +297,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:29-Sts</DESC>
+      <DESC>DI:29-Sts</DESC>
       <NAME>$(P)DI:29-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>481</y>
+    <x>830</x>
+    <y>460</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -310,12 +310,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:30-Sts</DESC>
+      <DESC>DI:30-Sts</DESC>
       <NAME>$(P)DI:30-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>451</y>
+    <x>830</x>
+    <y>430</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -323,12 +323,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:37-Sts</DESC>
+      <DESC>DI:37-Sts</DESC>
       <NAME>$(P)DI:37-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>421</y>
+    <x>830</x>
+    <y>400</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -336,12 +336,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:38-Sts</DESC>
+      <DESC>DI:38-Sts</DESC>
       <NAME>$(P)DI:38-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>391</y>
+    <x>830</x>
+    <y>370</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -349,12 +349,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:39-Sts</DESC>
+      <DESC>DI:39-Sts</DESC>
       <NAME>$(P)DI:39-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>361</y>
+    <x>830</x>
+    <y>340</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -362,12 +362,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:45-Sts</DESC>
+      <DESC>DI:45-Sts</DESC>
       <NAME>$(P)DI:45-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>31</y>
+    <x>830</x>
+    <y>10</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -375,12 +375,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:46-Sts</DESC>
+      <DESC>DI:46-Sts</DESC>
       <NAME>$(P)DI:46-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>1741</y>
+    <x>830</x>
+    <y>1720</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -388,12 +388,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:47-Sts</DESC>
+      <DESC>DI:47-Sts</DESC>
       <NAME>$(P)DI:47-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>1711</y>
+    <x>830</x>
+    <y>1690</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -401,12 +401,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:48-Sts</DESC>
+      <DESC>DI:48-Sts</DESC>
       <NAME>$(P)DI:48-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>1681</y>
+    <x>830</x>
+    <y>1660</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -414,12 +414,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:49-Sts</DESC>
+      <DESC>DI:49-Sts</DESC>
       <NAME>$(P)DI:49-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>1651</y>
+    <x>830</x>
+    <y>1630</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -427,12 +427,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:53-Sts</DESC>
+      <DESC>DI:53-Sts</DESC>
       <NAME>$(P)DI:53-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>1621</y>
+    <x>830</x>
+    <y>1600</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -440,12 +440,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:54-Sts</DESC>
+      <DESC>DI:54-Sts</DESC>
       <NAME>$(P)DI:54-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>1591</y>
+    <x>830</x>
+    <y>1570</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -453,12 +453,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:55-Sts</DESC>
+      <DESC>DI:55-Sts</DESC>
       <NAME>$(P)DI:55-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>1561</y>
+    <x>830</x>
+    <y>1540</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -466,12 +466,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:68-Sts</DESC>
+      <DESC>DI:68-Sts</DESC>
       <NAME>$(P)DI:68-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>1531</y>
+    <x>830</x>
+    <y>1510</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -479,12 +479,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:69-Sts</DESC>
+      <DESC>DI:69-Sts</DESC>
       <NAME>$(P)DI:69-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>1501</y>
+    <x>830</x>
+    <y>1480</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -492,12 +492,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:70-Sts</DESC>
+      <DESC>DI:70-Sts</DESC>
       <NAME>$(P)DI:70-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>1471</y>
+    <x>830</x>
+    <y>1450</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -505,12 +505,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:71-Sts</DESC>
+      <DESC>DI:71-Sts</DESC>
       <NAME>$(P)DI:71-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>1441</y>
+    <x>830</x>
+    <y>1420</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -518,12 +518,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:72-Sts</DESC>
+      <DESC>DI:72-Sts</DESC>
       <NAME>$(P)DI:72-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>1411</y>
+    <x>830</x>
+    <y>1390</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -531,12 +531,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:73-Sts</DESC>
+      <DESC>DI:73-Sts</DESC>
       <NAME>$(P)DI:73-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>1381</y>
+    <x>830</x>
+    <y>1360</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -544,12 +544,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:74-Sts</DESC>
+      <DESC>DI:74-Sts</DESC>
       <NAME>$(P)DI:74-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>1351</y>
+    <x>830</x>
+    <y>1330</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -557,12 +557,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:75-Sts</DESC>
+      <DESC>DI:75-Sts</DESC>
       <NAME>$(P)DI:75-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>1321</y>
+    <x>830</x>
+    <y>1300</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -570,12 +570,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:76-Sts</DESC>
+      <DESC>DI:76-Sts</DESC>
       <NAME>$(P)DI:76-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>1291</y>
+    <x>830</x>
+    <y>1270</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -583,12 +583,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:77-Sts</DESC>
+      <DESC>DI:77-Sts</DESC>
       <NAME>$(P)DI:77-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>1261</y>
+    <x>830</x>
+    <y>1240</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -596,12 +596,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:78-Sts</DESC>
+      <DESC>DI:78-Sts</DESC>
       <NAME>$(P)DI:78-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>1231</y>
+    <x>830</x>
+    <y>1210</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -609,12 +609,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:79-Sts</DESC>
+      <DESC>DI:79-Sts</DESC>
       <NAME>$(P)DI:79-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>1201</y>
+    <x>830</x>
+    <y>1180</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -622,12 +622,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:81-Sts</DESC>
+      <DESC>DI:81-Sts</DESC>
       <NAME>$(P)DI:81-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>1171</y>
+    <x>830</x>
+    <y>1150</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -635,12 +635,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:82-Sts</DESC>
+      <DESC>DI:82-Sts</DESC>
       <NAME>$(P)DI:82-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>1141</y>
+    <x>830</x>
+    <y>1120</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -648,12 +648,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:83-Sts</DESC>
+      <DESC>DI:83-Sts</DESC>
       <NAME>$(P)DI:83-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>1111</y>
+    <x>830</x>
+    <y>1090</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -661,12 +661,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:84-Sts</DESC>
+      <DESC>DI:84-Sts</DESC>
       <NAME>$(P)DI:84-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>1081</y>
+    <x>830</x>
+    <y>1060</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -674,12 +674,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:85-Sts</DESC>
+      <DESC>DI:85-Sts</DESC>
       <NAME>$(P)DI:85-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>1051</y>
+    <x>830</x>
+    <y>1030</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -687,12 +687,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:86-Sts</DESC>
+      <DESC>DI:86-Sts</DESC>
       <NAME>$(P)DI:86-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>1021</y>
+    <x>830</x>
+    <y>1000</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -700,12 +700,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:87-Sts</DESC>
+      <DESC>DI:87-Sts</DESC>
       <NAME>$(P)DI:87-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>991</y>
+    <x>830</x>
+    <y>970</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -713,12 +713,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:88-Sts</DESC>
+      <DESC>DI:88-Sts</DESC>
       <NAME>$(P)DI:88-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>961</y>
+    <x>830</x>
+    <y>940</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -726,12 +726,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:89-Sts</DESC>
+      <DESC>DI:89-Sts</DESC>
       <NAME>$(P)DI:89-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>931</y>
+    <x>830</x>
+    <y>910</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -739,12 +739,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:90-Sts</DESC>
+      <DESC>DI:90-Sts</DESC>
       <NAME>$(P)DI:90-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>331</y>
+    <x>830</x>
+    <y>310</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -752,12 +752,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:91-Sts</DESC>
+      <DESC>DI:91-Sts</DESC>
       <NAME>$(P)DI:91-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>301</y>
+    <x>830</x>
+    <y>280</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -765,12 +765,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:92-Sts</DESC>
+      <DESC>DI:92-Sts</DESC>
       <NAME>$(P)DI:92-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>271</y>
+    <x>830</x>
+    <y>250</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -778,12 +778,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:93-Sts</DESC>
+      <DESC>DI:93-Sts</DESC>
       <NAME>$(P)DI:93-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>241</y>
+    <x>830</x>
+    <y>220</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -791,12 +791,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:94-Sts</DESC>
+      <DESC>DI:94-Sts</DESC>
       <NAME>$(P)DI:94-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>211</y>
+    <x>830</x>
+    <y>190</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -804,12 +804,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:95-Sts</DESC>
+      <DESC>DI:95-Sts</DESC>
       <NAME>$(P)DI:95-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>181</y>
+    <x>830</x>
+    <y>160</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -817,12 +817,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:96-Sts</DESC>
+      <DESC>DI:96-Sts</DESC>
       <NAME>$(P)DI:96-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>151</y>
+    <x>830</x>
+    <y>130</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -830,12 +830,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:97-Sts</DESC>
+      <DESC>DI:97-Sts</DESC>
       <NAME>$(P)DI:97-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>121</y>
+    <x>830</x>
+    <y>100</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -843,12 +843,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:98-Sts</DESC>
+      <DESC>DI:98-Sts</DESC>
       <NAME>$(P)DI:98-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>91</y>
+    <x>830</x>
+    <y>70</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -856,12 +856,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DI:99-Sts</DESC>
+      <DESC>DI:99-Sts</DESC>
       <NAME>$(P)DI:99-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>420</x>
-    <y>61</y>
+    <x>830</x>
+    <y>40</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -869,7 +869,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)DeadManSwitch-Sts</DESC>
+      <DESC>DeadManSwitch-Sts</DESC>
       <NAME>$(P)DeadManSwitch-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -882,12 +882,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Debug-Sts</DESC>
+      <DESC>Debug-Sts</DESC>
       <NAME>$(P)Debug-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>10</x>
-    <y>1651</y>
+    <x>360</x>
+    <y>541</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -895,12 +895,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)ES:DOOR-Sts</DESC>
+      <DESC>ES:DOOR-Sts</DESC>
       <NAME>$(P)ES:DOOR-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>10</x>
-    <y>1621</y>
+    <x>360</x>
+    <y>511</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -908,12 +908,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)ES:INTERN-Sts</DESC>
+      <DESC>ES:INTERN-Sts</DESC>
       <NAME>$(P)ES:INTERN-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>10</x>
-    <y>1591</y>
+    <x>360</x>
+    <y>481</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -921,12 +921,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)ES:MCP-Sts</DESC>
+      <DESC>ES:MCP-Sts</DESC>
       <NAME>$(P)ES:MCP-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>10</x>
-    <y>1561</y>
+    <x>360</x>
+    <y>451</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -934,12 +934,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)ES:USA-Sts</DESC>
+      <DESC>ES:USA-Sts</DESC>
       <NAME>$(P)ES:USA-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>10</x>
-    <y>1531</y>
+    <x>360</x>
+    <y>421</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -947,12 +947,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)ES:USB-Sts</DESC>
+      <DESC>ES:USB-Sts</DESC>
       <NAME>$(P)ES:USB-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>10</x>
-    <y>1501</y>
+    <x>360</x>
+    <y>391</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -960,12 +960,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)ES:USEN-Sts</DESC>
+      <DESC>ES:USEN-Sts</DESC>
       <NAME>$(P)ES:USEN-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>10</x>
-    <y>1471</y>
+    <x>360</x>
+    <y>361</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -973,12 +973,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)ES:WMS-Sts</DESC>
+      <DESC>ES:WMS-Sts</DESC>
       <NAME>$(P)ES:WMS-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>10</x>
-    <y>1441</y>
+    <x>360</x>
+    <y>331</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -986,12 +986,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Fault-Sts</DESC>
+      <DESC>Fault-Sts</DESC>
       <NAME>$(P)Fault-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>10</x>
-    <y>1411</y>
+    <x>360</x>
+    <y>301</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -999,12 +999,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)GripA:Cl-Sts</DESC>
+      <DESC>GripA:Cl-Sts</DESC>
       <NAME>$(P)GripA:Cl-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>10</x>
-    <y>1381</y>
+    <x>360</x>
+    <y>271</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -1012,12 +1012,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)GripA:Op-Sts</DESC>
+      <DESC>GripA:Op-Sts</DESC>
       <NAME>$(P)GripA:Op-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>10</x>
-    <y>1351</y>
+    <x>360</x>
+    <y>241</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -1025,12 +1025,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)GripB:Cl-Sts</DESC>
+      <DESC>GripB:Cl-Sts</DESC>
       <NAME>$(P)GripB:Cl-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>10</x>
-    <y>1321</y>
+    <x>360</x>
+    <y>211</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -1038,12 +1038,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)GripB:Op-Sts</DESC>
+      <DESC>GripB:Op-Sts</DESC>
       <NAME>$(P)GripB:Op-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>10</x>
-    <y>1291</y>
+    <x>360</x>
+    <y>181</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -1051,12 +1051,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)LN2RegRqst-Sts</DESC>
+      <DESC>LN2RegRqst-Sts</DESC>
       <NAME>$(P)LN2RegRqst-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>10</x>
-    <y>1261</y>
+    <x>360</x>
+    <y>151</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -1064,12 +1064,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)ManualSeqMode-Sts</DESC>
+      <DESC>ManualSeqMode-Sts</DESC>
       <NAME>$(P)ManualSeqMode-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>10</x>
-    <y>1231</y>
+    <x>360</x>
+    <y>121</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -1077,12 +1077,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)NetworkOk-Sts</DESC>
+      <DESC>NetworkOk-Sts</DESC>
       <NAME>$(P)NetworkOk-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>10</x>
-    <y>1201</y>
+    <x>360</x>
+    <y>91</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -1090,12 +1090,12 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)OpenLidRqst-Sts</DESC>
+      <DESC>OpenLidRqst-Sts</DESC>
       <NAME>$(P)OpenLidRqst-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>10</x>
-    <y>1171</y>
+    <x>360</x>
+    <y>61</y>
     <width>325</width>
     <height>30</height>
     <resize>2</resize>
@@ -1103,115 +1103,11 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)PO:1-Sts</DESC>
+      <DESC>PO:1-Sts</DESC>
       <NAME>$(P)PO:1-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>10</x>
-    <y>1141</y>
-    <width>325</width>
-    <height>30</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display</name>
-    <macros>
-      <DESC>$(P)PO:10-Sts</DESC>
-      <NAME>$(P)PO:10-Sts</NAME>
-    </macros>
-    <file>_isara-bit.bob</file>
-    <x>10</x>
-    <y>1111</y>
-    <width>325</width>
-    <height>30</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display</name>
-    <macros>
-      <DESC>$(P)PO:11-Sts</DESC>
-      <NAME>$(P)PO:11-Sts</NAME>
-    </macros>
-    <file>_isara-bit.bob</file>
-    <x>10</x>
-    <y>1081</y>
-    <width>325</width>
-    <height>30</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display</name>
-    <macros>
-      <DESC>$(P)PO:12-Sts</DESC>
-      <NAME>$(P)PO:12-Sts</NAME>
-    </macros>
-    <file>_isara-bit.bob</file>
-    <x>10</x>
-    <y>1051</y>
-    <width>325</width>
-    <height>30</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display</name>
-    <macros>
-      <DESC>$(P)PO:2-Sts</DESC>
-      <NAME>$(P)PO:2-Sts</NAME>
-    </macros>
-    <file>_isara-bit.bob</file>
-    <x>10</x>
-    <y>1021</y>
-    <width>325</width>
-    <height>30</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display</name>
-    <macros>
-      <DESC>$(P)PO:3-Sts</DESC>
-      <NAME>$(P)PO:3-Sts</NAME>
-    </macros>
-    <file>_isara-bit.bob</file>
-    <x>10</x>
-    <y>991</y>
-    <width>325</width>
-    <height>30</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display</name>
-    <macros>
-      <DESC>$(P)PO:4-Sts</DESC>
-      <NAME>$(P)PO:4-Sts</NAME>
-    </macros>
-    <file>_isara-bit.bob</file>
-    <x>10</x>
-    <y>961</y>
-    <width>325</width>
-    <height>30</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display</name>
-    <macros>
-      <DESC>$(P)PO:5-Sts</DESC>
-      <NAME>$(P)PO:5-Sts</NAME>
-    </macros>
-    <file>_isara-bit.bob</file>
-    <x>10</x>
-    <y>931</y>
-    <width>325</width>
-    <height>30</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display</name>
-    <macros>
-      <DESC>$(P)PO:6-Sts</DESC>
-      <NAME>$(P)PO:6-Sts</NAME>
-    </macros>
-    <file>_isara-bit.bob</file>
-    <x>10</x>
+    <x>360</x>
     <y>901</y>
     <width>325</width>
     <height>30</height>
@@ -1220,11 +1116,11 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)PO:7-Sts</DESC>
-      <NAME>$(P)PO:7-Sts</NAME>
+      <DESC>PO:10-Sts</DESC>
+      <NAME>$(P)PO:10-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>10</x>
+    <x>360</x>
     <y>871</y>
     <width>325</width>
     <height>30</height>
@@ -1233,11 +1129,11 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)PO:8-Sts</DESC>
-      <NAME>$(P)PO:8-Sts</NAME>
+      <DESC>PO:11-Sts</DESC>
+      <NAME>$(P)PO:11-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>10</x>
+    <x>360</x>
     <y>841</y>
     <width>325</width>
     <height>30</height>
@@ -1246,11 +1142,11 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)PO:9-Sts</DESC>
-      <NAME>$(P)PO:9-Sts</NAME>
+      <DESC>PO:12-Sts</DESC>
+      <NAME>$(P)PO:12-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
-    <x>10</x>
+    <x>360</x>
     <y>811</y>
     <width>325</width>
     <height>30</height>
@@ -1259,7 +1155,111 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)RobotOutDewar-Sts</DESC>
+      <DESC>PO:2-Sts</DESC>
+      <NAME>$(P)PO:2-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>360</x>
+    <y>781</y>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>PO:3-Sts</DESC>
+      <NAME>$(P)PO:3-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>360</x>
+    <y>751</y>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>PO:4-Sts</DESC>
+      <NAME>$(P)PO:4-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>360</x>
+    <y>721</y>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>PO:5-Sts</DESC>
+      <NAME>$(P)PO:5-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>360</x>
+    <y>691</y>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>PO:6-Sts</DESC>
+      <NAME>$(P)PO:6-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>360</x>
+    <y>661</y>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>PO:7-Sts</DESC>
+      <NAME>$(P)PO:7-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>360</x>
+    <y>631</y>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>PO:8-Sts</DESC>
+      <NAME>$(P)PO:8-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>360</x>
+    <y>601</y>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>PO:9-Sts</DESC>
+      <NAME>$(P)PO:9-Sts</NAME>
+    </macros>
+    <file>_isara-bit.bob</file>
+    <x>360</x>
+    <y>571</y>
+    <width>325</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <DESC>RobotOutDewar-Sts</DESC>
       <NAME>$(P)RobotOutDewar-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -1272,7 +1272,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)RobotOutGonio-Sts</DESC>
+      <DESC>RobotOutGonio-Sts</DESC>
       <NAME>$(P)RobotOutGonio-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -1285,7 +1285,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)SGripClosed-Sts</DESC>
+      <DESC>SGripClosed-Sts</DESC>
       <NAME>$(P)SGripClosed-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -1298,7 +1298,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)SGripOpened-Sts</DESC>
+      <DESC>SGripOpened-Sts</DESC>
       <NAME>$(P)SGripOpened-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -1311,7 +1311,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)SafetyAck-Sts</DESC>
+      <DESC>SafetyAck-Sts</DESC>
       <NAME>$(P)SafetyAck-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -1324,7 +1324,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)SafetyRestartNeeded-Sts</DESC>
+      <DESC>SafetyRestartNeeded-Sts</DESC>
       <NAME>$(P)SafetyRestartNeeded-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -1337,7 +1337,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)SaveTrajResults-Sts</DESC>
+      <DESC>SaveTrajResults-Sts</DESC>
       <NAME>$(P)SaveTrajResults-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -1350,7 +1350,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)SeqPaused-Sts</DESC>
+      <DESC>SeqPaused-Sts</DESC>
       <NAME>$(P)SeqPaused-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -1363,7 +1363,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)SeqReady-Sts</DESC>
+      <DESC>SeqReady-Sts</DESC>
       <NAME>$(P)SeqReady-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -1376,7 +1376,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)SeqRunning-Sts</DESC>
+      <DESC>SeqRunning-Sts</DESC>
       <NAME>$(P)SeqRunning-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -1389,7 +1389,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Standby-Sts</DESC>
+      <DESC>Standby-Sts</DESC>
       <NAME>$(P)Standby-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -1402,7 +1402,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)ToolChanger-Sts</DESC>
+      <DESC>ToolChanger-Sts</DESC>
       <NAME>$(P)ToolChanger-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -1415,7 +1415,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)TorqueOvershoot-Sts</DESC>
+      <DESC>TorqueOvershoot-Sts</DESC>
       <NAME>$(P)TorqueOvershoot-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -1428,7 +1428,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)Warning-Sts</DESC>
+      <DESC>Warning-Sts</DESC>
       <NAME>$(P)Warning-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -1441,7 +1441,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)lnCamZoneDewar-Sts</DESC>
+      <DESC>lnCamZoneDewar-Sts</DESC>
       <NAME>$(P)lnCamZoneDewar-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -1454,7 +1454,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)lnCamZoneGonio-Sts</DESC>
+      <DESC>lnCamZoneGonio-Sts</DESC>
       <NAME>$(P)lnCamZoneGonio-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
@@ -1467,7 +1467,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display</name>
     <macros>
-      <DESC>$(P)lnCamZoneHome-Sts</DESC>
+      <DESC>lnCamZoneHome-Sts</DESC>
       <NAME>$(P)lnCamZoneHome-Sts</NAME>
     </macros>
     <file>_isara-bit.bob</file>
