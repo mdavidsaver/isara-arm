@@ -47,7 +47,8 @@ state {
        ",%(\$1Pos:RX-I)f"
        ",%(\$1Pos:RY-I)f"
        ",%(\$1Pos:RZ-I)f"
-       "%*/\)|,[^)]*\)/";
+       ",%*[^)])"; # recognize one or more unused args.
+       # "%*/\)|,[^)]*\)/"; # recognize zero or more unused args.  requires stream s/ PCRE support
 }
 
 # eg.
@@ -107,7 +108,9 @@ sampledata {
        ",%(\$1Pck27-I)[^,)]"
        ",%(\$1Pck28-I)[^,)]"
        ",%(\$1Pck29-I)[^,)]"
-       "%*/\)|,[^)]*\)/";
+       "%*[^)])"; # try to ignore ',' and extra args
+       # ",%*[^)])"; # recognize one or more unused args.
+       # "%*/\)|,[^)]*\)/"; # recognize zero or more unused args.  requires stream s/ PCRE support
 }
 
 # for "di" and "do"

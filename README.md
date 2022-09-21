@@ -14,7 +14,7 @@ Requires:
 - [EPICS](https://epics-controls.org/) [Base](https://epics.anl.gov/)
 - [asyn](https://epics-modules.github.io/master/asyn/)
 - [busy](https://github.com/epics-modules/busy)
-- [StreamDevice](https://paulscherrerinstitute.github.io/StreamDevice/) built with the optional PCRE support
+- [StreamDevice](https://paulscherrerinstitute.github.io/StreamDevice/)
 
 Optional:
 
@@ -70,6 +70,17 @@ To omit building/installing the `isaraDemo` executable.
 ```sh
 echo "BUILD_ISARA_DEMO=NO" >> configure/CONFIG_SITE.local
 ```
+
+## Forward Compatibility
+
+It is anticipated the future versions of the robot firmware will
+add new command and status requests.  The output of the existing
+status replies might also be extended.
+To facilitate this, extra output arguments to the status replies
+will be ignored.
+
+It is assumed that any string values in status replies will never
+included escaped comma '\,' or right parenthesis '\)' sequences.
 
 ## Other work
 
