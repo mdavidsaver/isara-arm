@@ -1,7 +1,7 @@
 
-# needs to be longer than longest move time
-LockTimeout  = 10000;
-ReplyTimeout = 10000;
+# replies to command requests should be prompt
+LockTimeout  = 100;
+ReplyTimeout = 100;
 
 # all proto blocks take at least one argument,
 # "\$1" which should be "$(P)" the record prefix.
