@@ -1,5 +1,5 @@
 
-# replies to status commands should be prompt
+# replies to status requests should be prompt
 LockTimeout  = 100;
 ReplyTimeout = 100;
 

@@ -4,7 +4,7 @@ LockTimeout  = 100;
 ReplyTimeout = 100;
 
 # all proto blocks take at least one argument,
-# "\$1" which should be "$(P)" the record prefix.
+# "\$1" which must be "$(P)" the record prefix.
 
 # capture and store mis-matched reply
 @mismatch {
