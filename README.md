@@ -22,7 +22,8 @@ Optional:
 
 ## Current State
 
-**Untested** and under active development!
+Positive test with one device.
+No further development planned.
 
 ## Including in an IOC.
 
